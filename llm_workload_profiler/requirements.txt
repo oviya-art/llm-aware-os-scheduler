@@ -1,0 +1,7 @@
+# Requirements for LLM-Aware OS Scheduler: Workload Simulation & Latency Profiling Module
+# Core features run strictly on Python 3.10+ standard libraries (json, urllib, csv, statistics, dataclasses, time, etc.)
+# Windows system telemetry monitoring:
+psutil>=5.9.0
+
+# Optional test runner:
+pytest>=7.0.0
