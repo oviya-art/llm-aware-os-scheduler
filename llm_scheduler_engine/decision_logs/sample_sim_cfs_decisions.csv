@@ -1,0 +1,812 @@
+t_ms,event,core,task_id,task_kind,phase,reason,other_task_id,laxity_ms,norm_laxity,key,pred_service_ms,detail
+510.0,ARRIVE,,req_0001,inference,prefill,,,,,,,prompt=33 bursts=32 total_service=769.4ms
+510.0,DISPATCH,0,req_0001,inference,prefill,cfs_idle_core,,,,0.0,,
+637.0,ARRIVE,,req_0002,inference,prefill,,,,,,,prompt=474 bursts=254 total_service=8677.2ms
+637.0,DISPATCH,1,req_0002,inference,prefill,cfs_idle_core,,,,122.9,,
+754.0,ARRIVE,,bg_001,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1190.0ms
+754.0,DISPATCH,2,bg_001,background,cpu_bound,cfs_idle_core,,,,236.8,,
+1014.0,ARRIVE,,bg_002,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1824.9ms
+1014.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_idle_core,,,,495.70000000000005,,
+1279.525,COMPLETE,,req_0001,inference,done,,,,,,,cpu=769.4ms preemptions=0
+1532.0,ARRIVE,,bg_003,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=4240.5ms
+1532.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_idle_core,,,,1009.6,,
+1750.0,ARRIVE,,req_0003,inference,prefill,,,,,,,prompt=43 bursts=19 total_service=460.5ms
+1750.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,req_0003,,,,,vruntime 1223.5 << running 1235.8
+1750.0,DISPATCH,1,req_0003,inference,prefill,cfs_lower_vruntime,req_0002,,,1223.5,,vruntime 1223.5 << running 1235.8
+1758.0,PREEMPT,2,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1235.8 << running 1240.7
+1758.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_001,,,1235.7999999999997,,vruntime 1235.8 << running 1240.7 [migrated]
+1766.0,ARRIVE,,req_0004,inference,prefill,,,,,,,prompt=48 bursts=55 total_service=1147.4ms
+1766.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1235.4 << running 1247.6
+1766.0,DISPATCH,3,req_0004,inference,prefill,cfs_lower_vruntime,bg_002,,,1235.4,,vruntime 1235.4 << running 1247.6
+1770.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_001,,,,,vruntime 1240.7 << running 1247.5
+1770.0,DISPATCH,0,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1240.7,,vruntime 1240.7 << running 1247.5 [migrated]
+1778.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1247.5 << running 1255.4
+1778.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1247.5,,vruntime 1247.5 << running 1255.4 [migrated]
+1782.0,PREEMPT,1,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1247.6 << running 1255.4
+1782.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1247.6,,vruntime 1247.6 << running 1255.4 [migrated]
+1790.0,PREEMPT,0,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1255.4 << running 1260.3
+1790.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_001,,,1255.3999999999996,,vruntime 1255.4 << running 1260.3 [migrated]
+1794.0,PREEMPT,3,req_0004,inference,prefill,cfs_lower_vruntime,req_0003,,,,,vruntime 1255.4 << running 1263.3
+1794.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,req_0004,,,1255.4,,vruntime 1255.4 << running 1263.3 [migrated]
+1796.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_001,,,,,vruntime 1260.3 << running 1265.1
+1796.0,DISPATCH,2,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1260.3,,vruntime 1260.3 << running 1265.1 [migrated]
+1804.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1263.3 << running 1269.2
+1804.0,DISPATCH,1,req_0004,inference,prefill,cfs_lower_vruntime,bg_002,,,1263.3000000000002,,vruntime 1263.3 << running 1269.2 [migrated]
+1805.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1265.1 << running 1270.0
+1805.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1265.1,,vruntime 1265.1 << running 1270.0 [migrated]
+1813.0,PREEMPT,2,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1269.2 << running 1276.9
+1813.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_001,,,1269.1999999999998,,vruntime 1269.2 << running 1276.9 [migrated]
+1813.0,PREEMPT,3,req_0003,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1270.0 << running 1274.0
+1813.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,req_0003,,,1269.9999999999995,,vruntime 1270.0 << running 1274.0 [migrated]
+1821.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1274.0 << running 1280.7
+1821.0,DISPATCH,0,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,1274.0,,vruntime 1274.0 << running 1280.7 [migrated]
+1825.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,bg_001,,,,,vruntime 1276.9 << running 1283.9
+1825.0,DISPATCH,1,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1276.8999999999999,,vruntime 1276.9 << running 1283.9 [migrated]
+1831.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1280.7 << running 1287.6
+1831.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1280.6999999999998,,vruntime 1280.7 << running 1287.6 [migrated]
+1835.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1283.9 << running 1290.8
+1835.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,1283.9000000000003,,vruntime 1283.9 << running 1290.8 [migrated]
+1840.0,PREEMPT,0,req_0003,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1287.6 << running 1292.6
+1840.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0003,,,1287.5999999999995,,vruntime 1287.6 << running 1292.6 [migrated]
+1844.0,PREEMPT,1,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1290.8 << running 1295.5
+1844.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_001,,,1290.7999999999997,,vruntime 1290.8 << running 1295.5 [migrated]
+1848.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1292.6 << running 1297.3
+1848.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,1292.6,,vruntime 1292.6 << running 1297.3 [migrated]
+1854.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_001,,,,,vruntime 1295.5 << running 1302.5
+1854.0,DISPATCH,2,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1295.4999999999998,,vruntime 1295.5 << running 1302.5 [migrated]
+1858.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1297.3 << running 1305.2
+1858.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1297.2999999999997,,vruntime 1297.3 << running 1305.2 [migrated]
+1863.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1302.5 << running 1309.4
+1863.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,1302.5000000000005,,vruntime 1302.5 << running 1309.4 [migrated]
+1867.0,PREEMPT,3,req_0003,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1305.2 << running 1311.2
+1867.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,req_0003,,,1305.1999999999994,,vruntime 1305.2 << running 1311.2 [migrated]
+1875.0,PREEMPT,2,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1309.4 << running 1316.1
+1875.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_001,,,1309.3999999999996,,vruntime 1309.4 << running 1316.1 [migrated]
+1879.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,req_0003,,,,,vruntime 1311.2 << running 1318.1
+1879.0,DISPATCH,1,req_0003,inference,decode,cfs_lower_vruntime,req_0004,,,1311.1999999999998,,vruntime 1311.2 << running 1318.1 [migrated]
+1883.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_001,,,,,vruntime 1316.1 << running 1321.9
+1883.0,DISPATCH,0,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1316.0999999999997,,vruntime 1316.1 << running 1321.9 [migrated]
+1887.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1318.1 << running 1324.8
+1887.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,1318.1000000000004,,vruntime 1318.1 << running 1324.8 [migrated]
+1895.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1321.9 << running 1329.0
+1895.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1321.8999999999996,,vruntime 1321.9 << running 1329.0 [migrated]
+1900.0,PREEMPT,0,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1324.8 << running 1332.7
+1900.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_001,,,1324.7999999999993,,vruntime 1324.8 << running 1332.7 [migrated]
+1903.0,PREEMPT,1,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1329.0 << running 1334.8
+1903.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1328.9999999999995,,vruntime 1329.0 << running 1334.8 [migrated]
+1907.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,bg_001,,,,,vruntime 1332.7 << running 1337.7
+1907.0,DISPATCH,3,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1332.6999999999996,,vruntime 1332.7 << running 1337.7 [migrated]
+1915.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1334.8 << running 1341.5
+1915.0,DISPATCH,2,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,1334.7999999999997,,vruntime 1334.8 << running 1341.5 [migrated]
+1919.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1337.7 << running 1344.6
+1919.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,1337.7000000000003,,vruntime 1337.7 << running 1344.6 [migrated]
+1923.0,PREEMPT,3,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1341.5 << running 1348.3
+1923.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_001,,,1341.4999999999995,,vruntime 1341.5 << running 1348.3 [migrated]
+1927.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1344.6 << running 1351.4
+1927.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1344.5999999999995,,vruntime 1344.6 << running 1351.4 [migrated]
+1934.0,PREEMPT,2,req_0003,inference,decode,cfs_lower_vruntime,bg_001,,,,,vruntime 1348.3 << running 1353.4
+1934.0,DISPATCH,2,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1348.2999999999995,,vruntime 1348.3 << running 1353.4 [migrated]
+1938.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1351.4 << running 1356.3
+1938.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1351.3999999999992,,vruntime 1351.4 << running 1356.3 [migrated]
+1942.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1353.4 << running 1360.1
+1942.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,1353.3999999999996,,vruntime 1353.4 << running 1360.1 [migrated]
+1946.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1356.3 << running 1363.2
+1946.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,1356.3000000000002,,vruntime 1356.3 << running 1363.2 [migrated]
+1952.0,PREEMPT,2,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1360.1 << running 1365.9
+1952.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_001,,,1360.0999999999995,,vruntime 1360.1 << running 1365.9 [migrated]
+1956.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1363.2 << running 1369.0
+1956.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1363.1999999999994,,vruntime 1363.2 << running 1369.0 [migrated]
+1961.0,PREEMPT,3,req_0003,inference,decode,cfs_lower_vruntime,bg_001,,,,,vruntime 1365.9 << running 1372.0
+1961.0,DISPATCH,3,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1365.8999999999994,,vruntime 1365.9 << running 1372.0 [migrated]
+1965.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1369.0 << running 1374.9
+1965.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1368.999999999999,,vruntime 1369.0 << running 1374.9 [migrated]
+1969.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1372.0 << running 1376.7
+1969.0,DISPATCH,2,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,1371.9999999999995,,vruntime 1372.0 << running 1376.7 [migrated]
+1973.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1374.9 << running 1379.8
+1973.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,1374.9,,vruntime 1374.9 << running 1379.8 [migrated]
+1977.0,PREEMPT,3,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1376.7 << running 1381.5
+1977.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_001,,,1376.6999999999994,,vruntime 1376.7 << running 1381.5 [migrated]
+1981.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1379.8 << running 1384.6
+1981.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1379.7999999999993,,vruntime 1379.8 << running 1384.6 [migrated]
+1985.0,PREEMPT,2,req_0003,inference,decode,cfs_lower_vruntime,bg_001,,,,,vruntime 1381.5 << running 1387.6
+1985.0,DISPATCH,2,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1381.4999999999993,,vruntime 1381.5 << running 1387.6 [migrated]
+1989.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1384.6 << running 1390.5
+1989.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1384.599999999999,,vruntime 1384.6 << running 1390.5 [migrated]
+1993.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1387.6 << running 1392.3
+1993.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,1387.5999999999995,,vruntime 1387.6 << running 1392.3 [migrated]
+1998.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1390.5 << running 1396.4
+1998.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,1390.5,,vruntime 1390.5 << running 1396.4 [migrated]
+2002.0,PREEMPT,2,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1392.3 << running 1398.1
+2002.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_001,,,1392.2999999999993,,vruntime 1392.3 << running 1398.1 [migrated]
+2006.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1396.4 << running 1401.2
+2006.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1396.3999999999992,,vruntime 1396.4 << running 1401.2 [migrated]
+2010.0,PREEMPT,3,req_0003,inference,decode,cfs_lower_vruntime,bg_001,,,,,vruntime 1398.1 << running 1404.2
+2010.0,DISPATCH,3,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1398.0999999999992,,vruntime 1398.1 << running 1404.2 [migrated]
+2014.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1401.2 << running 1406.1
+2014.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1401.199999999999,,vruntime 1401.2 << running 1406.1 [migrated]
+2022.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1404.2 << running 1412.0
+2022.0,DISPATCH,1,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1404.1999999999994,,vruntime 1404.2 << running 1412.0 [migrated]
+2022.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1406.1 << running 1411.9
+2022.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,1406.1,,vruntime 1406.1 << running 1411.9 [migrated]
+2032.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1412.0 << running 1418.8
+2032.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1411.999999999999,,vruntime 1412.0 << running 1418.8 [migrated]
+2032.0,PREEMPT,3,bg_001,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1411.9 << running 1419.7
+2032.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_001,,,1411.8999999999992,,vruntime 1411.9 << running 1419.7 [migrated]
+2041.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1418.8 << running 1424.7
+2041.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1418.7999999999988,,vruntime 1418.8 << running 1424.7 [migrated]
+2045.0,PREEMPT,1,req_0003,inference,decode,cfs_lower_vruntime,bg_001,,,,,vruntime 1419.7 << running 1426.8
+2045.0,DISPATCH,1,bg_001,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1419.6999999999991,,vruntime 1419.7 << running 1426.8 [migrated]
+2052.503,COMPLETE,,bg_001,background,done,,,,,,,cpu=1190.0ms preemptions=11
+2053.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_idle_core,req_0004,,,,,
+2053.0,DISPATCH,0,req_0004,inference,decode,cfs_idle_core,,,,1424.6999999999998,, [migrated]
+2053.0,DISPATCH,1,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1426.7999999999993,,vruntime 1426.8 << running 1432.6
+2061.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1432.6 << running 1440.5
+2061.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1432.599999999999,,vruntime 1432.6 << running 1440.5 [migrated]
+2069.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1440.5 << running 1446.4
+2069.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1440.499999999999,,vruntime 1440.5 << running 1446.4 [migrated]
+2077.0,PREEMPT,1,req_0003,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1446.4 << running 1450.7
+2077.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,req_0003,,,1446.3999999999987,,vruntime 1446.4 << running 1450.7 [migrated]
+2087.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0003,,,,,vruntime 1450.7 << running 1458.3
+2087.0,DISPATCH,0,req_0003,inference,decode,cfs_lower_vruntime,req_0004,,,1450.6999999999994,,vruntime 1450.7 << running 1458.3 [migrated]
+2095.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1458.3 << running 1466.2
+2095.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,1458.2999999999997,,vruntime 1458.3 << running 1466.2 [migrated]
+2100.0,ARRIVE,,bg_004,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=3143.7ms
+2100.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1458.9 << running 1471.1
+2100.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1458.8999999999996,,vruntime 1458.9 << running 1471.1
+2105.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1466.2 << running 1474.0
+2105.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1466.199999999999,,vruntime 1466.2 << running 1474.0 [migrated]
+2114.0,PREEMPT,0,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1471.1 << running 1477.3
+2114.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1471.099999999999,,vruntime 1471.1 << running 1477.3 [migrated]
+2118.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1474.0 << running 1480.9
+2118.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1473.9999999999986,,vruntime 1474.0 << running 1480.9 [migrated]
+2122.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1477.3 << running 1482.8
+2122.0,DISPATCH,1,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1477.2999999999993,,vruntime 1477.3 << running 1482.8 [migrated]
+2128.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1480.9 << running 1486.8
+2128.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,1480.8999999999996,,vruntime 1480.9 << running 1486.8 [migrated]
+2132.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1482.8 << running 1488.7
+2132.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1482.7999999999988,,vruntime 1482.8 << running 1488.7 [migrated]
+2136.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1486.8 << running 1491.6
+2136.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1486.7999999999997,,vruntime 1486.8 << running 1491.6 [migrated]
+2140.0,PREEMPT,1,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1488.7 << running 1494.9
+2140.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1488.699999999999,,vruntime 1488.7 << running 1494.9 [migrated]
+2144.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1491.6 << running 1496.5
+2144.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1491.5999999999985,,vruntime 1491.6 << running 1496.5 [migrated]
+2152.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1496.5 << running 1502.4
+2152.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,1496.4999999999995,,vruntime 1496.5 << running 1502.4 [migrated]
+2152.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1494.9 << running 1502.4
+2152.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,bg_004,,,1494.8999999999992,,vruntime 1494.9 << running 1502.4 [migrated]
+2160.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1502.4 << running 1508.3
+2160.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1502.3999999999987,,vruntime 1502.4 << running 1508.3 [migrated]
+2160.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1502.4 << running 1507.2
+2160.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1502.3999999999996,,vruntime 1502.4 << running 1507.2 [migrated]
+2169.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1507.2 << running 1513.1
+2169.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1507.1999999999985,,vruntime 1507.2 << running 1513.1 [migrated]
+2173.0,PREEMPT,3,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1508.3 << running 1515.5
+2173.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1508.2999999999988,,vruntime 1508.3 << running 1515.5 [migrated]
+2177.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1513.1 << running 1519.0
+2177.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,1513.0999999999995,,vruntime 1513.1 << running 1519.0 [migrated]
+2181.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1515.5 << running 1523.0
+2181.0,DISPATCH,1,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1515.499999999999,,vruntime 1515.5 << running 1523.0 [migrated]
+2187.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1519.0 << running 1524.8
+2187.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1518.9999999999995,,vruntime 1519.0 << running 1524.8 [migrated]
+2195.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1523.0 << running 1530.7
+2195.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1522.9999999999986,,vruntime 1523.0 << running 1530.7 [migrated]
+2195.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1524.8 << running 1529.9
+2195.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,1524.7999999999984,,vruntime 1524.8 << running 1529.9 [migrated]
+2203.0,PREEMPT,1,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1529.9 << running 1537.1
+2203.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1529.8999999999987,,vruntime 1529.9 << running 1537.1 [migrated]
+2207.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1530.7 << running 1538.6
+2207.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,1530.6999999999994,,vruntime 1530.7 << running 1538.6 [migrated]
+2215.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,req_0003,,,,,vruntime 1537.1 << running 1544.4
+2215.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,req_0002,,,1537.099999999999,,vruntime 1537.1 << running 1544.4 [migrated]
+2218.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1538.6 << running 1545.6
+2218.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1538.5999999999995,,vruntime 1538.6 << running 1545.6 [migrated]
+2222.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1544.4 << running 1548.5
+2222.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,1544.3999999999983,,vruntime 1544.4 << running 1548.5 [migrated]
+2227.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1545.6 << running 1550.3
+2227.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1545.5999999999985,,vruntime 1545.6 << running 1550.3 [migrated]
+2231.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1548.5 << running 1553.0
+2231.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1548.4999999999986,,vruntime 1548.5 << running 1553.0
+2235.0,PREEMPT,3,req_0003,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1550.3 << running 1556.7
+2235.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,req_0003,,,1550.2999999999993,,vruntime 1550.3 << running 1556.7 [migrated]
+2239.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1553.0 << running 1559.2
+2239.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1552.9999999999982,,vruntime 1553.0 << running 1559.2 [migrated]
+2243.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1556.7 << running 1561.2
+2243.0,DISPATCH,0,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1556.699999999999,,vruntime 1556.7 << running 1561.2 [migrated]
+2247.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1559.2 << running 1564.4
+2247.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1559.1999999999994,,vruntime 1559.2 << running 1564.4 [migrated]
+2254.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1561.2 << running 1568.9
+2254.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1561.1999999999985,,vruntime 1561.2 << running 1568.9 [migrated]
+2258.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1564.4 << running 1571.6
+2258.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1564.3999999999987,,vruntime 1564.4 << running 1571.6 [migrated]
+2262.0,PREEMPT,0,req_0003,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1568.9 << running 1575.3
+2262.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,req_0003,,,1568.8999999999992,,vruntime 1568.9 << running 1575.3 [migrated]
+2266.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1571.6 << running 1577.8
+2266.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1571.599999999998,,vruntime 1571.6 << running 1577.8 [migrated]
+2274.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1575.3 << running 1580.8
+2274.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1575.2999999999988,,vruntime 1575.3 << running 1580.8 [migrated]
+2277.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1577.8 << running 1583.5
+2277.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1577.7999999999993,,vruntime 1577.8 << running 1583.5 [migrated]
+2282.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1580.8 << running 1588.0
+2282.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1580.7999999999984,,vruntime 1580.8 << running 1588.0 [migrated]
+2286.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1583.5 << running 1591.2
+2286.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,1583.499999999999,,vruntime 1583.5 << running 1591.2 [migrated]
+2294.0,PREEMPT,3,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1588.0 << running 1594.9
+2294.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1587.9999999999986,,vruntime 1588.0 << running 1594.9 [migrated]
+2298.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1591.2 << running 1598.4
+2298.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1591.199999999998,,vruntime 1591.2 << running 1598.4 [migrated]
+2301.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1594.9 << running 1599.4
+2301.0,DISPATCH,2,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1594.8999999999987,,vruntime 1594.9 << running 1599.4 [migrated]
+2309.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1598.4 << running 1606.1
+2309.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1598.3999999999992,,vruntime 1598.4 << running 1606.1 [migrated]
+2310.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1599.4 << running 1603.6
+2310.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1599.3999999999983,,vruntime 1599.4 << running 1603.6 [migrated]
+2318.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1606.1 << running 1610.8
+2318.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,1606.099999999999,,vruntime 1606.1 << running 1610.8 [migrated]
+2318.0,PREEMPT,2,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1603.6 << running 1611.5
+2318.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1603.5999999999985,,vruntime 1603.6 << running 1611.5 [migrated]
+2329.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1610.8 << running 1618.0
+2329.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1610.799999999998,,vruntime 1610.8 << running 1618.0 [migrated]
+2329.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1611.5 << running 1618.0
+2329.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1611.4999999999986,,vruntime 1611.5 << running 1618.0 [migrated]
+2337.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1618.0 << running 1624.7
+2337.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1617.9999999999982,,vruntime 1618.0 << running 1624.7 [migrated]
+2337.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1618.0 << running 1622.2
+2337.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1617.999999999999,,vruntime 1618.0 << running 1622.2 [migrated]
+2346.0,PREEMPT,3,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1622.2 << running 1628.1
+2346.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,1622.1999999999985,,vruntime 1622.2 << running 1628.1 [migrated]
+2350.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1624.7 << running 1631.4
+2350.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,1624.699999999999,,vruntime 1624.7 << running 1631.4 [migrated]
+2354.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1628.1 << running 1634.6
+2354.0,DISPATCH,2,req_0003,inference,decode,cfs_lower_vruntime,bg_004,,,1628.0999999999985,,vruntime 1628.1 << running 1634.6 [migrated]
+2356.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1631.4 << running 1636.6
+2356.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,1631.3999999999978,,vruntime 1631.4 << running 1636.6 [migrated]
+2364.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1634.6 << running 1639.8
+2364.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1634.599999999999,,vruntime 1634.6 << running 1639.8 [migrated]
+2368.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1636.6 << running 1643.0
+2368.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1636.599999999998,,vruntime 1636.6 << running 1643.0
+2372.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1639.8 << running 1646.3
+2372.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1639.7999999999984,,vruntime 1639.8 << running 1646.3 [migrated]
+2376.0,PREEMPT,2,req_0003,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1643.0 << running 1649.7
+2376.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,req_0003,,,1642.9999999999977,,vruntime 1643.0 << running 1649.7 [migrated]
+2384.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1646.3 << running 1654.2
+2384.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,1646.2999999999988,,vruntime 1646.3 << running 1654.2 [migrated]
+2388.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1649.7 << running 1656.5
+2388.0,DISPATCH,0,req_0003,inference,decode,cfs_lower_vruntime,bg_002,,,1649.6999999999985,,vruntime 1649.7 << running 1656.5 [migrated]
+2392.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1654.2 << running 1659.4
+2392.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1654.199999999999,,vruntime 1654.2 << running 1659.4 [migrated]
+2396.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1656.5 << running 1662.6
+2396.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1656.4999999999982,,vruntime 1656.5 << running 1662.6 [migrated]
+2403.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1659.4 << running 1664.9
+2403.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1659.3999999999983,,vruntime 1659.4 << running 1664.9 [migrated]
+2407.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1662.6 << running 1668.8
+2407.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1662.5999999999976,,vruntime 1662.6 << running 1668.8 [migrated]
+2411.0,PREEMPT,0,req_0003,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1664.9 << running 1672.3
+2411.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,req_0003,,,1664.8999999999987,,vruntime 1664.9 << running 1672.3 [migrated]
+2415.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1668.8 << running 1675.1
+2415.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1668.7999999999988,,vruntime 1668.8 << running 1675.1 [migrated]
+2421.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0003,,,,,vruntime 1672.3 << running 1677.0
+2421.0,DISPATCH,3,req_0003,inference,decode,cfs_lower_vruntime,bg_003,,,1672.2999999999984,,vruntime 1672.3 << running 1677.0 [migrated]
+2425.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1675.1 << running 1680.2
+2425.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1675.099999999998,,vruntime 1675.1 << running 1680.2 [migrated]
+2429.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1677.0 << running 1682.5
+2429.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1676.9999999999982,,vruntime 1677.0 << running 1682.5 [migrated]
+2433.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1680.2 << running 1686.4
+2433.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1680.1999999999975,,vruntime 1680.2 << running 1686.4 [migrated]
+2433.118,COMPLETE,,req_0003,inference,done,,,,,,,cpu=460.5ms preemptions=22
+2434.0,DISPATCH,3,req_0004,inference,decode,cfs_idle_core,,,,1682.4999999999986,, [migrated]
+2442.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1686.4 << running 1691.7
+2442.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1686.3999999999987,,vruntime 1686.4 << running 1691.7 [migrated]
+2450.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1691.7 << running 1698.1
+2450.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1691.699999999998,,vruntime 1691.7 << running 1698.1 [migrated]
+2458.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1698.1 << running 1705.6
+2458.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,1698.0999999999985,,vruntime 1698.1 << running 1705.6 [migrated]
+2466.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1705.6 << running 1712.8
+2466.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1705.599999999998,,vruntime 1705.6 << running 1712.8 [migrated]
+2474.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1712.8 << running 1718.0
+2474.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1712.7999999999975,,vruntime 1712.8 << running 1718.0 [migrated]
+2484.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1718.0 << running 1725.3
+2484.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1717.9999999999986,,vruntime 1718.0 << running 1725.3 [migrated]
+2493.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1725.3 << running 1732.7
+2493.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1725.299999999998,,vruntime 1725.3 << running 1732.7 [migrated]
+2501.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1732.7 << running 1740.2
+2501.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,1732.6999999999985,,vruntime 1732.7 << running 1740.2 [migrated]
+2507.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1740.2 << running 1745.4
+2507.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1740.199999999998,,vruntime 1740.2 << running 1745.4 [migrated]
+2519.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1745.4 << running 1752.6
+2519.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1745.3999999999974,,vruntime 1745.4 << running 1752.6 [migrated]
+2527.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1752.6 << running 1759.8
+2527.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1752.5999999999985,,vruntime 1752.6 << running 1759.8 [migrated]
+2533.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1759.8 << running 1764.9
+2533.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1759.799999999998,,vruntime 1759.8 << running 1764.9 [migrated]
+2541.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1764.9 << running 1772.3
+2541.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1764.8999999999978,,vruntime 1764.9 << running 1772.3 [migrated]
+2553.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1772.3 << running 1779.4
+2553.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,1772.2999999999984,,vruntime 1772.3 << running 1779.4 [migrated]
+2561.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1779.4 << running 1787.0
+2561.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1779.3999999999978,,vruntime 1779.4 << running 1787.0 [migrated]
+2567.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1787.0 << running 1792.2
+2567.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,1786.9999999999973,,vruntime 1787.0 << running 1792.2 [migrated]
+2575.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1792.2 << running 1798.5
+2575.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1792.1999999999985,,vruntime 1792.2 << running 1798.5 [migrated]
+2583.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1798.5 << running 1802.6
+2583.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1798.4999999999977,,vruntime 1798.5 << running 1802.6 [migrated]
+2590.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1802.6 << running 1808.9
+2590.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1802.5999999999972,,vruntime 1802.6 << running 1808.9 [migrated]
+2598.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1808.9 << running 1816.0
+2598.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,1808.8999999999983,,vruntime 1808.9 << running 1816.0 [migrated]
+2606.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1816.0 << running 1822.8
+2606.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,1815.9999999999977,,vruntime 1816.0 << running 1822.8 [migrated]
+2614.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1822.8 << running 1829.1
+2614.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1822.7999999999984,,vruntime 1822.8 << running 1829.1 [migrated]
+2623.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1829.1 << running 1835.2
+2623.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1829.0999999999976,,vruntime 1829.1 << running 1835.2 [migrated]
+2631.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1835.2 << running 1841.5
+2631.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1835.199999999997,,vruntime 1835.2 << running 1841.5 [migrated]
+2639.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1841.5 << running 1848.6
+2639.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,1841.4999999999982,,vruntime 1841.5 << running 1848.6 [migrated]
+2646.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1848.6 << running 1854.4
+2646.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,1848.5999999999976,,vruntime 1848.6 << running 1854.4 [migrated]
+2654.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1854.4 << running 1859.7
+2654.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1854.3999999999983,,vruntime 1854.4 << running 1859.7 [migrated]
+2661.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1859.7 << running 1864.8
+2661.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1859.6999999999975,,vruntime 1859.7 << running 1864.8 [migrated]
+2669.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1864.8 << running 1871.2
+2669.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,1864.799999999997,,vruntime 1864.8 << running 1871.2 [migrated]
+2677.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1871.2 << running 1879.1
+2677.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1871.1999999999975,,vruntime 1871.2 << running 1879.1 [migrated]
+2685.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1879.1 << running 1885.0
+2685.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,1879.099999999998,,vruntime 1879.1 << running 1885.0 [migrated]
+2691.0,ARRIVE,,bg_005,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1206.1ms
+2691.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 1882.7 << running 1889.3
+2691.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1882.699999999998,,vruntime 1882.7 << running 1889.3
+2695.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1885.0 << running 1890.4
+2695.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1884.9999999999982,,vruntime 1885.0 << running 1890.4 [migrated]
+2703.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1890.4 << running 1896.7
+2703.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1890.399999999997,,vruntime 1890.4 << running 1896.7 [migrated]
+2703.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1889.3 << running 1896.8
+2703.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1889.2999999999975,,vruntime 1889.3 << running 1896.8 [migrated]
+2711.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1896.7 << running 1902.6
+2711.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,1896.699999999998,,vruntime 1896.7 << running 1902.6 [migrated]
+2712.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1896.8 << running 1901.6
+2712.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,1896.7999999999975,,vruntime 1896.8 << running 1901.6 [migrated]
+2722.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1901.6 << running 1909.0
+2722.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1901.599999999998,,vruntime 1901.6 << running 1909.0 [migrated]
+2722.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 1902.6 << running 1907.9
+2722.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1902.599999999998,,vruntime 1902.6 << running 1907.9 [migrated]
+2730.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1909.0 << running 1914.4
+2730.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,1908.9999999999968,,vruntime 1909.0 << running 1914.4 [migrated]
+2730.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1907.9 << running 1915.3
+2730.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1907.8999999999974,,vruntime 1907.9 << running 1915.3 [migrated]
+2742.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1915.3 << running 1921.2
+2742.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,1915.299999999998,,vruntime 1915.3 << running 1921.2 [migrated]
+2742.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1914.4 << running 1922.2
+2742.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,1914.3999999999974,,vruntime 1914.4 << running 1922.2 [migrated]
+2750.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1921.2 << running 1928.6
+2750.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1921.199999999998,,vruntime 1921.2 << running 1928.6 [migrated]
+2750.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 1922.2 << running 1927.5
+2750.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1922.199999999998,,vruntime 1922.2 << running 1927.5 [migrated]
+2762.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1927.5 << running 1934.9
+2762.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1927.4999999999973,,vruntime 1927.5 << running 1934.9 [migrated]
+2762.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1928.6 << running 1934.0
+2762.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,1928.5999999999967,,vruntime 1928.6 << running 1934.0 [migrated]
+2769.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1934.9 << running 1939.8
+2769.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,1934.8999999999978,,vruntime 1934.9 << running 1939.8 [migrated]
+2769.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1934.0 << running 1940.8
+2769.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,1933.9999999999973,,vruntime 1934.0 << running 1940.8 [migrated]
+2778.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1939.8 << running 1944.2
+2778.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1939.799999999998,,vruntime 1939.8 << running 1944.2 [migrated]
+2782.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 1940.8 << running 1947.5
+2782.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1940.799999999998,,vruntime 1940.8 << running 1947.5 [migrated]
+2786.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1944.2 << running 1951.1
+2786.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,1944.1999999999966,,vruntime 1944.2 << running 1951.1 [migrated]
+2790.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1947.5 << running 1954.6
+2790.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,1947.4999999999977,,vruntime 1947.5 << running 1954.6 [migrated]
+2794.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1951.1 << running 1955.4
+2794.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,1951.0999999999972,,vruntime 1951.1 << running 1955.4 [migrated]
+2802.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 1955.4 << running 1959.8
+2802.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1955.3999999999978,,vruntime 1955.4 << running 1959.8 [migrated]
+2802.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1954.6 << running 1960.4
+2802.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,1954.5999999999972,,vruntime 1954.6 << running 1960.4 [migrated]
+2807.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 1959.8 << running 1964.1
+2807.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,1959.7999999999965,,vruntime 1959.8 << running 1964.1 [migrated]
+2811.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 1960.4 << running 1967.7
+2811.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1960.3999999999978,,vruntime 1960.4 << running 1967.7 [migrated]
+2816.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 1964.1 << running 1969.0
+2816.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,1964.0999999999976,,vruntime 1964.1 << running 1969.0 [migrated]
+2820.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 1967.7 << running 1972.4
+2820.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,1967.699999999997,,vruntime 1967.7 << running 1972.4 [migrated]
+2824.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1969.0 << running 1976.2
+2824.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1968.9999999999977,,vruntime 1969.0 << running 1976.2 [migrated]
+2828.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1972.4 << running 1977.0
+2828.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,1972.3999999999965,,vruntime 1972.4 << running 1977.0 [migrated]
+2836.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 1976.2 << running 1983.7
+2836.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1976.199999999997,,vruntime 1976.2 << running 1983.7 [migrated]
+2836.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 1977.0 << running 1983.3
+2836.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1976.9999999999977,,vruntime 1977.0 << running 1983.3 [migrated]
+2844.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 1983.3 << running 1988.6
+2844.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,1983.299999999997,,vruntime 1983.3 << running 1988.6 [migrated]
+2844.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1983.7 << running 1988.0
+2844.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,1983.6999999999975,,vruntime 1983.7 << running 1988.0 [migrated]
+2852.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 1988.0 << running 1992.6
+2852.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,1987.9999999999964,,vruntime 1988.0 << running 1992.6 [migrated]
+2856.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 1988.6 << running 1995.8
+2856.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,1988.5999999999976,,vruntime 1988.6 << running 1995.8 [migrated]
+2860.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 1992.6 << running 1999.3
+2860.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,1992.5999999999976,,vruntime 1992.6 << running 1999.3 [migrated]
+2863.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 1995.8 << running 2001.9
+2863.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,1995.799999999997,,vruntime 1995.8 << running 2001.9 [migrated]
+2871.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 1999.3 << running 2006.6
+2871.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,1999.2999999999975,,vruntime 1999.3 << running 2006.6 [migrated]
+2875.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2001.9 << running 2007.4
+2875.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2001.899999999997,,vruntime 2001.9 << running 2007.4
+2881.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2006.6 << running 2013.2
+2881.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2006.5999999999963,,vruntime 2006.6 << running 2013.2 [migrated]
+2881.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2007.4 << running 2013.2
+2881.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2007.399999999997,,vruntime 2007.4 << running 2013.2 [migrated]
+2893.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2013.2 << running 2019.8
+2893.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2013.1999999999975,,vruntime 2013.2 << running 2019.8 [migrated]
+2893.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 2013.2 << running 2020.9
+2893.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2013.1999999999975,,vruntime 2013.2 << running 2020.9 [migrated]
+2901.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 2020.9 << running 2026.2
+2901.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,2020.8999999999974,,vruntime 2020.9 << running 2026.2 [migrated]
+2901.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2019.8 << running 2027.0
+2901.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2019.799999999997,,vruntime 2019.8 << running 2027.0 [migrated]
+2914.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2026.2 << running 2033.8
+2914.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,2026.1999999999962,,vruntime 2026.2 << running 2033.8 [migrated]
+2914.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2027.0 << running 2033.8
+2914.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,2026.9999999999968,,vruntime 2027.0 << running 2033.8 [migrated]
+2920.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 2033.8 << running 2039.5
+2920.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2033.7999999999975,,vruntime 2033.8 << running 2039.5 [migrated]
+2920.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2033.8 << running 2038.4
+2920.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2033.7999999999975,,vruntime 2033.8 << running 2038.4 [migrated]
+2932.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2039.5 << running 2045.4
+2932.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,2039.4999999999973,,vruntime 2039.5 << running 2045.4
+2932.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2038.4 << running 2045.4
+2932.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,2038.399999999997,,vruntime 2038.4 << running 2045.4
+2940.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2045.4 << running 2051.8
+2940.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2045.3999999999974,,vruntime 2045.4 << running 2051.8 [migrated]
+2940.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2045.4 << running 2052.6
+2940.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2045.3999999999974,,vruntime 2045.4 << running 2052.6 [migrated]
+2952.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 2051.8 << running 2059.4
+2952.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,2051.799999999996,,vruntime 2051.8 << running 2059.4 [migrated]
+2952.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2052.6 << running 2058.3
+2952.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2052.5999999999967,,vruntime 2052.6 << running 2058.3 [migrated]
+2960.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2058.3 << running 2065.0
+2960.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2058.299999999997,,vruntime 2058.3 << running 2065.0 [migrated]
+2960.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2059.4 << running 2065.0
+2960.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,2059.3999999999974,,vruntime 2059.4 << running 2065.0 [migrated]
+2970.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2065.0 << running 2069.4
+2970.0,DISPATCH,0,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2064.9999999999973,,vruntime 2065.0 << running 2069.4 [migrated]
+2970.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2065.0 << running 2070.2
+2970.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2064.9999999999973,,vruntime 2065.0 << running 2070.2 [migrated]
+2978.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2070.2 << running 2075.9
+2978.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2070.1999999999966,,vruntime 2070.2 << running 2075.9 [migrated]
+2978.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 2069.4 << running 2077.0
+2978.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,2069.399999999996,,vruntime 2069.4 << running 2077.0 [migrated]
+2986.0,PREEMPT,0,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2075.9 << running 2080.6
+2986.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2075.899999999997,,vruntime 2075.9 << running 2080.6 [migrated]
+2990.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2077.0 << running 2084.6
+2990.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,2076.9999999999973,,vruntime 2077.0 << running 2084.6 [migrated]
+2996.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2080.6 << running 2087.8
+2996.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2080.599999999997,,vruntime 2080.6 << running 2087.8 [migrated]
+3000.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 2084.6 << running 2091.0
+3000.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2084.599999999997,,vruntime 2084.6 << running 2091.0 [migrated]
+3004.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2087.8 << running 2093.5
+3004.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2087.7999999999965,,vruntime 2087.8 << running 2093.5 [migrated]
+3009.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 2091.0 << running 2095.6
+3009.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,2090.999999999996,,vruntime 2091.0 << running 2095.6 [migrated]
+3015.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2093.5 << running 2099.2
+3015.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2093.499999999997,,vruntime 2093.5 << running 2099.2 [migrated]
+3019.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2095.6 << running 2103.2
+3019.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,2095.599999999997,,vruntime 2095.6 << running 2103.2 [migrated]
+3023.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2099.2 << running 2106.4
+3023.0,DISPATCH,0,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2099.199999999997,,vruntime 2099.2 << running 2106.4 [migrated]
+3027.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 2103.2 << running 2108.6
+3027.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2103.199999999997,,vruntime 2103.2 << running 2108.6 [migrated]
+3035.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2106.4 << running 2113.1
+3035.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2106.3999999999965,,vruntime 2106.4 << running 2113.1 [migrated]
+3038.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 2108.6 << running 2114.2
+3038.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,2108.599999999996,,vruntime 2108.6 << running 2114.2 [migrated]
+3042.0,PREEMPT,0,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2113.1 << running 2117.8
+3042.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2113.0999999999967,,vruntime 2113.1 << running 2117.8 [migrated]
+3046.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2114.2 << running 2121.8
+3046.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,2114.199999999997,,vruntime 2114.2 << running 2121.8 [migrated]
+3054.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2117.8 << running 2125.0
+3054.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2117.799999999997,,vruntime 2117.8 << running 2125.0 [migrated]
+3058.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2121.8 << running 2128.7
+3058.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2121.799999999997,,vruntime 2121.8 << running 2128.7 [migrated]
+3061.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 2125.0 << running 2131.2
+3061.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2124.9999999999964,,vruntime 2125.0 << running 2131.2 [migrated]
+3065.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 2128.7 << running 2132.8
+3065.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2128.6999999999966,,vruntime 2128.7 << running 2132.8 [migrated]
+3073.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2131.2 << running 2136.6
+3073.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,2131.1999999999957,,vruntime 2131.2 << running 2136.6
+3077.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2132.8 << running 2140.4
+3077.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,2132.799999999997,,vruntime 2132.8 << running 2140.4 [migrated]
+3081.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2136.6 << running 2144.4
+3081.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2136.5999999999963,,vruntime 2136.6 << running 2144.4 [migrated]
+3085.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2140.4 << running 2148.3
+3085.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2140.399999999997,,vruntime 2140.4 << running 2148.3 [migrated]
+3093.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2144.4 << running 2151.1
+3093.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2144.399999999997,,vruntime 2144.4 << running 2151.1 [migrated]
+3097.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 2148.3 << running 2152.4
+3097.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2148.2999999999965,,vruntime 2148.3 << running 2152.4 [migrated]
+3101.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2151.1 << running 2156.2
+3101.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,2151.099999999996,,vruntime 2151.1 << running 2156.2 [migrated]
+3105.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2152.4 << running 2160.0
+3105.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,2152.399999999997,,vruntime 2152.4 << running 2160.0 [migrated]
+3110.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2156.2 << running 2161.0
+3110.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2156.199999999996,,vruntime 2156.2 << running 2161.0 [migrated]
+3114.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2160.0 << running 2164.9
+3114.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2159.999999999997,,vruntime 2160.0 << running 2164.9 [migrated]
+3118.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2161.0 << running 2167.7
+3118.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2160.999999999997,,vruntime 2161.0 << running 2167.7 [migrated]
+3122.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 2164.9 << running 2169.0
+3122.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2164.8999999999965,,vruntime 2164.9 << running 2169.0 [migrated]
+3126.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2167.7 << running 2171.8
+3126.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,2167.6999999999957,,vruntime 2167.7 << running 2171.8 [migrated]
+3130.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2169.0 << running 2175.6
+3130.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,2168.999999999997,,vruntime 2169.0 << running 2175.6 [migrated]
+3134.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2171.8 << running 2176.6
+3134.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2171.799999999996,,vruntime 2171.8 << running 2176.6 [migrated]
+3140.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2175.6 << running 2182.5
+3140.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2175.5999999999967,,vruntime 2175.6 << running 2182.5 [migrated]
+3140.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2176.6 << running 2181.3
+3140.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2176.5999999999967,,vruntime 2176.6 << running 2181.3 [migrated]
+3148.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 2181.3 << running 2186.6
+3148.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,2181.2999999999956,,vruntime 2181.3 << running 2186.6 [migrated]
+3152.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2182.5 << running 2189.4
+3152.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2182.4999999999964,,vruntime 2182.5 << running 2189.4 [migrated]
+3156.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2186.6 << running 2192.2
+3156.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,2186.5999999999967,,vruntime 2186.6 << running 2192.2 [migrated]
+3160.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2189.4 << running 2195.2
+3160.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,2189.399999999996,,vruntime 2189.4 << running 2195.2 [migrated]
+3164.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2192.2 << running 2196.9
+3164.0,DISPATCH,0,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2192.1999999999966,,vruntime 2192.2 << running 2196.9 [migrated]
+3172.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2196.9 << running 2202.1
+3172.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_002,,,2196.8999999999955,,vruntime 2196.9 << running 2202.1 [migrated]
+3172.0,PREEMPT,3,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 2195.2 << running 2202.2
+3172.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2195.1999999999966,,vruntime 2195.2 << running 2202.2 [migrated]
+3180.0,PREEMPT,0,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2202.2 << running 2207.8
+3180.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,2202.1999999999966,,vruntime 2202.2 << running 2207.8 [migrated]
+3180.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2202.1 << running 2209.0
+3180.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2202.0999999999963,,vruntime 2202.1 << running 2209.0 [migrated]
+3188.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2207.8 << running 2212.5
+3188.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2207.7999999999965,,vruntime 2207.8 << running 2212.5 [migrated]
+3191.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2209.0 << running 2213.8
+3191.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,2208.999999999996,,vruntime 2209.0 << running 2213.8 [migrated]
+3195.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,,,vruntime 2212.5 << running 2216.8
+3195.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,2212.4999999999955,,vruntime 2212.5 << running 2216.8 [migrated]
+3199.0,PREEMPT,2,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2213.8 << running 2220.7
+3199.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2213.7999999999965,,vruntime 2213.8 << running 2220.7 [migrated]
+3203.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2216.8 << running 2222.4
+3203.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,2216.7999999999965,,vruntime 2216.8 << running 2222.4 [migrated]
+3211.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2222.4 << running 2228.1
+3211.0,DISPATCH,0,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2222.3999999999965,,vruntime 2222.4 << running 2228.1 [migrated]
+3211.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2220.7 << running 2228.6
+3211.0,DISPATCH,3,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2220.699999999996,,vruntime 2220.7 << running 2228.6 [migrated]
+3218.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2228.1 << running 2232.4
+3218.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2228.0999999999954,,vruntime 2228.1 << running 2232.4 [migrated]
+3222.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 2228.6 << running 2235.4
+3222.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2228.599999999996,,vruntime 2228.6 << running 2235.4 [migrated]
+3226.0,PREEMPT,0,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2232.4 << running 2237.0
+3226.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2232.3999999999965,,vruntime 2232.4 << running 2237.0 [migrated]
+3230.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 2235.4 << running 2239.7
+3230.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,2235.3999999999965,,vruntime 2235.4 << running 2239.7 [migrated]
+3234.0,PREEMPT,3,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2237.0 << running 2243.3
+3234.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2236.9999999999964,,vruntime 2237.0 << running 2243.3 [migrated]
+3238.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2239.7 << running 2244.2
+3238.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,2239.6999999999953,,vruntime 2239.7 << running 2244.2 [migrated]
+3242.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,,,vruntime 2243.3 << running 2248.0
+3242.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,2243.299999999996,,vruntime 2243.3 << running 2248.0 [migrated]
+3247.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 2244.2 << running 2252.0
+3247.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2244.1999999999957,,vruntime 2244.2 << running 2252.0 [migrated]
+3251.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2248.0 << running 2253.6
+3251.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2247.9999999999964,,vruntime 2248.0 << running 2253.6 [migrated]
+3255.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,req_0004,,,,,vruntime 2252.0 << running 2256.3
+3255.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,req_0002,,,2251.9999999999964,,vruntime 2252.0 << running 2256.3 [migrated]
+3259.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2253.6 << running 2259.9
+3259.0,DISPATCH,0,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2253.5999999999963,,vruntime 2253.6 << running 2259.9 [migrated]
+3267.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2256.3 << running 2263.8
+3267.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,2256.299999999995,,vruntime 2256.3 << running 2263.8 [migrated]
+3270.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 2259.9 << running 2266.6
+3270.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2259.899999999996,,vruntime 2259.9 << running 2266.6 [migrated]
+3274.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2263.8 << running 2270.6
+3274.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,2263.7999999999956,,vruntime 2263.8 << running 2270.6 [migrated]
+3278.0,PREEMPT,0,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2266.6 << running 2272.2
+3278.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,2266.5999999999963,,vruntime 2266.6 << running 2272.2 [migrated]
+3288.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2272.2 << running 2277.4
+3288.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2272.199999999996,,vruntime 2272.2 << running 2277.4 [migrated]
+3288.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2270.6 << running 2277.5
+3288.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2270.5999999999963,,vruntime 2270.6 << running 2277.5
+3296.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 2277.5 << running 2284.2
+3296.0,DISPATCH,0,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2277.499999999996,,vruntime 2277.5 << running 2284.2 [migrated]
+3296.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 2277.4 << running 2284.9
+3296.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2277.3999999999955,,vruntime 2277.4 << running 2284.9 [migrated]
+3308.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2284.2 << running 2291.8
+3308.0,DISPATCH,1,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,2284.199999999996,,vruntime 2284.2 << running 2291.8 [migrated]
+3308.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2284.9 << running 2290.5
+3308.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2284.899999999995,,vruntime 2284.9 << running 2290.5 [migrated]
+3316.0,PREEMPT,0,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2290.5 << running 2297.1
+3316.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2290.4999999999964,,vruntime 2290.5 << running 2297.1 [migrated]
+3316.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2291.8 << running 2297.0
+3316.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2291.799999999996,,vruntime 2291.8 << running 2297.0 [migrated]
+3328.0,PREEMPT,1,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 2297.1 << running 2303.8
+3328.0,DISPATCH,1,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2297.099999999996,,vruntime 2297.1 << running 2303.8 [migrated]
+3328.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 2297.0 << running 2304.5
+3328.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2296.9999999999955,,vruntime 2297.0 << running 2304.5 [migrated]
+3336.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2304.5 << running 2310.1
+3336.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2304.499999999995,,vruntime 2304.5 << running 2310.1 [migrated]
+3336.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2303.8 << running 2311.4
+3336.0,DISPATCH,2,req_0004,inference,decode,cfs_lower_vruntime,bg_005,,,2303.799999999996,,vruntime 2303.8 << running 2311.4 [migrated]
+3347.0,PREEMPT,1,bg_002,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2310.1 << running 2315.7
+3347.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_002,,,2310.0999999999963,,vruntime 2310.1 << running 2315.7 [migrated]
+3347.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2311.4 << running 2315.6
+3347.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2311.399999999996,,vruntime 2311.4 << running 2315.6 [migrated]
+3355.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 2315.6 << running 2323.1
+3355.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2315.5999999999954,,vruntime 2315.6 << running 2323.1 [migrated]
+3355.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_002,,,,,vruntime 2315.7 << running 2322.4
+3355.0,DISPATCH,2,bg_002,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2315.6999999999957,,vruntime 2315.7 << running 2322.4 [migrated]
+3360.282,COMPLETE,,bg_002,background,done,,,,,,,cpu=1824.9ms preemptions=53
+3361.0,DISPATCH,2,req_0004,inference,decode,cfs_idle_core,,,,2322.399999999996,,
+3364.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2323.1 << running 2328.0
+3364.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,2323.099999999995,,vruntime 2323.1 << running 2328.0 [migrated]
+3373.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2328.0 << running 2335.7
+3373.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,2327.999999999996,,vruntime 2328.0 << running 2335.7 [migrated]
+3381.0,PREEMPT,2,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 2335.7 << running 2342.3
+3381.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2335.699999999996,,vruntime 2335.7 << running 2342.3 [migrated]
+3389.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2342.3 << running 2349.2
+3389.0,DISPATCH,0,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,2342.299999999996,,vruntime 2342.3 << running 2349.2 [migrated]
+3397.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 2349.2 << running 2355.7
+3397.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2349.1999999999953,,vruntime 2349.2 << running 2355.7 [migrated]
+3409.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2355.7 << running 2363.6
+3409.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,2355.699999999995,,vruntime 2355.7 << running 2363.6 [migrated]
+3414.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2363.6 << running 2368.3
+3414.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,2363.599999999996,,vruntime 2363.6 << running 2368.3 [migrated]
+3423.0,PREEMPT,0,req_0004,inference,decode,cfs_lower_vruntime,bg_004,,,,,vruntime 2368.3 << running 2375.9
+3423.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0004,,,2368.299999999996,,vruntime 2368.3 << running 2375.9 [migrated]
+3431.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0004,,,,,vruntime 2375.9 << running 2382.8
+3431.0,DISPATCH,3,req_0004,inference,decode,cfs_lower_vruntime,bg_003,,,2375.899999999996,,vruntime 2375.9 << running 2382.8 [migrated]
+3438.318,COMPLETE,,req_0004,inference,done,,,,,,,cpu=1147.4ms preemptions=56
+3439.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_idle_core,,,,2382.799999999995,,
+3814.0,ARRIVE,,bg_006,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=870.0ms
+3814.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_006,,,,,vruntime 2756.7 << running 2763.2
+3814.0,DISPATCH,2,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2756.6999999999953,,vruntime 2756.7 << running 2763.2
+3822.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2763.2 << running 2768.3
+3822.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2763.1999999999957,,vruntime 2763.2 << running 2768.3 [migrated]
+3830.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2768.3 << running 2774.9
+3830.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2768.2999999999947,,vruntime 2768.3 << running 2774.9 [migrated]
+3838.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2774.9 << running 2781.7
+3838.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2774.899999999996,,vruntime 2774.9 << running 2781.7 [migrated]
+3846.0,PREEMPT,2,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2781.7 << running 2788.6
+3846.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,2781.6999999999953,,vruntime 2781.7 << running 2788.6 [migrated]
+3853.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_006,,,,,vruntime 2788.6 << running 2793.8
+3853.0,DISPATCH,1,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2788.5999999999954,,vruntime 2788.6 << running 2793.8 [migrated]
+3861.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2793.8 << running 2798.9
+3861.0,DISPATCH,0,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2793.7999999999956,,vruntime 2793.8 << running 2798.9 [migrated]
+3869.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2798.9 << running 2805.5
+3869.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2798.8999999999946,,vruntime 2798.9 << running 2805.5 [migrated]
+3877.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2805.5 << running 2812.3
+3877.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2805.499999999996,,vruntime 2805.5 << running 2812.3 [migrated]
+3885.0,PREEMPT,1,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2812.3 << running 2820.2
+3885.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,2812.299999999995,,vruntime 2812.3 << running 2820.2 [migrated]
+3893.0,PREEMPT,0,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_006,,,,,vruntime 2820.2 << running 2825.4
+3893.0,DISPATCH,0,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2820.1999999999953,,vruntime 2820.2 << running 2825.4 [migrated]
+3902.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2825.4 << running 2831.5
+3902.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2825.3999999999955,,vruntime 2825.4 << running 2831.5 [migrated]
+3910.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2831.5 << running 2838.1
+3910.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2831.4999999999945,,vruntime 2831.5 << running 2838.1 [migrated]
+3918.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2838.1 << running 2844.9
+3918.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2838.099999999996,,vruntime 2838.1 << running 2844.9 [migrated]
+3926.0,PREEMPT,0,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2844.9 << running 2852.8
+3926.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,2844.899999999995,,vruntime 2844.9 << running 2852.8 [migrated]
+3934.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_006,,,,,vruntime 2852.8 << running 2857.0
+3934.0,DISPATCH,3,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2852.799999999995,,vruntime 2852.8 << running 2857.0 [migrated]
+3943.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2857.0 << running 2864.1
+3943.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2856.9999999999955,,vruntime 2857.0 << running 2864.1 [migrated]
+3951.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2864.1 << running 2870.7
+3951.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2864.0999999999945,,vruntime 2864.1 << running 2870.7 [migrated]
+3959.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2870.7 << running 2877.5
+3959.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2870.6999999999957,,vruntime 2870.7 << running 2877.5 [migrated]
+3967.0,PREEMPT,3,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2877.5 << running 2885.4
+3967.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,2877.499999999995,,vruntime 2877.5 << running 2885.4 [migrated]
+3979.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_006,,,,,vruntime 2885.4 << running 2892.6
+3979.0,DISPATCH,2,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2885.399999999995,,vruntime 2885.4 << running 2892.6 [migrated]
+3987.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2892.6 << running 2899.7
+3987.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2892.5999999999954,,vruntime 2892.6 << running 2899.7 [migrated]
+3995.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2899.7 << running 2906.3
+3995.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2899.6999999999944,,vruntime 2899.7 << running 2906.3 [migrated]
+4003.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2906.3 << running 2913.1
+4003.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2906.2999999999956,,vruntime 2906.3 << running 2913.1 [migrated]
+4015.0,PREEMPT,2,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2913.1 << running 2921.0
+4015.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,2913.099999999995,,vruntime 2913.1 << running 2921.0 [migrated]
+4023.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_006,,,,,vruntime 2921.0 << running 2928.2
+4023.0,DISPATCH,1,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2920.999999999995,,vruntime 2921.0 << running 2928.2 [migrated]
+4029.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_005,,,,,vruntime 2928.2 << running 2933.3
+4029.0,DISPATCH,0,bg_005,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2928.1999999999953,,vruntime 2928.2 << running 2933.3 [migrated]
+4037.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2933.3 << running 2939.9
+4037.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2933.2999999999943,,vruntime 2933.3 << running 2939.9 [migrated]
+4049.0,PREEMPT,0,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2939.9 << running 2947.8
+4049.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2939.8999999999955,,vruntime 2939.9 << running 2947.8 [migrated]
+4057.0,PREEMPT,2,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2947.8 << running 2954.7
+4057.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2947.799999999995,,vruntime 2947.8 << running 2954.7 [migrated]
+4065.0,PREEMPT,1,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2954.7 << running 2962.6
+4065.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,2954.699999999995,,vruntime 2954.7 << running 2962.6 [migrated]
+4074.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_006,,,,,vruntime 2962.6 << running 2969.9
+4074.0,DISPATCH,3,bg_006,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2962.599999999995,,vruntime 2962.6 << running 2969.9 [migrated]
+4086.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 2969.9 << running 2976.5
+4086.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,2969.899999999994,,vruntime 2969.9 << running 2976.5 [migrated]
+4094.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 2976.5 << running 2984.4
+4094.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,2976.4999999999955,,vruntime 2976.5 << running 2984.4 [migrated]
+4102.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 2984.4 << running 2991.3
+4102.0,DISPATCH,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,2984.399999999995,,vruntime 2984.4 << running 2991.3 [migrated]
+4110.0,PREEMPT,3,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 2991.3 << running 2998.2
+4110.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,2991.2999999999947,,vruntime 2991.3 << running 2998.2 [migrated]
+4121.0,PREEMPT,0,req_0002,inference,decode,cfs_lower_vruntime,bg_006,,,,,vruntime 2998.2 << running 3004.5
+4121.0,DISPATCH,0,bg_006,background,cpu_bound,cfs_lower_vruntime,req_0002,,,2998.199999999995,,vruntime 2998.2 << running 3004.5 [migrated]
+4129.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 3004.5 << running 3011.1
+4129.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,3004.499999999994,,vruntime 3004.5 << running 3011.1 [migrated]
+4137.0,PREEMPT,1,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 3011.1 << running 3019.0
+4137.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,3011.0999999999954,,vruntime 3011.1 << running 3019.0 [migrated]
+4145.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 3019.0 << running 3025.9
+4145.0,DISPATCH,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_003,,,3018.999999999995,,vruntime 3019.0 << running 3025.9 [migrated]
+4157.0,PREEMPT,0,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,,,vruntime 3025.9 << running 3033.8
+4157.0,DISPATCH,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,3025.8999999999946,,vruntime 3025.9 << running 3033.8 [migrated]
+4163.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_006,,,,,vruntime 3033.8 << running 3038.1
+4163.0,DISPATCH,2,bg_006,background,cpu_bound,cfs_lower_vruntime,req_0002,,,3033.7999999999947,,vruntime 3033.8 << running 3038.1 [migrated]
+4171.0,PREEMPT,1,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 3038.1 << running 3044.7
+4171.0,DISPATCH,1,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,3038.099999999994,,vruntime 3038.1 << running 3044.7 [migrated]
+4179.0,PREEMPT,3,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 3044.7 << running 3052.6
+4179.0,DISPATCH,3,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,3044.6999999999953,,vruntime 3044.7 << running 3052.6 [migrated]
+4187.0,PREEMPT,2,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 3052.6 << running 3057.4
+4187.0,DISPATCH,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_006,,,3052.599999999995,,vruntime 3052.6 << running 3057.4 [migrated]
+4195.0,PREEMPT,0,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_006,,,,,vruntime 3057.4 << running 3063.5
+4195.0,DISPATCH,0,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_003,,,3057.3999999999946,,vruntime 3057.4 << running 3063.5 [migrated]
+4203.0,PREEMPT,1,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 3063.5 << running 3069.7
+4203.0,DISPATCH,1,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,3063.4999999999945,,vruntime 3063.5 << running 3069.7 [migrated]
+4211.0,PREEMPT,3,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 3069.7 << running 3076.3
+4211.0,DISPATCH,3,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,3069.699999999994,,vruntime 3069.7 << running 3076.3 [migrated]
+4219.0,PREEMPT,2,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 3076.3 << running 3084.2
+4219.0,DISPATCH,2,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_005,,,3076.299999999995,,vruntime 3076.3 << running 3084.2 [migrated]
+4227.0,PREEMPT,0,bg_006,background,cpu_bound,cfs_lower_vruntime,bg_005,,,,,vruntime 3084.2 << running 3089.0
+4227.0,DISPATCH,0,bg_005,background,cpu_bound,cfs_lower_vruntime,bg_006,,,3084.199999999995,,vruntime 3084.2 << running 3089.0 [migrated]
+4231.955,COMPLETE,,bg_005,background,done,,,,,,,cpu=1206.1ms preemptions=37
+4232.0,DISPATCH,0,bg_006,background,cpu_bound,cfs_idle_core,,,,3088.9999999999945,,
+4769.848,COMPLETE,,bg_006,background,done,,,,,,,cpu=870.0ms preemptions=10
+5654.0,ARRIVE,,bg_007,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2972.6ms
+5654.0,DISPATCH,0,bg_007,background,cpu_bound,cfs_idle_core,,,,4508.899999999995,,
+5698.0,ARRIVE,,bg_008,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1637.9ms
+5698.0,PREEMPT,1,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_008,,,,,vruntime 4551.8 << running 4558.1
+5698.0,DISPATCH,1,bg_008,background,cpu_bound,cfs_lower_vruntime,bg_003,,,4551.799999999995,,vruntime 4551.8 << running 4558.1
+5706.0,PREEMPT,3,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 4558.1 << running 4564.3
+5706.0,DISPATCH,3,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,4558.099999999995,,vruntime 4558.1 << running 4564.3 [migrated]
+5714.0,PREEMPT,2,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 4564.3 << running 4570.9
+5714.0,DISPATCH,2,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,4564.299999999994,,vruntime 4564.3 << running 4570.9 [migrated]
+5722.0,PREEMPT,0,bg_007,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 4570.9 << running 4576.8
+5722.0,DISPATCH,0,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_007,,,4570.899999999995,,vruntime 4570.9 << running 4576.8 [migrated]
+5730.0,PREEMPT,1,bg_008,background,cpu_bound,cfs_lower_vruntime,bg_007,,,,,vruntime 4576.8 << running 4583.7
+5730.0,DISPATCH,1,bg_007,background,cpu_bound,cfs_lower_vruntime,bg_008,,,4576.799999999995,,vruntime 4576.8 << running 4583.7 [migrated]
+5738.0,PREEMPT,3,bg_003,background,cpu_bound,cfs_lower_vruntime,bg_008,,,,,vruntime 4583.7 << running 4589.7
+5738.0,DISPATCH,3,bg_008,background,cpu_bound,cfs_lower_vruntime,bg_003,,,4583.699999999994,,vruntime 4583.7 << running 4589.7 [migrated]
+5746.0,PREEMPT,2,req_0002,inference,decode,cfs_lower_vruntime,bg_003,,,,,vruntime 4589.7 << running 4595.9
+5746.0,DISPATCH,2,bg_003,background,cpu_bound,cfs_lower_vruntime,req_0002,,,4589.699999999995,,vruntime 4589.7 << running 4595.9 [migrated]
+5754.0,PREEMPT,0,bg_004,background,cpu_bound,cfs_lower_vruntime,req_0002,,,,,vruntime 4595.9 << running 4602.5
+5754.0,DISPATCH,0,req_0002,inference,decode,cfs_lower_vruntime,bg_004,,,4595.899999999994,,vruntime 4595.9 << running 4602.5 [migrated]
+5761.0,PREEMPT,1,bg_007,background,cpu_bound,cfs_lower_vruntime,bg_004,,,,,vruntime 4602.5 << running 4607.4
+5761.0,DISPATCH,1,bg_004,background,cpu_bound,cfs_lower_vruntime,bg_007,,,4602.499999999995,,vruntime 4602.5 << running 4607.4 [migrated]
+5761.467,COMPLETE,,bg_004,background,done,,,,,,,cpu=3143.7ms preemptions=55
+5762.0,DISPATCH,1,bg_007,background,cpu_bound,cfs_idle_core,,,,4607.399999999995,,
+6406.77,COMPLETE,,bg_003,background,done,,,,,,,cpu=4240.5ms preemptions=67
+7190.0,ARRIVE,,bg_009,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=994.0ms
+7190.0,DISPATCH,2,bg_009,background,cpu_bound,cfs_idle_core,,,,6029.4999999999945,,
+7344.391,COMPLETE,,bg_008,background,done,,,,,,,cpu=1637.9ms preemptions=1
+8184.079,COMPLETE,,bg_009,background,done,,,,,,,cpu=994.0ms preemptions=0
+8504.0,ARRIVE,,bg_010,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1772.3ms
+8504.0,DISPATCH,2,bg_010,background,cpu_bound,cfs_idle_core,,,,7344.4999999999945,,
+8636.156,COMPLETE,,bg_007,background,done,,,,,,,cpu=2972.6ms preemptions=2
+9019.0,ARRIVE,,bg_011,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2088.1ms
+9019.0,DISPATCH,1,bg_011,background,cpu_bound,cfs_idle_core,,,,7855.399999999994,,
+9958.592,COMPLETE,,req_0002,inference,done,,,,,,,cpu=8677.2ms preemptions=69
+10276.36,COMPLETE,,bg_010,background,done,,,,,,,cpu=1772.3ms preemptions=0
+11107.194,COMPLETE,,bg_011,background,done,,,,,,,cpu=2088.1ms preemptions=0

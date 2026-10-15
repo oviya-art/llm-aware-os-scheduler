@@ -1,0 +1,3 @@
+# The scheduling engine, simulator, tests and CLI use ONLY the Python standard library.
+# psutil is needed only for the optional real-OS actuator (os_actuator.py).
+psutil>=5.9

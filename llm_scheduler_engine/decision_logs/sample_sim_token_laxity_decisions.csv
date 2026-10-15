@@ -1,0 +1,100 @@
+t_ms,event,core,task_id,task_kind,phase,reason,other_task_id,laxity_ms,norm_laxity,key,pred_service_ms,detail
+510.0,ARRIVE,,req_0001,inference,prefill,,,,,,,prompt=33 bursts=32 total_service=769.4ms
+510.0,DISPATCH,0,req_0001,inference,prefill,fill_idle_core,,259.06,0.8635,0.6135,40.94,lam=0.86 L=259.1ms key=0.61 protected
+637.0,ARRIVE,,req_0002,inference,prefill,,,,,,,prompt=474 bursts=254 total_service=8677.2ms
+637.0,DISPATCH,1,req_0002,inference,prefill,fill_idle_core,,704.576,0.8807,0.7807,94.724,lam=0.88 L=704.6ms key=0.78 protected
+754.0,ARRIVE,,bg_001,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1190.0ms
+754.0,DISPATCH,2,bg_001,background,cpu_bound,fill_idle_core,,,,2.9998,,bg_key=3.00
+1014.0,ARRIVE,,bg_002,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1824.9ms
+1014.0,DISPATCH,3,bg_002,background,cpu_bound,fill_idle_core,,,,3.0,,bg_key=3.00
+1279.525,COMPLETE,,req_0001,inference,done,,,,,,,cpu=769.4ms preemptions=0
+1532.0,ARRIVE,,bg_003,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=4240.5ms
+1532.0,DISPATCH,0,bg_003,background,cpu_bound,fill_idle_core,,,,2.9996,,bg_key=3.00
+1750.0,ARRIVE,,req_0003,inference,prefill,,,,,,,prompt=43 bursts=19 total_service=460.5ms
+1766.0,ARRIVE,,req_0004,inference,prefill,,,,,,,prompt=48 bursts=55 total_service=1147.4ms
+1832.0,PREEMPT,0,bg_003,background,cpu_bound,preempt_background,req_0003,,,,,lam=0.59 L=177.9ms key=0.34 protected | evicts bg_003 (key=3.00)
+1832.0,DISPATCH,0,req_0003,inference,prefill,preempt_background,bg_003,177.947,0.5932,0.3432,40.053,lam=0.59 L=177.9ms key=0.34 protected | evicts bg_003 (key=3.00)
+1846.0,PREEMPT,2,bg_001,background,cpu_bound,preempt_background,req_0004,,,,,lam=0.59 L=178.5ms key=0.34 protected | evicts bg_001 (key=3.00)
+1846.0,DISPATCH,2,req_0004,inference,prefill,preempt_background,bg_001,178.46,0.5949,0.3449,40.64,lam=0.59 L=178.5ms key=0.34 protected | evicts bg_001 (key=3.00)
+1986.0,PREEMPT,3,bg_002,background,cpu_bound,bg_aging_rotation,bg_003,,,,,bg_key=2.69 | evicts bg_002 (key=3.00)
+1986.0,DISPATCH,3,bg_003,background,cpu_bound,bg_aging_rotation,bg_002,,,2.692,,bg_key=2.69 | evicts bg_002 (key=3.00) [migrated]
+1998.0,PREEMPT,3,bg_003,background,cpu_bound,bg_aging_rotation,bg_001,,,,,bg_key=2.70 | evicts bg_003 (key=3.00)
+1998.0,DISPATCH,3,bg_001,background,cpu_bound,bg_aging_rotation,bg_003,,,2.696,,bg_key=2.70 | evicts bg_003 (key=3.00) [migrated]
+2096.503,COMPLETE,,bg_001,background,done,,,,,,,cpu=1190.0ms preemptions=1
+2097.0,DISPATCH,3,bg_002,background,cpu_bound,fill_idle_core,,,,2.778,,bg_key=2.78
+2100.0,ARRIVE,,bg_004,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=3143.7ms
+2152.0,PREEMPT,3,bg_002,background,cpu_bound,bg_aging_rotation,bg_003,,,,,bg_key=2.69 | evicts bg_002 (key=3.00)
+2152.0,DISPATCH,3,bg_003,background,cpu_bound,bg_aging_rotation,bg_002,,,2.692,,bg_key=2.69 | evicts bg_002 (key=3.00)
+2251.0,PREEMPT,3,bg_003,background,cpu_bound,bg_aging_rotation,bg_004,,,,,bg_key=2.70 | evicts bg_003 (key=3.00)
+2251.0,DISPATCH,3,bg_004,background,cpu_bound,bg_aging_rotation,bg_003,,,2.6962,,bg_key=2.70 | evicts bg_003 (key=3.00)
+2292.618,COMPLETE,,req_0003,inference,done,,,,,,,cpu=460.5ms preemptions=0
+2293.0,DISPATCH,0,bg_002,background,cpu_bound,fill_idle_core,,,,2.718,,bg_key=2.72 [migrated]
+2404.0,PREEMPT,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_003,,,,,bg_key=2.69 | evicts bg_002 (key=3.00)
+2404.0,DISPATCH,0,bg_003,background,cpu_bound,bg_aging_rotation,bg_002,,,2.694,,bg_key=2.69 | evicts bg_002 (key=3.00) [migrated]
+2558.0,PREEMPT,0,bg_003,background,cpu_bound,bg_aging_rotation,bg_002,,,,,bg_key=2.69 | evicts bg_003 (key=3.00)
+2558.0,DISPATCH,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_003,,,2.692,,bg_key=2.69 | evicts bg_003 (key=3.00)
+2691.0,ARRIVE,,bg_005,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1206.1ms
+2711.0,PREEMPT,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_003,,,,,bg_key=2.69 | evicts bg_002 (key=3.00)
+2711.0,DISPATCH,0,bg_003,background,cpu_bound,bg_aging_rotation,bg_002,,,2.694,,bg_key=2.69 | evicts bg_002 (key=3.00)
+2842.0,PREEMPT,0,bg_003,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.70 | evicts bg_003 (key=3.00)
+2842.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_003,,,2.6976,,bg_key=2.70 | evicts bg_003 (key=3.00)
+2863.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_002,,,,,bg_key=2.70 | evicts bg_005 (key=3.00)
+2863.0,DISPATCH,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_005,,,2.696,,bg_key=2.70 | evicts bg_005 (key=3.00)
+2993.518,COMPLETE,,req_0004,inference,done,,,,,,,cpu=1147.4ms preemptions=0
+2994.0,DISPATCH,2,bg_003,background,cpu_bound,fill_idle_core,,,,2.696,,bg_key=2.70 [migrated]
+3014.0,PREEMPT,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.70 | evicts bg_002 (key=3.00)
+3014.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_002,,,2.698,,bg_key=2.70 | evicts bg_002 (key=3.00)
+3166.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_002,,,,,bg_key=2.70 | evicts bg_005 (key=3.00)
+3166.0,DISPATCH,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_005,,,2.696,,bg_key=2.70 | evicts bg_005 (key=3.00)
+3317.0,PREEMPT,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.70 | evicts bg_002 (key=3.00)
+3317.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_002,,,2.698,,bg_key=2.70 | evicts bg_002 (key=3.00)
+3468.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_002,,,,,bg_key=2.70 | evicts bg_005 (key=3.00)
+3468.0,DISPATCH,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_005,,,2.698,,bg_key=2.70 | evicts bg_005 (key=3.00)
+3622.0,PREEMPT,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.69 | evicts bg_002 (key=3.00)
+3622.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_002,,,2.692,,bg_key=2.69 | evicts bg_002 (key=3.00)
+3773.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_002,,,,,bg_key=2.70 | evicts bg_005 (key=3.00)
+3773.0,DISPATCH,0,bg_002,background,cpu_bound,bg_aging_rotation,bg_005,,,2.698,,bg_key=2.70 | evicts bg_005 (key=3.00)
+3814.0,ARRIVE,,bg_006,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=870.0ms
+3851.982,COMPLETE,,bg_002,background,done,,,,,,,cpu=1824.9ms preemptions=7
+3852.0,DISPATCH,0,bg_005,background,cpu_bound,fill_idle_core,,,,2.842,,bg_key=2.84
+3965.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,,,bg_key=2.70 | evicts bg_005 (key=3.00)
+3965.0,DISPATCH,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,2.697,,bg_key=2.70 | evicts bg_005 (key=3.00)
+4118.0,PREEMPT,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.69 | evicts bg_006 (key=3.00)
+4118.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,2.694,,bg_key=2.69 | evicts bg_006 (key=3.00)
+4270.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,,,bg_key=2.70 | evicts bg_005 (key=3.00)
+4270.0,DISPATCH,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,2.696,,bg_key=2.70 | evicts bg_005 (key=3.00)
+4421.0,PREEMPT,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.70 | evicts bg_006 (key=3.00)
+4421.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,2.698,,bg_key=2.70 | evicts bg_006 (key=3.00)
+4573.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,,,bg_key=2.70 | evicts bg_005 (key=3.00)
+4573.0,DISPATCH,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,2.696,,bg_key=2.70 | evicts bg_005 (key=3.00)
+4726.0,PREEMPT,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.69 | evicts bg_006 (key=3.00)
+4726.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,2.694,,bg_key=2.69 | evicts bg_006 (key=3.00)
+4880.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,,,bg_key=2.69 | evicts bg_005 (key=3.00)
+4880.0,DISPATCH,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,2.692,,bg_key=2.69 | evicts bg_005 (key=3.00)
+5034.0,PREEMPT,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.69 | evicts bg_006 (key=3.00)
+5034.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,2.692,,bg_key=2.69 | evicts bg_006 (key=3.00)
+5187.0,PREEMPT,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,,,bg_key=2.69 | evicts bg_005 (key=3.00)
+5187.0,DISPATCH,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,2.694,,bg_key=2.69 | evicts bg_005 (key=3.00)
+5341.0,PREEMPT,0,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.69 | evicts bg_006 (key=3.00)
+5341.0,DISPATCH,0,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,2.692,,bg_key=2.69 | evicts bg_006 (key=3.00)
+5349.055,COMPLETE,,bg_005,background,done,,,,,,,cpu=1206.1ms preemptions=9
+5350.0,DISPATCH,0,bg_006,background,cpu_bound,fill_idle_core,,,,2.982,,bg_key=2.98
+5394.767,COMPLETE,,bg_004,background,done,,,,,,,cpu=3143.7ms preemptions=0
+5455.648,COMPLETE,,bg_006,background,done,,,,,,,cpu=870.0ms preemptions=5
+5654.0,ARRIVE,,bg_007,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2972.6ms
+5654.0,DISPATCH,0,bg_007,background,cpu_bound,fill_idle_core,,,,2.9984,,bg_key=3.00
+5698.0,ARRIVE,,bg_008,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1637.9ms
+5698.0,DISPATCH,3,bg_008,background,cpu_bound,fill_idle_core,,,,2.9984,,bg_key=3.00
+6539.97,COMPLETE,,bg_003,background,done,,,,,,,cpu=4240.5ms preemptions=5
+7190.0,ARRIVE,,bg_009,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=994.0ms
+7190.0,DISPATCH,2,bg_009,background,cpu_bound,fill_idle_core,,,,2.9992,,bg_key=3.00
+7335.991,COMPLETE,,bg_008,background,done,,,,,,,cpu=1637.9ms preemptions=0
+8184.079,COMPLETE,,bg_009,background,done,,,,,,,cpu=994.0ms preemptions=0
+8504.0,ARRIVE,,bg_010,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1772.3ms
+8504.0,DISPATCH,2,bg_010,background,cpu_bound,fill_idle_core,,,,2.998,,bg_key=3.00
+8626.656,COMPLETE,,bg_007,background,done,,,,,,,cpu=2972.6ms preemptions=0
+9019.0,ARRIVE,,bg_011,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2088.1ms
+9019.0,DISPATCH,0,bg_011,background,cpu_bound,fill_idle_core,,,,2.9985,,bg_key=3.00
+9314.292,COMPLETE,,req_0002,inference,done,,,,,,,cpu=8677.2ms preemptions=0
+10276.36,COMPLETE,,bg_010,background,done,,,,,,,cpu=1772.3ms preemptions=0
+11107.194,COMPLETE,,bg_011,background,done,,,,,,,cpu=2088.1ms preemptions=0

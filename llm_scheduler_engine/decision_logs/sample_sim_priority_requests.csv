@@ -1,0 +1,5 @@
+request_id,category,request_type,priority_metadata,arrival_time_s,deadline_target_itl_ms,ttft_budget_ms,ttft_ms,ttft_missed,tokens_generated,avg_itl_ms,p95_itl_ms,p99_itl_ms,max_itl_ms,itl_violation_count,itl_violation_rate_pct,min_slack_ms,avg_slack_ms,completion_ms,isolated_service_ms,slowdown,sla_attained,preemptions,migrations,trace_ttft_ms,trace_avg_itl_ms
+req_0001,short,interactive,high,0.51,30.0,300.0,33.325,False,31,23.748,25.86,35.964,40.277,1,3.23,-10.277,6.252,769.525,769.425,1.0,True,0,0,60.66,43.358
+req_0002,medium,standard,normal,0.6363,50.0,800.0,82.102,False,253,36.487,54.178,80.852,86.885,23,9.09,-36.885,13.513,9313.292,8677.192,1.073,False,59,48,148.434,62.03
+req_0003,short,interactive,high,1.75,30.0,300.0,31.336,False,18,23.849,46.933,49.116,49.661,2,11.11,-19.661,6.151,460.618,460.518,1.0,False,0,0,57.028,43.541
+req_0004,short,interactive,high,1.7651,30.0,300.0,29.167,False,54,20.727,24.942,33.986,42.53,1,1.85,-12.53,9.273,1148.418,1147.418,1.001,True,0,0,51.424,37.841

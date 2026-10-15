@@ -1,0 +1,756 @@
+t_ms,event,core,task_id,task_kind,phase,reason,other_task_id,laxity_ms,norm_laxity,key,pred_service_ms,detail
+510.0,ARRIVE,,req_0001,inference,prefill,,,,,,,prompt=33 bursts=32 total_service=769.4ms
+510.0,DISPATCH,0,req_0001,inference,prefill,rr_next_in_queue,,,,,,
+637.0,ARRIVE,,req_0002,inference,prefill,,,,,,,prompt=474 bursts=254 total_service=8677.2ms
+637.0,DISPATCH,1,req_0002,inference,prefill,rr_next_in_queue,,,,,,
+754.0,ARRIVE,,bg_001,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1190.0ms
+754.0,DISPATCH,2,bg_001,background,cpu_bound,rr_next_in_queue,,,,,,
+1014.0,ARRIVE,,bg_002,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1824.9ms
+1014.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,,
+1279.525,COMPLETE,,req_0001,inference,done,,,,,,,cpu=769.4ms preemptions=0
+1532.0,ARRIVE,,bg_003,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=4240.5ms
+1532.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,,
+1750.0,ARRIVE,,req_0003,inference,prefill,,,,,,,prompt=43 bursts=19 total_service=460.5ms
+1750.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+1750.0,DISPATCH,3,req_0003,inference,prefill,rr_next_in_queue,,,,,,
+1766.0,ARRIVE,,req_0004,inference,prefill,,,,,,,prompt=48 bursts=55 total_service=1147.4ms
+1770.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+1770.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1770.0,PREEMPT,2,bg_001,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+1770.0,DISPATCH,2,req_0004,inference,prefill,rr_next_in_queue,,,,,,
+1774.0,PREEMPT,3,req_0003,inference,prefill,rr_next_in_queue,req_0002,,,,,
+1774.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1792.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+1792.0,DISPATCH,1,req_0003,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+1792.0,PREEMPT,2,req_0004,inference,prefill,rr_next_in_queue,bg_001,,,,,
+1792.0,DISPATCH,2,bg_001,background,cpu_bound,rr_next_in_queue,,,,,,
+1796.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+1796.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1812.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+1812.0,DISPATCH,0,req_0004,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+1816.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,req_0002,,,,,
+1816.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1816.0,PREEMPT,2,bg_001,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+1816.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1819.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+1819.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1836.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_001,,,,,
+1836.0,DISPATCH,0,bg_001,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1840.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+1840.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1840.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+1840.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,,
+1860.0,PREEMPT,0,bg_001,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+1860.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1860.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0003,,,,,
+1860.0,DISPATCH,1,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1864.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_001,,,,,
+1864.0,DISPATCH,2,bg_001,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1864.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+1864.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1884.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+1884.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1884.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+1884.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1886.0,PREEMPT,2,bg_001,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+1886.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1886.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0003,,,,,
+1886.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1906.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_001,,,,,
+1906.0,DISPATCH,0,bg_001,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1906.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+1906.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1910.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+1910.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1910.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+1910.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1927.0,PREEMPT,0,bg_001,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+1927.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1927.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0003,,,,,
+1927.0,DISPATCH,1,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1931.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_001,,,,,
+1931.0,DISPATCH,2,bg_001,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1931.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+1931.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1950.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+1950.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1950.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+1950.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1952.0,PREEMPT,2,bg_001,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+1952.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1952.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0003,,,,,
+1952.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1972.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_001,,,,,
+1972.0,DISPATCH,0,bg_001,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1972.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+1972.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1976.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+1976.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1976.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+1976.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1994.0,PREEMPT,0,bg_001,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+1994.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1994.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0003,,,,,
+1994.0,DISPATCH,1,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+1998.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_001,,,,,
+1998.0,DISPATCH,2,bg_001,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+1998.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+1998.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2015.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2015.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2015.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2015.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2020.0,PREEMPT,2,bg_001,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2020.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2020.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0003,,,,,
+2020.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2037.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_001,,,,,
+2037.0,DISPATCH,0,bg_001,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2037.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2037.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2041.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2041.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2041.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2041.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2058.003,COMPLETE,,bg_001,background,done,,,,,,,cpu=1190.0ms preemptions=8
+2059.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2059.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0003,,,,,
+2059.0,DISPATCH,1,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2063.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2063.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2080.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2080.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2084.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0003,,,,,
+2084.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2100.0,ARRIVE,,bg_004,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=3143.7ms
+2100.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2100.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2102.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2102.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,,
+2107.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2107.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2107.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2107.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2123.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2123.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2123.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2123.0,DISPATCH,1,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2131.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2131.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2131.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2131.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2145.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2145.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2145.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2145.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2153.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2153.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2153.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2153.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2166.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2166.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2166.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2166.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2174.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2174.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2174.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2174.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2190.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2190.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2190.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2190.0,DISPATCH,1,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2198.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2198.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2198.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2198.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2212.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2212.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2212.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2212.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2220.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2220.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2220.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2220.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2235.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2235.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2235.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2235.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2241.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2241.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2241.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2241.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2257.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2257.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2257.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2257.0,DISPATCH,1,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2262.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2262.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2262.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2262.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2279.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2279.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2279.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2279.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2283.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2283.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2283.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2283.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2303.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2303.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2303.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2303.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2307.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2307.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2307.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2307.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2327.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2327.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2327.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2327.0,DISPATCH,1,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2330.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2330.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2330.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2330.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2349.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2349.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2349.0,PREEMPT,1,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2349.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2353.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2353.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2353.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2353.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2372.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2372.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2372.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2372.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2375.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2375.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2375.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2375.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2396.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2396.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,,
+2396.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2396.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,,
+2417.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2417.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,,
+2417.0,PREEMPT,3,req_0003,inference,decode,rr_next_in_queue,bg_002,,,,,
+2417.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,,
+2439.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2439.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,,
+2439.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0003,,,,,
+2439.0,DISPATCH,3,req_0003,inference,decode,rr_next_in_queue,,,,,,
+2460.018,COMPLETE,,req_0003,inference,done,,,,,,,cpu=460.5ms preemptions=20
+2461.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+2461.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,,
+2461.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,,
+2481.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2481.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2484.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2484.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2504.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2504.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2508.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2508.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2524.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2524.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2528.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2528.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2531.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2531.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2547.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2547.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2551.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2551.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2555.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2555.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2567.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+2567.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2571.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2571.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2575.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2575.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2579.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2579.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2591.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2591.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2595.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+2595.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2599.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2599.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2603.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2603.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2615.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2615.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2619.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2619.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2623.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+2623.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2627.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2627.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2637.0,PREEMPT,0,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2637.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2641.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2641.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2645.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2645.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2648.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+2648.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2660.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2660.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2663.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2663.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2667.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2667.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2671.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+2671.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2682.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+2682.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2684.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2684.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2688.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2688.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2691.0,ARRIVE,,bg_005,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1206.1ms
+2695.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2695.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2703.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2703.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,,
+2707.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2707.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2711.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2711.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2718.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2718.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2726.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2726.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2729.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2729.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2733.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2733.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2741.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2741.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2748.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2748.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2752.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2752.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2756.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2756.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2764.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2764.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2772.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2772.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2775.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2775.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2779.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2779.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2787.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2787.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2795.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2795.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2799.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2799.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2803.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2803.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2811.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2811.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2819.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2819.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2823.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2823.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2827.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2827.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2833.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2833.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2841.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2841.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2845.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2845.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2848.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2848.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2856.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2856.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2864.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2864.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2868.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2868.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2872.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2872.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2878.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2878.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2886.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2886.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2890.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2890.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2894.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2894.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2900.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2900.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2908.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2908.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2912.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2912.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2916.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2916.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2924.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2924.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2929.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2929.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2933.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2933.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2938.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2938.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2946.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2946.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2950.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2950.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2954.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2954.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2962.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2962.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2967.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2967.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2971.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2971.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2975.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+2975.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2983.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2983.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2989.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+2989.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+2995.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2995.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2999.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+2999.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3007.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3007.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3011.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3011.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3019.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3019.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3020.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3020.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3028.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3028.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3032.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3032.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3041.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3041.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3041.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3041.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3050.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3050.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3054.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3054.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3062.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3062.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3062.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3062.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3074.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3074.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3076.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3076.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3083.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3083.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3083.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3083.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3095.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3095.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3099.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3099.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3107.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3107.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3107.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3107.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3117.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3117.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3121.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3121.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3129.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3129.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3129.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3129.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3141.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3141.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3145.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3145.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3150.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3150.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3150.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3150.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3162.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3162.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3169.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3169.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3173.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3173.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3173.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3173.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3185.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3185.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3192.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3192.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3196.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3196.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3196.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3196.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3208.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3208.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3216.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3216.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3220.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3220.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3220.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3220.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3231.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3231.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3239.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3239.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3243.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3243.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3243.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3243.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3254.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3254.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3262.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3262.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3266.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3266.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3266.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3266.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3278.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3278.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3285.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3285.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3287.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3287.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3287.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3287.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3299.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3299.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3307.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3307.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3311.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3311.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3311.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3311.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3323.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+3323.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3331.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3331.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3332.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3332.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3332.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3332.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3345.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3345.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3353.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+3353.0,DISPATCH,1,req_0004,inference,decode,rr_next_in_queue,,,,,,
+3353.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+3353.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3369.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+3369.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3373.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3373.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3374.0,PREEMPT,1,req_0004,inference,decode,rr_next_in_queue,bg_005,,,,,
+3374.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3374.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3374.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3390.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,req_0004,,,,,
+3390.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3394.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,bg_002,,,,,
+3394.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3398.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+3398.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3398.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3398.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3409.682,COMPLETE,,bg_002,background,done,,,,,,,cpu=1824.9ms preemptions=49
+3410.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3414.0,PREEMPT,2,req_0004,inference,decode,rr_next_in_queue,bg_003,,,,,
+3414.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3422.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3422.0,DISPATCH,3,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3431.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3431.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3435.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3435.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3442.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3442.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3446.0,PREEMPT,3,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3446.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3454.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3454.0,DISPATCH,0,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3458.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3458.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3464.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3464.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3468.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3468.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3476.0,PREEMPT,0,req_0004,inference,decode,rr_next_in_queue,bg_004,,,,,
+3476.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3479.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,req_0004,,,,,
+3479.0,DISPATCH,2,req_0004,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3483.218,COMPLETE,,req_0004,inference,done,,,,,,,cpu=1147.4ms preemptions=49
+3484.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,,
+3814.0,ARRIVE,,bg_006,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=870.0ms
+3814.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+3814.0,DISPATCH,3,bg_006,background,cpu_bound,rr_next_in_queue,,,,,,
+3834.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,bg_003,,,,,
+3834.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3838.0,PREEMPT,3,bg_006,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3838.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3855.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+3855.0,DISPATCH,2,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3859.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,bg_003,,,,,
+3859.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3875.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3875.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3879.0,PREEMPT,2,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3879.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3883.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+3883.0,DISPATCH,3,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3895.0,PREEMPT,0,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3895.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3899.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+3899.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3903.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3903.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3905.0,PREEMPT,3,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3905.0,DISPATCH,3,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3917.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+3917.0,DISPATCH,0,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3921.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3921.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3925.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+3925.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3929.0,PREEMPT,3,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3929.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3941.0,PREEMPT,0,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3941.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3945.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+3945.0,DISPATCH,1,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3949.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3949.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3953.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+3953.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3965.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3965.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3969.0,PREEMPT,1,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3969.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3973.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+3973.0,DISPATCH,2,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3977.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3977.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3989.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+3989.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3993.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+3993.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+3996.0,PREEMPT,2,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3996.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4000.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4000.0,DISPATCH,3,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4012.0,PREEMPT,0,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+4012.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4016.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+4016.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4020.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+4020.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+4024.0,PREEMPT,3,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+4024.0,DISPATCH,3,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4036.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4036.0,DISPATCH,0,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4037.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+4037.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4041.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+4041.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4045.0,PREEMPT,3,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+4045.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+4057.0,PREEMPT,0,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+4057.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4061.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4061.0,DISPATCH,1,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4065.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+4065.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4069.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+4069.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4081.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+4081.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+4085.0,PREEMPT,1,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+4085.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4089.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4089.0,DISPATCH,2,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4091.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+4091.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4103.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+4103.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4107.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+4107.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+4111.0,PREEMPT,2,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+4111.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4115.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4115.0,DISPATCH,3,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4126.0,PREEMPT,0,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+4126.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4130.0,PREEMPT,1,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+4130.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4134.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+4134.0,DISPATCH,2,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+4138.0,PREEMPT,3,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+4138.0,DISPATCH,3,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4150.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4150.0,DISPATCH,0,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4154.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+4154.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4158.0,PREEMPT,2,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+4158.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4162.0,PREEMPT,3,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+4162.0,DISPATCH,3,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+4174.0,PREEMPT,0,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+4174.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4178.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4178.0,DISPATCH,1,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4182.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+4182.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4186.0,PREEMPT,3,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+4186.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4198.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+4198.0,DISPATCH,0,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+4202.0,PREEMPT,1,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+4202.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4206.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4206.0,DISPATCH,2,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4210.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+4210.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4221.0,PREEMPT,0,req_0002,inference,decode,rr_next_in_queue,bg_004,,,,,
+4221.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4225.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,req_0002,,,,,
+4225.0,DISPATCH,1,req_0002,inference,decode,rr_next_in_queue,,,,,, [migrated]
+4229.0,PREEMPT,2,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+4229.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4233.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+4233.0,DISPATCH,3,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4241.555,COMPLETE,,bg_005,background,done,,,,,,,cpu=1206.1ms preemptions=36
+4242.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+4782.748,COMPLETE,,bg_006,background,done,,,,,,,cpu=870.0ms preemptions=14
+5654.0,ARRIVE,,bg_007,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2972.6ms
+5654.0,DISPATCH,3,bg_007,background,cpu_bound,rr_next_in_queue,,,,,,
+5698.0,ARRIVE,,bg_008,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1637.9ms
+5698.0,PREEMPT,3,bg_007,background,cpu_bound,rr_next_in_queue,bg_008,,,,,
+5698.0,DISPATCH,3,bg_008,background,cpu_bound,rr_next_in_queue,,,,,,
+5718.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_007,,,,,
+5718.0,DISPATCH,2,bg_007,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+5720.0,PREEMPT,3,bg_008,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+5720.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+5728.167,COMPLETE,,bg_004,background,done,,,,,,,cpu=3143.7ms preemptions=51
+5729.0,DISPATCH,0,bg_008,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+6412.97,COMPLETE,,bg_003,background,done,,,,,,,cpu=4240.5ms preemptions=65
+7190.0,ARRIVE,,bg_009,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=994.0ms
+7190.0,DISPATCH,3,bg_009,background,cpu_bound,rr_next_in_queue,,,,,,
+7345.391,COMPLETE,,bg_008,background,done,,,,,,,cpu=1637.9ms preemptions=1
+8184.079,COMPLETE,,bg_009,background,done,,,,,,,cpu=994.0ms preemptions=0
+8504.0,ARRIVE,,bg_010,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1772.3ms
+8504.0,DISPATCH,0,bg_010,background,cpu_bound,rr_next_in_queue,,,,,,
+8647.056,COMPLETE,,bg_007,background,done,,,,,,,cpu=2972.6ms preemptions=1
+9019.0,ARRIVE,,bg_011,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2088.1ms
+9019.0,DISPATCH,2,bg_011,background,cpu_bound,rr_next_in_queue,,,,,,
+9917.392,COMPLETE,,req_0002,inference,done,,,,,,,cpu=8677.2ms preemptions=61
+10276.36,COMPLETE,,bg_010,background,done,,,,,,,cpu=1772.3ms preemptions=0
+11107.194,COMPLETE,,bg_011,background,done,,,,,,,cpu=2088.1ms preemptions=0

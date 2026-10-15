@@ -1,0 +1,50 @@
+t_ms,event,core,task_id,task_kind,phase,reason,other_task_id,laxity_ms,norm_laxity,key,pred_service_ms,detail
+510.0,ARRIVE,,req_0001,inference,prefill,,,,,,,prompt=33 bursts=32 total_service=769.4ms
+510.0,DISPATCH,0,req_0001,inference,prefill,edf_earliest_deadline,,,,810.0,,
+637.0,ARRIVE,,req_0002,inference,prefill,,,,,,,prompt=474 bursts=254 total_service=8677.2ms
+637.0,DISPATCH,1,req_0002,inference,prefill,edf_earliest_deadline,,,,1436.3,,
+754.0,ARRIVE,,bg_001,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1190.0ms
+754.0,DISPATCH,2,bg_001,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+1014.0,ARRIVE,,bg_002,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1824.9ms
+1014.0,DISPATCH,3,bg_002,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+1279.525,COMPLETE,,req_0001,inference,done,,,,,,,cpu=769.4ms preemptions=0
+1532.0,ARRIVE,,bg_003,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=4240.5ms
+1532.0,DISPATCH,0,bg_003,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+1750.0,ARRIVE,,req_0003,inference,prefill,,,,,,,prompt=43 bursts=19 total_service=460.5ms
+1750.0,PREEMPT,0,bg_003,background,cpu_bound,edf_earliest_deadline,req_0003,,,,,
+1750.0,DISPATCH,0,req_0003,inference,prefill,edf_earliest_deadline,,,,2050.0,,
+1766.0,ARRIVE,,req_0004,inference,prefill,,,,,,,prompt=48 bursts=55 total_service=1147.4ms
+1766.0,PREEMPT,3,bg_002,background,cpu_bound,edf_earliest_deadline,req_0004,,,,,
+1766.0,DISPATCH,3,req_0004,inference,prefill,edf_earliest_deadline,,,,2065.1,,
+1944.103,COMPLETE,,bg_001,background,done,,,,,,,cpu=1190.0ms preemptions=0
+1945.0,DISPATCH,2,bg_002,background,cpu_bound,edf_earliest_deadline,,,,-1.0,, [migrated]
+2100.0,ARRIVE,,bg_004,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=3143.7ms
+2210.618,COMPLETE,,req_0003,inference,done,,,,,,,cpu=460.5ms preemptions=0
+2211.0,DISPATCH,0,bg_003,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+2691.0,ARRIVE,,bg_005,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1206.1ms
+2913.518,COMPLETE,,req_0004,inference,done,,,,,,,cpu=1147.4ms preemptions=0
+2914.0,DISPATCH,3,bg_004,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+3018.382,COMPLETE,,bg_002,background,done,,,,,,,cpu=1824.9ms preemptions=1
+3019.0,DISPATCH,2,bg_005,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+3814.0,ARRIVE,,bg_006,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=870.0ms
+4225.155,COMPLETE,,bg_005,background,done,,,,,,,cpu=1206.1ms preemptions=0
+4226.0,DISPATCH,2,bg_006,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+5096.148,COMPLETE,,bg_006,background,done,,,,,,,cpu=870.0ms preemptions=0
+5654.0,ARRIVE,,bg_007,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2972.6ms
+5654.0,DISPATCH,2,bg_007,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+5698.0,ARRIVE,,bg_008,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1637.9ms
+6057.767,COMPLETE,,bg_004,background,done,,,,,,,cpu=3143.7ms preemptions=0
+6058.0,DISPATCH,3,bg_008,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+6233.67,COMPLETE,,bg_003,background,done,,,,,,,cpu=4240.5ms preemptions=1
+7190.0,ARRIVE,,bg_009,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=994.0ms
+7190.0,DISPATCH,0,bg_009,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+7695.991,COMPLETE,,bg_008,background,done,,,,,,,cpu=1637.9ms preemptions=0
+8184.079,COMPLETE,,bg_009,background,done,,,,,,,cpu=994.0ms preemptions=0
+8504.0,ARRIVE,,bg_010,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1772.3ms
+8504.0,DISPATCH,0,bg_010,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+8626.656,COMPLETE,,bg_007,background,done,,,,,,,cpu=2972.6ms preemptions=0
+9019.0,ARRIVE,,bg_011,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2088.1ms
+9019.0,DISPATCH,2,bg_011,background,cpu_bound,edf_earliest_deadline,,,,-1.0,,
+9314.292,COMPLETE,,req_0002,inference,done,,,,,,,cpu=8677.2ms preemptions=0
+10276.36,COMPLETE,,bg_010,background,done,,,,,,,cpu=1772.3ms preemptions=0
+11107.194,COMPLETE,,bg_011,background,done,,,,,,,cpu=2088.1ms preemptions=0

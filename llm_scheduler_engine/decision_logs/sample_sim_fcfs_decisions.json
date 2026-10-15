@@ -1,0 +1,4114 @@
+{
+  "schema_version": "1.0",
+  "producer": "Member 2 - llm_scheduler_engine",
+  "scheduler": "fcfs",
+  "description": "First-Come-First-Served, non-preemptive",
+  "source_trace": "/tmp/orig/llm-aware-os-scheduler-main/llm_workload_profiler/traces/simulation_trace.json",
+  "simulator_config": {
+    "num_cores": 4,
+    "tick_ms": 1.0,
+    "decision_interval_ms": 4.0,
+    "context_switch_ms": 0.1,
+    "migration_ms": 0.3,
+    "max_sim_ms": 3600000.0
+  },
+  "extra_config": {
+    "trace": "/tmp/orig/llm-aware-os-scheduler-main/llm_workload_profiler/traces/simulation_trace.json",
+    "trace_mode": "simulation",
+    "demand_scale": 0.5477308294209702,
+    "background": "mixed_load",
+    "bg_tasks": 11,
+    "seed": 42,
+    "tls_overrides": {},
+    "quantum_ms": 20.0
+  },
+  "metrics": {
+    "scheduler": "fcfs",
+    "description": "First-Come-First-Served, non-preemptive",
+    "num_cores": 4,
+    "num_inference_requests": 4,
+    "num_background_tasks": 11,
+    "truncated": false,
+    "deadline_miss_rate_pct": 3.33,
+    "itl_violation_rate_pct": 3.09,
+    "itl_violations": 11,
+    "decode_tokens": 356,
+    "ttft_miss_rate_pct": 25.0,
+    "sla_attained_pct": 50.0,
+    "mean_ttft_ms": 252.73,
+    "p95_ttft_ms": 602.74,
+    "mean_itl_ms": 30.564,
+    "p95_itl_ms": 38.043,
+    "p99_itl_ms": 56.766,
+    "max_itl_ms": 61.385,
+    "mean_slack_ms": 13.65,
+    "deadline_goodput_tokens_per_s": 31.33,
+    "inference_slowdown_mean": 1.246,
+    "inference_fairness_jain": 0.9612,
+    "by_request_type": {
+      "interactive": {
+        "requests": 3,
+        "decode_tokens": 103,
+        "itl_violation_rate_pct": 3.88,
+        "ttft_miss_rate_pct": 33.33,
+        "deadline_miss_rate_pct": 4.72,
+        "p95_itl_ms": 25.89,
+        "p99_itl_ms": 46.37,
+        "mean_ttft_ms": 309.61
+      },
+      "standard": {
+        "requests": 1,
+        "decode_tokens": 253,
+        "itl_violation_rate_pct": 2.77,
+        "ttft_miss_rate_pct": 0.0,
+        "deadline_miss_rate_pct": 2.76,
+        "p95_itl_ms": 38.26,
+        "p99_itl_ms": 57.45,
+        "mean_ttft_ms": 82.1
+      }
+    },
+    "bg_completed": 11,
+    "bg_mean_slowdown": 1.19,
+    "bg_max_slowdown": 2.089,
+    "bg_cpu_ms_done": 21939.9,
+    "makespan_s": 11.107,
+    "cpu_utilization_pct": 74.26,
+    "switch_overhead_pct": 0.003,
+    "context_switches": 15,
+    "preemptions": 0,
+    "migrations": 0
+  },
+  "requests": [
+    {
+      "request_id": "req_0001",
+      "category": "short",
+      "request_type": "interactive",
+      "priority_metadata": "high",
+      "arrival_time_s": 0.51,
+      "deadline_target_itl_ms": 30.0,
+      "ttft_budget_ms": 300.0,
+      "ttft_ms": 33.325,
+      "ttft_missed": false,
+      "tokens_generated": 31,
+      "avg_itl_ms": 23.748,
+      "p95_itl_ms": 25.86,
+      "p99_itl_ms": 35.964,
+      "max_itl_ms": 40.277,
+      "itl_violation_count": 1,
+      "itl_violation_rate_pct": 3.23,
+      "min_slack_ms": -10.277,
+      "avg_slack_ms": 6.252,
+      "completion_ms": 769.525,
+      "isolated_service_ms": 769.425,
+      "slowdown": 1.0,
+      "sla_attained": true,
+      "preemptions": 0,
+      "migrations": 0,
+      "trace_ttft_ms": 60.66,
+      "trace_avg_itl_ms": 43.358
+    },
+    {
+      "request_id": "req_0002",
+      "category": "medium",
+      "request_type": "standard",
+      "priority_metadata": "normal",
+      "arrival_time_s": 0.6363,
+      "deadline_target_itl_ms": 50.0,
+      "ttft_budget_ms": 800.0,
+      "ttft_ms": 82.102,
+      "ttft_missed": false,
+      "tokens_generated": 253,
+      "avg_itl_ms": 33.976,
+      "p95_itl_ms": 38.255,
+      "p99_itl_ms": 57.452,
+      "max_itl_ms": 61.385,
+      "itl_violation_count": 7,
+      "itl_violation_rate_pct": 2.77,
+      "min_slack_ms": -11.385,
+      "avg_slack_ms": 16.024,
+      "completion_ms": 8677.992,
+      "isolated_service_ms": 8677.192,
+      "slowdown": 1.0,
+      "sla_attained": true,
+      "preemptions": 0,
+      "migrations": 0,
+      "trace_ttft_ms": 148.434,
+      "trace_avg_itl_ms": 62.03
+    },
+    {
+      "request_id": "req_0003",
+      "category": "short",
+      "request_type": "interactive",
+      "priority_metadata": "high",
+      "arrival_time_s": 1.75,
+      "deadline_target_itl_ms": 30.0,
+      "ttft_budget_ms": 300.0,
+      "ttft_ms": 226.336,
+      "ttft_missed": false,
+      "tokens_generated": 18,
+      "avg_itl_ms": 23.849,
+      "p95_itl_ms": 46.933,
+      "p99_itl_ms": 49.116,
+      "max_itl_ms": 49.661,
+      "itl_violation_count": 2,
+      "itl_violation_rate_pct": 11.11,
+      "min_slack_ms": -19.661,
+      "avg_slack_ms": 6.151,
+      "completion_ms": 655.618,
+      "isolated_service_ms": 460.518,
+      "slowdown": 1.424,
+      "sla_attained": false,
+      "preemptions": 0,
+      "migrations": 0,
+      "trace_ttft_ms": 57.028,
+      "trace_avg_itl_ms": 43.541
+    },
+    {
+      "request_id": "req_0004",
+      "category": "short",
+      "request_type": "interactive",
+      "priority_metadata": "high",
+      "arrival_time_s": 1.7651,
+      "deadline_target_itl_ms": 30.0,
+      "ttft_budget_ms": 300.0,
+      "ttft_ms": 669.167,
+      "ttft_missed": true,
+      "tokens_generated": 54,
+      "avg_itl_ms": 20.727,
+      "p95_itl_ms": 24.942,
+      "p99_itl_ms": 33.986,
+      "max_itl_ms": 42.53,
+      "itl_violation_count": 1,
+      "itl_violation_rate_pct": 1.85,
+      "min_slack_ms": -12.53,
+      "avg_slack_ms": 9.273,
+      "completion_ms": 1788.418,
+      "isolated_service_ms": 1147.418,
+      "slowdown": 1.559,
+      "sla_attained": false,
+      "preemptions": 0,
+      "migrations": 0,
+      "trace_ttft_ms": 51.424,
+      "trace_avg_itl_ms": 37.841
+    }
+  ],
+  "decisions": [
+    {
+      "t_ms": 510.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "req_0001",
+      "task_kind": "inference",
+      "phase": "prefill",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=33 bursts=32 total_service=769.4ms"
+    },
+    {
+      "t_ms": 510.0,
+      "event": "DISPATCH",
+      "core": 0,
+      "task_id": "req_0001",
+      "task_kind": "inference",
+      "phase": "prefill",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 510.0,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 637.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "req_0002",
+      "task_kind": "inference",
+      "phase": "prefill",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=474 bursts=254 total_service=8677.2ms"
+    },
+    {
+      "t_ms": 637.0,
+      "event": "DISPATCH",
+      "core": 1,
+      "task_id": "req_0002",
+      "task_kind": "inference",
+      "phase": "prefill",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 636.3,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 754.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_001",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=1190.0ms"
+    },
+    {
+      "t_ms": 754.0,
+      "event": "DISPATCH",
+      "core": 2,
+      "task_id": "bg_001",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 753.8981891166785,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 1014.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_002",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=1824.9ms"
+    },
+    {
+      "t_ms": 1014.0,
+      "event": "DISPATCH",
+      "core": 3,
+      "task_id": "bg_002",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 1013.9963303249076,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 1279.525,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "req_0001",
+      "task_kind": "inference",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=769.4ms preemptions=0"
+    },
+    {
+      "t_ms": 1532.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_003",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=4240.5ms"
+    },
+    {
+      "t_ms": 1532.0,
+      "event": "DISPATCH",
+      "core": 0,
+      "task_id": "bg_003",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 1531.7918207444768,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 1750.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "req_0003",
+      "task_kind": "inference",
+      "phase": "prefill",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=43 bursts=19 total_service=460.5ms"
+    },
+    {
+      "t_ms": 1766.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "req_0004",
+      "task_kind": "inference",
+      "phase": "prefill",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=48 bursts=55 total_service=1147.4ms"
+    },
+    {
+      "t_ms": 1944.103,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_001",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=1190.0ms preemptions=0"
+    },
+    {
+      "t_ms": 1945.0,
+      "event": "DISPATCH",
+      "core": 2,
+      "task_id": "req_0003",
+      "task_kind": "inference",
+      "phase": "prefill",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 1750.0,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 2100.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_004",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=3143.7ms"
+    },
+    {
+      "t_ms": 2405.618,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "req_0003",
+      "task_kind": "inference",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=460.5ms preemptions=0"
+    },
+    {
+      "t_ms": 2406.0,
+      "event": "DISPATCH",
+      "core": 2,
+      "task_id": "req_0004",
+      "task_kind": "inference",
+      "phase": "prefill",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 1765.1,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 2691.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_005",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=1206.1ms"
+    },
+    {
+      "t_ms": 2838.982,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_002",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=1824.9ms preemptions=0"
+    },
+    {
+      "t_ms": 2839.0,
+      "event": "DISPATCH",
+      "core": 3,
+      "task_id": "bg_004",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 2099.0782113223477,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 3553.518,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "req_0004",
+      "task_kind": "inference",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=1147.4ms preemptions=0"
+    },
+    {
+      "t_ms": 3554.0,
+      "event": "DISPATCH",
+      "core": 2,
+      "task_id": "bg_005",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 2690.8020513233487,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 3814.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_006",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=870.0ms"
+    },
+    {
+      "t_ms": 4760.155,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_005",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=1206.1ms preemptions=0"
+    },
+    {
+      "t_ms": 4761.0,
+      "event": "DISPATCH",
+      "core": 2,
+      "task_id": "bg_006",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 3813.5226308827077,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 5631.148,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_006",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=870.0ms preemptions=0"
+    },
+    {
+      "t_ms": 5654.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_007",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=2972.6ms"
+    },
+    {
+      "t_ms": 5654.0,
+      "event": "DISPATCH",
+      "core": 2,
+      "task_id": "bg_007",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 5653.218741695189,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 5698.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_008",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=1637.9ms"
+    },
+    {
+      "t_ms": 5772.57,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_003",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=4240.5ms preemptions=0"
+    },
+    {
+      "t_ms": 5773.0,
+      "event": "DISPATCH",
+      "core": 0,
+      "task_id": "bg_008",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 5697.215692719082,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 5982.767,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_004",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=3143.7ms preemptions=0"
+    },
+    {
+      "t_ms": 7190.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_009",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=994.0ms"
+    },
+    {
+      "t_ms": 7190.0,
+      "event": "DISPATCH",
+      "core": 3,
+      "task_id": "bg_009",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 7189.598011688587,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 7410.991,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_008",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=1637.9ms preemptions=0"
+    },
+    {
+      "t_ms": 8184.079,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_009",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=994.0ms preemptions=0"
+    },
+    {
+      "t_ms": 8504.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_010",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=1772.3ms"
+    },
+    {
+      "t_ms": 8504.0,
+      "event": "DISPATCH",
+      "core": 0,
+      "task_id": "bg_010",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 8503.024002544207,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 8626.656,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_007",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=2972.6ms preemptions=0"
+    },
+    {
+      "t_ms": 9019.0,
+      "event": "ARRIVE",
+      "core": null,
+      "task_id": "bg_011",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "prompt=0 bursts=1 total_service=2088.1ms"
+    },
+    {
+      "t_ms": 9019.0,
+      "event": "DISPATCH",
+      "core": 2,
+      "task_id": "bg_011",
+      "task_kind": "background",
+      "phase": "cpu_bound",
+      "reason": "fcfs_head_of_queue",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": 9018.254662356472,
+      "pred_service_ms": null,
+      "detail": ""
+    },
+    {
+      "t_ms": 9314.292,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "req_0002",
+      "task_kind": "inference",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=8677.2ms preemptions=0"
+    },
+    {
+      "t_ms": 10276.36,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_010",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=1772.3ms preemptions=0"
+    },
+    {
+      "t_ms": 11107.194,
+      "event": "COMPLETE",
+      "core": null,
+      "task_id": "bg_011",
+      "task_kind": "background",
+      "phase": "done",
+      "reason": "",
+      "other_task_id": "",
+      "laxity_ms": null,
+      "norm_laxity": null,
+      "key": null,
+      "pred_service_ms": null,
+      "detail": "cpu=2088.1ms preemptions=0"
+    }
+  ],
+  "token_outcomes": [
+    {
+      "request_id": "req_0001",
+      "token_index": 0,
+      "emit_time_ms": 543.325,
+      "latency_ms": 33.325,
+      "deadline_ms": 300.0,
+      "slack_ms": 266.675,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 1,
+      "emit_time_ms": 568.995,
+      "latency_ms": 25.669,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.331,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 2,
+      "emit_time_ms": 592.836,
+      "latency_ms": 23.842,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.158,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 3,
+      "emit_time_ms": 613.762,
+      "latency_ms": 20.926,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.074,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 4,
+      "emit_time_ms": 632.077,
+      "latency_ms": 18.314,
+      "deadline_ms": 30.0,
+      "slack_ms": 11.686,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 5,
+      "emit_time_ms": 657.466,
+      "latency_ms": 25.39,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.61,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 6,
+      "emit_time_ms": 697.744,
+      "latency_ms": 40.277,
+      "deadline_ms": 30.0,
+      "slack_ms": -10.277,
+      "missed": true
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 7,
+      "emit_time_ms": 719.218,
+      "latency_ms": 21.474,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.526,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 8,
+      "emit_time_ms": 739.934,
+      "latency_ms": 20.716,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.284,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 9,
+      "emit_time_ms": 763.545,
+      "latency_ms": 23.612,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.388,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 10,
+      "emit_time_ms": 786.752,
+      "latency_ms": 23.206,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.794,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 11,
+      "emit_time_ms": 809.393,
+      "latency_ms": 22.642,
+      "deadline_ms": 30.0,
+      "slack_ms": 7.358,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 12,
+      "emit_time_ms": 834.235,
+      "latency_ms": 24.842,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.158,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 13,
+      "emit_time_ms": 858.765,
+      "latency_ms": 24.53,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.47,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 14,
+      "emit_time_ms": 882.943,
+      "latency_ms": 24.178,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.822,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 15,
+      "emit_time_ms": 907.999,
+      "latency_ms": 25.055,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.945,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 16,
+      "emit_time_ms": 927.344,
+      "latency_ms": 19.346,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.654,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 17,
+      "emit_time_ms": 948.331,
+      "latency_ms": 20.987,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.013,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 18,
+      "emit_time_ms": 974.23,
+      "latency_ms": 25.899,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.101,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 19,
+      "emit_time_ms": 1000.051,
+      "latency_ms": 25.821,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.179,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 20,
+      "emit_time_ms": 1020.801,
+      "latency_ms": 20.75,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.25,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 21,
+      "emit_time_ms": 1044.612,
+      "latency_ms": 23.812,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.188,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 22,
+      "emit_time_ms": 1070.354,
+      "latency_ms": 25.742,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.258,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 23,
+      "emit_time_ms": 1095.634,
+      "latency_ms": 25.279,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.721,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 24,
+      "emit_time_ms": 1120.443,
+      "latency_ms": 24.809,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.191,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 25,
+      "emit_time_ms": 1142.652,
+      "latency_ms": 22.209,
+      "deadline_ms": 30.0,
+      "slack_ms": 7.791,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 26,
+      "emit_time_ms": 1167.519,
+      "latency_ms": 24.866,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.134,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 27,
+      "emit_time_ms": 1188.77,
+      "latency_ms": 21.251,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.749,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 28,
+      "emit_time_ms": 1209.255,
+      "latency_ms": 20.485,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.515,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 29,
+      "emit_time_ms": 1234.139,
+      "latency_ms": 24.884,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.116,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 30,
+      "emit_time_ms": 1259.928,
+      "latency_ms": 25.789,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.211,
+      "missed": false
+    },
+    {
+      "request_id": "req_0001",
+      "token_index": 31,
+      "emit_time_ms": 1279.525,
+      "latency_ms": 19.597,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.403,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 0,
+      "emit_time_ms": 718.402,
+      "latency_ms": 82.102,
+      "deadline_ms": 800.0,
+      "slack_ms": 717.898,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 1,
+      "emit_time_ms": 750.226,
+      "latency_ms": 31.824,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.176,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 2,
+      "emit_time_ms": 785.255,
+      "latency_ms": 35.029,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.971,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 3,
+      "emit_time_ms": 818.714,
+      "latency_ms": 33.459,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.541,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 4,
+      "emit_time_ms": 856.2,
+      "latency_ms": 37.486,
+      "deadline_ms": 50.0,
+      "slack_ms": 12.514,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 5,
+      "emit_time_ms": 887.595,
+      "latency_ms": 31.395,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.605,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 6,
+      "emit_time_ms": 916.583,
+      "latency_ms": 28.988,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.012,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 7,
+      "emit_time_ms": 952.768,
+      "latency_ms": 36.185,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.815,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 8,
+      "emit_time_ms": 985.887,
+      "latency_ms": 33.119,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.881,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 9,
+      "emit_time_ms": 1021.912,
+      "latency_ms": 36.025,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.975,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 10,
+      "emit_time_ms": 1056.839,
+      "latency_ms": 34.927,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.073,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 11,
+      "emit_time_ms": 1088.495,
+      "latency_ms": 31.657,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.343,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 12,
+      "emit_time_ms": 1120.543,
+      "latency_ms": 32.047,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.953,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 13,
+      "emit_time_ms": 1153.538,
+      "latency_ms": 32.995,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.005,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 14,
+      "emit_time_ms": 1183.739,
+      "latency_ms": 30.201,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.799,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 15,
+      "emit_time_ms": 1213.85,
+      "latency_ms": 30.112,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.888,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 16,
+      "emit_time_ms": 1241.231,
+      "latency_ms": 27.381,
+      "deadline_ms": 50.0,
+      "slack_ms": 22.619,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 17,
+      "emit_time_ms": 1279.508,
+      "latency_ms": 38.277,
+      "deadline_ms": 50.0,
+      "slack_ms": 11.723,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 18,
+      "emit_time_ms": 1312.789,
+      "latency_ms": 33.281,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.719,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 19,
+      "emit_time_ms": 1345.574,
+      "latency_ms": 32.786,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.214,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 20,
+      "emit_time_ms": 1376.856,
+      "latency_ms": 31.281,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.719,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 21,
+      "emit_time_ms": 1409.492,
+      "latency_ms": 32.636,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.364,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 22,
+      "emit_time_ms": 1440.214,
+      "latency_ms": 30.722,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.278,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 23,
+      "emit_time_ms": 1474.283,
+      "latency_ms": 34.069,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.931,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 24,
+      "emit_time_ms": 1507.11,
+      "latency_ms": 32.827,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.173,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 25,
+      "emit_time_ms": 1542.882,
+      "latency_ms": 35.773,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.227,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 26,
+      "emit_time_ms": 1577.276,
+      "latency_ms": 34.394,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.606,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 27,
+      "emit_time_ms": 1608.916,
+      "latency_ms": 31.64,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.36,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 28,
+      "emit_time_ms": 1644.22,
+      "latency_ms": 35.305,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.695,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 29,
+      "emit_time_ms": 1680.491,
+      "latency_ms": 36.27,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.73,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 30,
+      "emit_time_ms": 1713.469,
+      "latency_ms": 32.979,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.021,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 31,
+      "emit_time_ms": 1774.854,
+      "latency_ms": 61.385,
+      "deadline_ms": 50.0,
+      "slack_ms": -11.385,
+      "missed": true
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 32,
+      "emit_time_ms": 1811.07,
+      "latency_ms": 36.215,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.785,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 33,
+      "emit_time_ms": 1841.109,
+      "latency_ms": 30.04,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.96,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 34,
+      "emit_time_ms": 1878.204,
+      "latency_ms": 37.095,
+      "deadline_ms": 50.0,
+      "slack_ms": 12.905,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 35,
+      "emit_time_ms": 1907.371,
+      "latency_ms": 29.166,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.834,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 36,
+      "emit_time_ms": 1943.974,
+      "latency_ms": 36.604,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.396,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 37,
+      "emit_time_ms": 1978.678,
+      "latency_ms": 34.704,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.296,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 38,
+      "emit_time_ms": 2008.845,
+      "latency_ms": 30.167,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.833,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 39,
+      "emit_time_ms": 2042.353,
+      "latency_ms": 33.508,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.492,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 40,
+      "emit_time_ms": 2073.995,
+      "latency_ms": 31.642,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.358,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 41,
+      "emit_time_ms": 2107.792,
+      "latency_ms": 33.797,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.203,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 42,
+      "emit_time_ms": 2141.451,
+      "latency_ms": 33.66,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.34,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 43,
+      "emit_time_ms": 2176.414,
+      "latency_ms": 34.962,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.038,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 44,
+      "emit_time_ms": 2206.884,
+      "latency_ms": 30.47,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.53,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 45,
+      "emit_time_ms": 2240.999,
+      "latency_ms": 34.115,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.885,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 46,
+      "emit_time_ms": 2272.434,
+      "latency_ms": 31.435,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.565,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 47,
+      "emit_time_ms": 2308.112,
+      "latency_ms": 35.678,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.322,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 48,
+      "emit_time_ms": 2344.116,
+      "latency_ms": 36.003,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.997,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 49,
+      "emit_time_ms": 2378.581,
+      "latency_ms": 34.465,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.535,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 50,
+      "emit_time_ms": 2412.201,
+      "latency_ms": 33.62,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.38,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 51,
+      "emit_time_ms": 2444.572,
+      "latency_ms": 32.371,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.629,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 52,
+      "emit_time_ms": 2477.902,
+      "latency_ms": 33.331,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.669,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 53,
+      "emit_time_ms": 2512.16,
+      "latency_ms": 34.257,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.743,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 54,
+      "emit_time_ms": 2541.22,
+      "latency_ms": 29.06,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.94,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 55,
+      "emit_time_ms": 2574.968,
+      "latency_ms": 33.748,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.252,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 56,
+      "emit_time_ms": 2610.04,
+      "latency_ms": 35.071,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.929,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 57,
+      "emit_time_ms": 2644.501,
+      "latency_ms": 34.462,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.538,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 58,
+      "emit_time_ms": 2677.103,
+      "latency_ms": 32.602,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.398,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 59,
+      "emit_time_ms": 2706.727,
+      "latency_ms": 29.624,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.376,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 60,
+      "emit_time_ms": 2738.059,
+      "latency_ms": 31.331,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.669,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 61,
+      "emit_time_ms": 2772.324,
+      "latency_ms": 34.265,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.735,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 62,
+      "emit_time_ms": 2806.306,
+      "latency_ms": 33.982,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.018,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 63,
+      "emit_time_ms": 2841.71,
+      "latency_ms": 35.404,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.596,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 64,
+      "emit_time_ms": 2874.772,
+      "latency_ms": 33.062,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.938,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 65,
+      "emit_time_ms": 2913.071,
+      "latency_ms": 38.299,
+      "deadline_ms": 50.0,
+      "slack_ms": 11.701,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 66,
+      "emit_time_ms": 2945.418,
+      "latency_ms": 32.347,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.653,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 67,
+      "emit_time_ms": 2978.242,
+      "latency_ms": 32.824,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.176,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 68,
+      "emit_time_ms": 3016.483,
+      "latency_ms": 38.241,
+      "deadline_ms": 50.0,
+      "slack_ms": 11.759,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 69,
+      "emit_time_ms": 3048.515,
+      "latency_ms": 32.032,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.968,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 70,
+      "emit_time_ms": 3079.972,
+      "latency_ms": 31.457,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.543,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 71,
+      "emit_time_ms": 3113.173,
+      "latency_ms": 33.2,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.8,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 72,
+      "emit_time_ms": 3141.357,
+      "latency_ms": 28.185,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.815,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 73,
+      "emit_time_ms": 3179.046,
+      "latency_ms": 37.689,
+      "deadline_ms": 50.0,
+      "slack_ms": 12.311,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 74,
+      "emit_time_ms": 3209.771,
+      "latency_ms": 30.725,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.275,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 75,
+      "emit_time_ms": 3243.503,
+      "latency_ms": 33.733,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.267,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 76,
+      "emit_time_ms": 3273.099,
+      "latency_ms": 29.596,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.404,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 77,
+      "emit_time_ms": 3304.89,
+      "latency_ms": 31.791,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.209,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 78,
+      "emit_time_ms": 3340.931,
+      "latency_ms": 36.041,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.959,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 79,
+      "emit_time_ms": 3373.392,
+      "latency_ms": 32.461,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.539,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 80,
+      "emit_time_ms": 3409.317,
+      "latency_ms": 35.925,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.075,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 81,
+      "emit_time_ms": 3443.45,
+      "latency_ms": 34.133,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.867,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 82,
+      "emit_time_ms": 3479.741,
+      "latency_ms": 36.291,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.709,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 83,
+      "emit_time_ms": 3517.717,
+      "latency_ms": 37.976,
+      "deadline_ms": 50.0,
+      "slack_ms": 12.024,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 84,
+      "emit_time_ms": 3547.903,
+      "latency_ms": 30.186,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.814,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 85,
+      "emit_time_ms": 3579.008,
+      "latency_ms": 31.105,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.895,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 86,
+      "emit_time_ms": 3613.406,
+      "latency_ms": 34.398,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.602,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 87,
+      "emit_time_ms": 3645.355,
+      "latency_ms": 31.949,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.051,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 88,
+      "emit_time_ms": 3675.733,
+      "latency_ms": 30.378,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.622,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 89,
+      "emit_time_ms": 3710.277,
+      "latency_ms": 34.544,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.456,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 90,
+      "emit_time_ms": 3744.374,
+      "latency_ms": 34.097,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.903,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 91,
+      "emit_time_ms": 3780.952,
+      "latency_ms": 36.577,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.423,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 92,
+      "emit_time_ms": 3813.084,
+      "latency_ms": 32.132,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.868,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 93,
+      "emit_time_ms": 3844.417,
+      "latency_ms": 31.333,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.667,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 94,
+      "emit_time_ms": 3879.773,
+      "latency_ms": 35.356,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.644,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 95,
+      "emit_time_ms": 3913.956,
+      "latency_ms": 34.183,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.817,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 96,
+      "emit_time_ms": 3948.447,
+      "latency_ms": 34.491,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.509,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 97,
+      "emit_time_ms": 3982.214,
+      "latency_ms": 33.767,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.233,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 98,
+      "emit_time_ms": 4018.756,
+      "latency_ms": 36.542,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.458,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 99,
+      "emit_time_ms": 4048.574,
+      "latency_ms": 29.817,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.183,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 100,
+      "emit_time_ms": 4083.442,
+      "latency_ms": 34.868,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.132,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 101,
+      "emit_time_ms": 4113.377,
+      "latency_ms": 29.935,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.065,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 102,
+      "emit_time_ms": 4146.268,
+      "latency_ms": 32.891,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.109,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 103,
+      "emit_time_ms": 4179.085,
+      "latency_ms": 32.817,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.183,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 104,
+      "emit_time_ms": 4209.307,
+      "latency_ms": 30.223,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.777,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 105,
+      "emit_time_ms": 4237.682,
+      "latency_ms": 28.375,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.625,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 106,
+      "emit_time_ms": 4273.035,
+      "latency_ms": 35.353,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.647,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 107,
+      "emit_time_ms": 4307.921,
+      "latency_ms": 34.886,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.114,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 108,
+      "emit_time_ms": 4340.661,
+      "latency_ms": 32.74,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.26,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 109,
+      "emit_time_ms": 4372.187,
+      "latency_ms": 31.526,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.474,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 110,
+      "emit_time_ms": 4400.232,
+      "latency_ms": 28.044,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.956,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 111,
+      "emit_time_ms": 4433.649,
+      "latency_ms": 33.417,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.583,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 112,
+      "emit_time_ms": 4490.263,
+      "latency_ms": 56.615,
+      "deadline_ms": 50.0,
+      "slack_ms": -6.615,
+      "missed": true
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 113,
+      "emit_time_ms": 4524.179,
+      "latency_ms": 33.916,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.084,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 114,
+      "emit_time_ms": 4556.949,
+      "latency_ms": 32.77,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.23,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 115,
+      "emit_time_ms": 4593.799,
+      "latency_ms": 36.85,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.15,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 116,
+      "emit_time_ms": 4627.768,
+      "latency_ms": 33.969,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.031,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 117,
+      "emit_time_ms": 4660.879,
+      "latency_ms": 33.111,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.889,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 118,
+      "emit_time_ms": 4689.724,
+      "latency_ms": 28.845,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.155,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 119,
+      "emit_time_ms": 4721.54,
+      "latency_ms": 31.815,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.185,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 120,
+      "emit_time_ms": 4755.978,
+      "latency_ms": 34.439,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.561,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 121,
+      "emit_time_ms": 4790.46,
+      "latency_ms": 34.482,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.518,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 122,
+      "emit_time_ms": 4826.69,
+      "latency_ms": 36.23,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.77,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 123,
+      "emit_time_ms": 4855.943,
+      "latency_ms": 29.253,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.747,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 124,
+      "emit_time_ms": 4892.215,
+      "latency_ms": 36.272,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.728,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 125,
+      "emit_time_ms": 4927.695,
+      "latency_ms": 35.48,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.52,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 126,
+      "emit_time_ms": 4959.776,
+      "latency_ms": 32.082,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.918,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 127,
+      "emit_time_ms": 4991.91,
+      "latency_ms": 32.134,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.866,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 128,
+      "emit_time_ms": 5029.141,
+      "latency_ms": 37.231,
+      "deadline_ms": 50.0,
+      "slack_ms": 12.769,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 129,
+      "emit_time_ms": 5086.093,
+      "latency_ms": 56.952,
+      "deadline_ms": 50.0,
+      "slack_ms": -6.952,
+      "missed": true
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 130,
+      "emit_time_ms": 5116.508,
+      "latency_ms": 30.415,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.585,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 131,
+      "emit_time_ms": 5154.214,
+      "latency_ms": 37.706,
+      "deadline_ms": 50.0,
+      "slack_ms": 12.294,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 132,
+      "emit_time_ms": 5187.949,
+      "latency_ms": 33.735,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.265,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 133,
+      "emit_time_ms": 5219.313,
+      "latency_ms": 31.364,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.636,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 134,
+      "emit_time_ms": 5255.546,
+      "latency_ms": 36.233,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.767,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 135,
+      "emit_time_ms": 5285.308,
+      "latency_ms": 29.762,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.238,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 136,
+      "emit_time_ms": 5316.45,
+      "latency_ms": 31.142,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.858,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 137,
+      "emit_time_ms": 5349.994,
+      "latency_ms": 33.543,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.457,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 138,
+      "emit_time_ms": 5384.548,
+      "latency_ms": 34.555,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.445,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 139,
+      "emit_time_ms": 5417.828,
+      "latency_ms": 33.28,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.72,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 140,
+      "emit_time_ms": 5452.715,
+      "latency_ms": 34.887,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.113,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 141,
+      "emit_time_ms": 5485.384,
+      "latency_ms": 32.669,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.331,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 142,
+      "emit_time_ms": 5521.288,
+      "latency_ms": 35.904,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.096,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 143,
+      "emit_time_ms": 5554.005,
+      "latency_ms": 32.717,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.283,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 144,
+      "emit_time_ms": 5588.486,
+      "latency_ms": 34.482,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.518,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 145,
+      "emit_time_ms": 5621.274,
+      "latency_ms": 32.787,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.213,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 146,
+      "emit_time_ms": 5656.249,
+      "latency_ms": 34.975,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.025,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 147,
+      "emit_time_ms": 5690.86,
+      "latency_ms": 34.611,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.389,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 148,
+      "emit_time_ms": 5721.74,
+      "latency_ms": 30.88,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.12,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 149,
+      "emit_time_ms": 5753.082,
+      "latency_ms": 31.342,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.658,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 150,
+      "emit_time_ms": 5814.303,
+      "latency_ms": 61.222,
+      "deadline_ms": 50.0,
+      "slack_ms": -11.222,
+      "missed": true
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 151,
+      "emit_time_ms": 5850.992,
+      "latency_ms": 36.689,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.311,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 152,
+      "emit_time_ms": 5883.321,
+      "latency_ms": 32.329,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.671,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 153,
+      "emit_time_ms": 5912.637,
+      "latency_ms": 29.317,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.683,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 154,
+      "emit_time_ms": 5948.787,
+      "latency_ms": 36.149,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.851,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 155,
+      "emit_time_ms": 5983.297,
+      "latency_ms": 34.51,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.49,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 156,
+      "emit_time_ms": 6018.484,
+      "latency_ms": 35.187,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.813,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 157,
+      "emit_time_ms": 6048.527,
+      "latency_ms": 30.043,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.957,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 158,
+      "emit_time_ms": 6079.613,
+      "latency_ms": 31.086,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.914,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 159,
+      "emit_time_ms": 6113.947,
+      "latency_ms": 34.333,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.667,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 160,
+      "emit_time_ms": 6142.18,
+      "latency_ms": 28.233,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.767,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 161,
+      "emit_time_ms": 6177.869,
+      "latency_ms": 35.689,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.311,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 162,
+      "emit_time_ms": 6209.46,
+      "latency_ms": 31.591,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.409,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 163,
+      "emit_time_ms": 6256.823,
+      "latency_ms": 47.363,
+      "deadline_ms": 50.0,
+      "slack_ms": 2.637,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 164,
+      "emit_time_ms": 6287.122,
+      "latency_ms": 30.299,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.701,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 165,
+      "emit_time_ms": 6321.477,
+      "latency_ms": 34.355,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.645,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 166,
+      "emit_time_ms": 6353.033,
+      "latency_ms": 31.556,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.444,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 167,
+      "emit_time_ms": 6386.658,
+      "latency_ms": 33.626,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.374,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 168,
+      "emit_time_ms": 6420.117,
+      "latency_ms": 33.458,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.542,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 169,
+      "emit_time_ms": 6451.82,
+      "latency_ms": 31.703,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.297,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 170,
+      "emit_time_ms": 6483.473,
+      "latency_ms": 31.653,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.347,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 171,
+      "emit_time_ms": 6514.978,
+      "latency_ms": 31.505,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.495,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 172,
+      "emit_time_ms": 6547.264,
+      "latency_ms": 32.286,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.714,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 173,
+      "emit_time_ms": 6593.632,
+      "latency_ms": 46.368,
+      "deadline_ms": 50.0,
+      "slack_ms": 3.632,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 174,
+      "emit_time_ms": 6622.237,
+      "latency_ms": 28.605,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.395,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 175,
+      "emit_time_ms": 6655.994,
+      "latency_ms": 33.757,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.243,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 176,
+      "emit_time_ms": 6688.006,
+      "latency_ms": 32.012,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.988,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 177,
+      "emit_time_ms": 6719.954,
+      "latency_ms": 31.948,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.052,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 178,
+      "emit_time_ms": 6777.949,
+      "latency_ms": 57.994,
+      "deadline_ms": 50.0,
+      "slack_ms": -7.994,
+      "missed": true
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 179,
+      "emit_time_ms": 6814.383,
+      "latency_ms": 36.434,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.566,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 180,
+      "emit_time_ms": 6849.347,
+      "latency_ms": 34.964,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.036,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 181,
+      "emit_time_ms": 6883.914,
+      "latency_ms": 34.567,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.433,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 182,
+      "emit_time_ms": 6916.231,
+      "latency_ms": 32.318,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.682,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 183,
+      "emit_time_ms": 6949.203,
+      "latency_ms": 32.972,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.028,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 184,
+      "emit_time_ms": 6978.253,
+      "latency_ms": 29.049,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.951,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 185,
+      "emit_time_ms": 7012.432,
+      "latency_ms": 34.179,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.821,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 186,
+      "emit_time_ms": 7040.812,
+      "latency_ms": 28.38,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.62,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 187,
+      "emit_time_ms": 7070.67,
+      "latency_ms": 29.858,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.142,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 188,
+      "emit_time_ms": 7103.199,
+      "latency_ms": 32.529,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.471,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 189,
+      "emit_time_ms": 7133.563,
+      "latency_ms": 30.363,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.637,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 190,
+      "emit_time_ms": 7169.667,
+      "latency_ms": 36.104,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.896,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 191,
+      "emit_time_ms": 7200.425,
+      "latency_ms": 30.758,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.242,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 192,
+      "emit_time_ms": 7233.537,
+      "latency_ms": 33.113,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.887,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 193,
+      "emit_time_ms": 7269.89,
+      "latency_ms": 36.352,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.648,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 194,
+      "emit_time_ms": 7301.649,
+      "latency_ms": 31.759,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.241,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 195,
+      "emit_time_ms": 7333.379,
+      "latency_ms": 31.73,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.27,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 196,
+      "emit_time_ms": 7366.158,
+      "latency_ms": 32.779,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.221,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 197,
+      "emit_time_ms": 7401.226,
+      "latency_ms": 35.068,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.932,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 198,
+      "emit_time_ms": 7434.7,
+      "latency_ms": 33.474,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.526,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 199,
+      "emit_time_ms": 7471.292,
+      "latency_ms": 36.592,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.408,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 200,
+      "emit_time_ms": 7501.928,
+      "latency_ms": 30.636,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.364,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 201,
+      "emit_time_ms": 7536.571,
+      "latency_ms": 34.643,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.357,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 202,
+      "emit_time_ms": 7565.226,
+      "latency_ms": 28.656,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.344,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 203,
+      "emit_time_ms": 7600.696,
+      "latency_ms": 35.469,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.531,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 204,
+      "emit_time_ms": 7636.201,
+      "latency_ms": 35.505,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.495,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 205,
+      "emit_time_ms": 7683.062,
+      "latency_ms": 46.861,
+      "deadline_ms": 50.0,
+      "slack_ms": 3.139,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 206,
+      "emit_time_ms": 7716.216,
+      "latency_ms": 33.155,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.845,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 207,
+      "emit_time_ms": 7744.738,
+      "latency_ms": 28.522,
+      "deadline_ms": 50.0,
+      "slack_ms": 21.478,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 208,
+      "emit_time_ms": 7777.749,
+      "latency_ms": 33.01,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.99,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 209,
+      "emit_time_ms": 7807.896,
+      "latency_ms": 30.148,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.852,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 210,
+      "emit_time_ms": 7858.008,
+      "latency_ms": 50.111,
+      "deadline_ms": 50.0,
+      "slack_ms": -0.111,
+      "missed": true
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 211,
+      "emit_time_ms": 7893.493,
+      "latency_ms": 35.486,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.514,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 212,
+      "emit_time_ms": 7925.403,
+      "latency_ms": 31.91,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.09,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 213,
+      "emit_time_ms": 7959.245,
+      "latency_ms": 33.842,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.158,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 214,
+      "emit_time_ms": 7991.911,
+      "latency_ms": 32.667,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.333,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 215,
+      "emit_time_ms": 8024.591,
+      "latency_ms": 32.68,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.32,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 216,
+      "emit_time_ms": 8060.919,
+      "latency_ms": 36.328,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.672,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 217,
+      "emit_time_ms": 8094.537,
+      "latency_ms": 33.618,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.382,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 218,
+      "emit_time_ms": 8129.74,
+      "latency_ms": 35.203,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.797,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 219,
+      "emit_time_ms": 8163.497,
+      "latency_ms": 33.758,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.242,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 220,
+      "emit_time_ms": 8196.712,
+      "latency_ms": 33.215,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.785,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 221,
+      "emit_time_ms": 8227.514,
+      "latency_ms": 30.802,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.198,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 222,
+      "emit_time_ms": 8281.171,
+      "latency_ms": 53.657,
+      "deadline_ms": 50.0,
+      "slack_ms": -3.657,
+      "missed": true
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 223,
+      "emit_time_ms": 8315.183,
+      "latency_ms": 34.012,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.988,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 224,
+      "emit_time_ms": 8346.268,
+      "latency_ms": 31.085,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.915,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 225,
+      "emit_time_ms": 8382.037,
+      "latency_ms": 35.769,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.231,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 226,
+      "emit_time_ms": 8415.243,
+      "latency_ms": 33.206,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.794,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 227,
+      "emit_time_ms": 8455.583,
+      "latency_ms": 40.34,
+      "deadline_ms": 50.0,
+      "slack_ms": 9.66,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 228,
+      "emit_time_ms": 8491.055,
+      "latency_ms": 35.472,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.528,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 229,
+      "emit_time_ms": 8526.563,
+      "latency_ms": 35.509,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.491,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 230,
+      "emit_time_ms": 8558.386,
+      "latency_ms": 31.823,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.177,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 231,
+      "emit_time_ms": 8587.69,
+      "latency_ms": 29.304,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.696,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 232,
+      "emit_time_ms": 8620.731,
+      "latency_ms": 33.041,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.959,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 233,
+      "emit_time_ms": 8652.646,
+      "latency_ms": 31.915,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.085,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 234,
+      "emit_time_ms": 8686.112,
+      "latency_ms": 33.466,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.534,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 235,
+      "emit_time_ms": 8719.499,
+      "latency_ms": 33.387,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.613,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 236,
+      "emit_time_ms": 8754.801,
+      "latency_ms": 35.302,
+      "deadline_ms": 50.0,
+      "slack_ms": 14.698,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 237,
+      "emit_time_ms": 8787.252,
+      "latency_ms": 32.451,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.549,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 238,
+      "emit_time_ms": 8819.123,
+      "latency_ms": 31.871,
+      "deadline_ms": 50.0,
+      "slack_ms": 18.129,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 239,
+      "emit_time_ms": 8849.152,
+      "latency_ms": 30.029,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.971,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 240,
+      "emit_time_ms": 8884.054,
+      "latency_ms": 34.903,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.097,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 241,
+      "emit_time_ms": 8914.578,
+      "latency_ms": 30.523,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.477,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 242,
+      "emit_time_ms": 8948.068,
+      "latency_ms": 33.49,
+      "deadline_ms": 50.0,
+      "slack_ms": 16.51,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 243,
+      "emit_time_ms": 8979.031,
+      "latency_ms": 30.963,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.037,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 244,
+      "emit_time_ms": 9009.974,
+      "latency_ms": 30.943,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.057,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 245,
+      "emit_time_ms": 9042.95,
+      "latency_ms": 32.976,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.024,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 246,
+      "emit_time_ms": 9080.647,
+      "latency_ms": 37.696,
+      "deadline_ms": 50.0,
+      "slack_ms": 12.304,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 247,
+      "emit_time_ms": 9117.328,
+      "latency_ms": 36.681,
+      "deadline_ms": 50.0,
+      "slack_ms": 13.319,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 248,
+      "emit_time_ms": 9149.728,
+      "latency_ms": 32.4,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.6,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 249,
+      "emit_time_ms": 9180.397,
+      "latency_ms": 30.67,
+      "deadline_ms": 50.0,
+      "slack_ms": 19.33,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 250,
+      "emit_time_ms": 9212.924,
+      "latency_ms": 32.526,
+      "deadline_ms": 50.0,
+      "slack_ms": 17.474,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 251,
+      "emit_time_ms": 9250.151,
+      "latency_ms": 37.227,
+      "deadline_ms": 50.0,
+      "slack_ms": 12.773,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 252,
+      "emit_time_ms": 9279.76,
+      "latency_ms": 29.609,
+      "deadline_ms": 50.0,
+      "slack_ms": 20.391,
+      "missed": false
+    },
+    {
+      "request_id": "req_0002",
+      "token_index": 253,
+      "emit_time_ms": 9314.292,
+      "latency_ms": 34.532,
+      "deadline_ms": 50.0,
+      "slack_ms": 15.468,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 0,
+      "emit_time_ms": 1976.336,
+      "latency_ms": 226.336,
+      "deadline_ms": 300.0,
+      "slack_ms": 73.664,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 1,
+      "emit_time_ms": 2001.091,
+      "latency_ms": 24.755,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.245,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 2,
+      "emit_time_ms": 2024.176,
+      "latency_ms": 23.086,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.914,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 3,
+      "emit_time_ms": 2070.628,
+      "latency_ms": 46.452,
+      "deadline_ms": 30.0,
+      "slack_ms": -16.452,
+      "missed": true
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 4,
+      "emit_time_ms": 2089.658,
+      "latency_ms": 19.03,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.97,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 5,
+      "emit_time_ms": 2111.191,
+      "latency_ms": 21.533,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.467,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 6,
+      "emit_time_ms": 2135.875,
+      "latency_ms": 24.684,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.316,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 7,
+      "emit_time_ms": 2185.536,
+      "latency_ms": 49.661,
+      "deadline_ms": 30.0,
+      "slack_ms": -19.661,
+      "missed": true
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 8,
+      "emit_time_ms": 2204.224,
+      "latency_ms": 18.688,
+      "deadline_ms": 30.0,
+      "slack_ms": 11.312,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 9,
+      "emit_time_ms": 2224.23,
+      "latency_ms": 20.005,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.995,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 10,
+      "emit_time_ms": 2242.029,
+      "latency_ms": 17.8,
+      "deadline_ms": 30.0,
+      "slack_ms": 12.2,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 11,
+      "emit_time_ms": 2260.86,
+      "latency_ms": 18.831,
+      "deadline_ms": 30.0,
+      "slack_ms": 11.169,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 12,
+      "emit_time_ms": 2279.176,
+      "latency_ms": 18.316,
+      "deadline_ms": 30.0,
+      "slack_ms": 11.684,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 13,
+      "emit_time_ms": 2300.352,
+      "latency_ms": 21.176,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.824,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 14,
+      "emit_time_ms": 2324.49,
+      "latency_ms": 24.138,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.862,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 15,
+      "emit_time_ms": 2342.109,
+      "latency_ms": 17.619,
+      "deadline_ms": 30.0,
+      "slack_ms": 12.381,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 16,
+      "emit_time_ms": 2363.125,
+      "latency_ms": 21.016,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.984,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 17,
+      "emit_time_ms": 2381.835,
+      "latency_ms": 18.71,
+      "deadline_ms": 30.0,
+      "slack_ms": 11.29,
+      "missed": false
+    },
+    {
+      "request_id": "req_0003",
+      "token_index": 18,
+      "emit_time_ms": 2405.618,
+      "latency_ms": 23.784,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.216,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 0,
+      "emit_time_ms": 2434.267,
+      "latency_ms": 669.167,
+      "deadline_ms": 300.0,
+      "slack_ms": -369.167,
+      "missed": true
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 1,
+      "emit_time_ms": 2454.814,
+      "latency_ms": 20.548,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.452,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 2,
+      "emit_time_ms": 2476.052,
+      "latency_ms": 21.238,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.762,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 3,
+      "emit_time_ms": 2496.831,
+      "latency_ms": 20.779,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.221,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 4,
+      "emit_time_ms": 2518.466,
+      "latency_ms": 21.635,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.365,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 5,
+      "emit_time_ms": 2541.428,
+      "latency_ms": 22.963,
+      "deadline_ms": 30.0,
+      "slack_ms": 7.037,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 6,
+      "emit_time_ms": 2561.138,
+      "latency_ms": 19.71,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.29,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 7,
+      "emit_time_ms": 2581.848,
+      "latency_ms": 20.71,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.29,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 8,
+      "emit_time_ms": 2624.377,
+      "latency_ms": 42.53,
+      "deadline_ms": 30.0,
+      "slack_ms": -12.53,
+      "missed": true
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 9,
+      "emit_time_ms": 2643.54,
+      "latency_ms": 19.162,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.838,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 10,
+      "emit_time_ms": 2669.95,
+      "latency_ms": 26.41,
+      "deadline_ms": 30.0,
+      "slack_ms": 3.59,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 11,
+      "emit_time_ms": 2693.396,
+      "latency_ms": 23.447,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.553,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 12,
+      "emit_time_ms": 2716.897,
+      "latency_ms": 23.5,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.5,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 13,
+      "emit_time_ms": 2734.663,
+      "latency_ms": 17.766,
+      "deadline_ms": 30.0,
+      "slack_ms": 12.234,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 14,
+      "emit_time_ms": 2753.606,
+      "latency_ms": 18.943,
+      "deadline_ms": 30.0,
+      "slack_ms": 11.057,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 15,
+      "emit_time_ms": 2779.035,
+      "latency_ms": 25.429,
+      "deadline_ms": 30.0,
+      "slack_ms": 4.571,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 16,
+      "emit_time_ms": 2800.937,
+      "latency_ms": 21.902,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.098,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 17,
+      "emit_time_ms": 2820.318,
+      "latency_ms": 19.381,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.619,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 18,
+      "emit_time_ms": 2840.986,
+      "latency_ms": 20.668,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.332,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 19,
+      "emit_time_ms": 2862.903,
+      "latency_ms": 21.917,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.083,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 20,
+      "emit_time_ms": 2885.467,
+      "latency_ms": 22.564,
+      "deadline_ms": 30.0,
+      "slack_ms": 7.436,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 21,
+      "emit_time_ms": 2908.533,
+      "latency_ms": 23.067,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.933,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 22,
+      "emit_time_ms": 2931.368,
+      "latency_ms": 22.834,
+      "deadline_ms": 30.0,
+      "slack_ms": 7.166,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 23,
+      "emit_time_ms": 2951.931,
+      "latency_ms": 20.563,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.437,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 24,
+      "emit_time_ms": 2974.883,
+      "latency_ms": 22.952,
+      "deadline_ms": 30.0,
+      "slack_ms": 7.048,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 25,
+      "emit_time_ms": 2999.562,
+      "latency_ms": 24.679,
+      "deadline_ms": 30.0,
+      "slack_ms": 5.321,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 26,
+      "emit_time_ms": 3014.202,
+      "latency_ms": 14.64,
+      "deadline_ms": 30.0,
+      "slack_ms": 15.36,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 27,
+      "emit_time_ms": 3031.355,
+      "latency_ms": 17.153,
+      "deadline_ms": 30.0,
+      "slack_ms": 12.847,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 28,
+      "emit_time_ms": 3049.034,
+      "latency_ms": 17.679,
+      "deadline_ms": 30.0,
+      "slack_ms": 12.321,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 29,
+      "emit_time_ms": 3070.0,
+      "latency_ms": 20.966,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.034,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 30,
+      "emit_time_ms": 3093.478,
+      "latency_ms": 23.478,
+      "deadline_ms": 30.0,
+      "slack_ms": 6.522,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 31,
+      "emit_time_ms": 3113.76,
+      "latency_ms": 20.282,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.718,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 32,
+      "emit_time_ms": 3133.967,
+      "latency_ms": 20.207,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.793,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 33,
+      "emit_time_ms": 3153.659,
+      "latency_ms": 19.692,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.308,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 34,
+      "emit_time_ms": 3175.436,
+      "latency_ms": 21.776,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.224,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 35,
+      "emit_time_ms": 3192.132,
+      "latency_ms": 16.696,
+      "deadline_ms": 30.0,
+      "slack_ms": 13.304,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 36,
+      "emit_time_ms": 3213.281,
+      "latency_ms": 21.149,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.851,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 37,
+      "emit_time_ms": 3230.967,
+      "latency_ms": 17.687,
+      "deadline_ms": 30.0,
+      "slack_ms": 12.313,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 38,
+      "emit_time_ms": 3248.652,
+      "latency_ms": 17.685,
+      "deadline_ms": 30.0,
+      "slack_ms": 12.315,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 39,
+      "emit_time_ms": 3265.521,
+      "latency_ms": 16.869,
+      "deadline_ms": 30.0,
+      "slack_ms": 13.131,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 40,
+      "emit_time_ms": 3284.713,
+      "latency_ms": 19.192,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.808,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 41,
+      "emit_time_ms": 3306.117,
+      "latency_ms": 21.404,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.596,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 42,
+      "emit_time_ms": 3326.86,
+      "latency_ms": 20.743,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.257,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 43,
+      "emit_time_ms": 3345.231,
+      "latency_ms": 18.371,
+      "deadline_ms": 30.0,
+      "slack_ms": 11.629,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 44,
+      "emit_time_ms": 3364.544,
+      "latency_ms": 19.312,
+      "deadline_ms": 30.0,
+      "slack_ms": 10.688,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 45,
+      "emit_time_ms": 3382.928,
+      "latency_ms": 18.385,
+      "deadline_ms": 30.0,
+      "slack_ms": 11.615,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 46,
+      "emit_time_ms": 3397.72,
+      "latency_ms": 14.791,
+      "deadline_ms": 30.0,
+      "slack_ms": 15.209,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 47,
+      "emit_time_ms": 3418.435,
+      "latency_ms": 20.715,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.285,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 48,
+      "emit_time_ms": 3438.888,
+      "latency_ms": 20.453,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.547,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 49,
+      "emit_time_ms": 3459.015,
+      "latency_ms": 20.127,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.873,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 50,
+      "emit_time_ms": 3480.172,
+      "latency_ms": 21.157,
+      "deadline_ms": 30.0,
+      "slack_ms": 8.843,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 51,
+      "emit_time_ms": 3495.169,
+      "latency_ms": 14.997,
+      "deadline_ms": 30.0,
+      "slack_ms": 15.003,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 52,
+      "emit_time_ms": 3512.675,
+      "latency_ms": 17.506,
+      "deadline_ms": 30.0,
+      "slack_ms": 12.494,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 53,
+      "emit_time_ms": 3532.722,
+      "latency_ms": 20.047,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.953,
+      "missed": false
+    },
+    {
+      "request_id": "req_0004",
+      "token_index": 54,
+      "emit_time_ms": 3553.518,
+      "latency_ms": 20.797,
+      "deadline_ms": 30.0,
+      "slack_ms": 9.203,
+      "missed": false
+    }
+  ]
+}
