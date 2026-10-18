@@ -1,0 +1,383 @@
+t_ms,event,core,task_id,task_kind,phase,reason,other_task_id,laxity_ms,norm_laxity,key,pred_service_ms,detail
+0.0,ARRIVE,,real_972962,inference,prefill,,,,,,,prompt=0 bursts=7 total_service=23179.8ms
+0.0,DISPATCH,0,real_972962,inference,prefill,rr_next_in_queue,,,,,,
+754.0,ARRIVE,,bg_001,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1190.0ms
+754.0,DISPATCH,1,bg_001,background,cpu_bound,rr_next_in_queue,,,,,,
+1014.0,ARRIVE,,bg_002,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1824.9ms
+1014.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,,
+1532.0,ARRIVE,,bg_003,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=4240.5ms
+1532.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,,
+1944.103,COMPLETE,,bg_001,background,done,,,,,,,cpu=1190.0ms preemptions=0
+2100.0,ARRIVE,,bg_004,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=3143.7ms
+2100.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,,
+2600.0,ARRIVE,,bg_005,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1206.1ms
+2600.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2600.0,DISPATCH,3,bg_005,background,cpu_bound,rr_next_in_queue,,,,,,
+2620.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2620.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2624.0,PREEMPT,3,bg_005,background,cpu_bound,rr_next_in_queue,bg_002,,,,,
+2624.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2640.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2640.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2644.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2644.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2648.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2648.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2660.0,PREEMPT,0,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2660.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2664.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2664.0,DISPATCH,1,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2668.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2668.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2672.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2672.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2684.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2684.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2688.0,PREEMPT,1,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2688.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2692.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2692.0,DISPATCH,2,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2696.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2696.0,DISPATCH,3,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2708.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2708.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2712.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2712.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2716.0,PREEMPT,2,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2716.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2720.0,PREEMPT,3,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2720.0,DISPATCH,3,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2732.0,PREEMPT,0,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2732.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2736.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2736.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2740.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2740.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2744.0,PREEMPT,3,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2744.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2756.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2756.0,DISPATCH,0,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2760.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2760.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2764.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2764.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2768.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2768.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2780.0,PREEMPT,0,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2780.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2784.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2784.0,DISPATCH,1,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2788.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2788.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2792.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2792.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2804.0,PREEMPT,0,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2804.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2808.0,PREEMPT,1,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2808.0,DISPATCH,1,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2812.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2812.0,DISPATCH,2,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2816.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2816.0,DISPATCH,3,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2828.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2828.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2832.0,PREEMPT,1,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2832.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2836.0,PREEMPT,2,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2836.0,DISPATCH,2,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2840.0,PREEMPT,3,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2840.0,DISPATCH,3,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2852.0,PREEMPT,0,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2852.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2856.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2856.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2860.0,PREEMPT,2,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2860.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2864.0,PREEMPT,3,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2864.0,DISPATCH,3,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2876.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2876.0,DISPATCH,0,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2880.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+2880.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2884.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+2884.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2888.0,PREEMPT,3,bg_002,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+2888.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2900.0,PREEMPT,0,real_972962,inference,prefill,rr_next_in_queue,bg_002,,,,,
+2900.0,DISPATCH,0,bg_002,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+2904.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+2904.0,DISPATCH,1,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+2906.982,COMPLETE,,bg_002,background,done,,,,,,,cpu=1824.9ms preemptions=10
+2907.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3722.0,ARRIVE,,bg_006,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=870.0ms
+3722.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,bg_006,,,,,
+3722.0,DISPATCH,3,bg_006,background,cpu_bound,rr_next_in_queue,,,,,,
+3742.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3742.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3746.0,PREEMPT,3,bg_006,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+3746.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3762.0,PREEMPT,1,real_972962,inference,prefill,rr_next_in_queue,bg_006,,,,,
+3762.0,DISPATCH,1,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3766.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+3766.0,DISPATCH,2,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+3770.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3770.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3782.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+3782.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3786.0,PREEMPT,1,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3786.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3790.0,PREEMPT,2,real_972962,inference,prefill,rr_next_in_queue,bg_006,,,,,
+3790.0,DISPATCH,2,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3794.0,PREEMPT,3,bg_003,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+3794.0,DISPATCH,3,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+3806.0,PREEMPT,0,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3806.0,DISPATCH,0,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3810.0,PREEMPT,1,bg_005,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+3810.0,DISPATCH,1,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3814.0,PREEMPT,2,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3814.0,DISPATCH,2,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3818.0,PREEMPT,3,real_972962,inference,prefill,rr_next_in_queue,bg_006,,,,,
+3818.0,DISPATCH,3,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3830.0,PREEMPT,0,bg_003,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+3830.0,DISPATCH,0,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+3834.0,PREEMPT,1,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3834.0,DISPATCH,1,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3838.0,PREEMPT,2,bg_005,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+3838.0,DISPATCH,2,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3842.0,PREEMPT,3,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3842.0,DISPATCH,3,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3854.0,PREEMPT,0,real_972962,inference,prefill,rr_next_in_queue,bg_006,,,,,
+3854.0,DISPATCH,0,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3858.0,PREEMPT,1,bg_003,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+3858.0,DISPATCH,1,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+3862.0,PREEMPT,2,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3862.0,DISPATCH,2,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3866.0,PREEMPT,3,bg_005,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+3866.0,DISPATCH,3,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3878.0,PREEMPT,0,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3878.0,DISPATCH,0,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3882.0,PREEMPT,1,real_972962,inference,prefill,rr_next_in_queue,bg_006,,,,,
+3882.0,DISPATCH,1,bg_006,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3886.0,PREEMPT,2,bg_003,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+3886.0,DISPATCH,2,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+3890.0,PREEMPT,3,bg_004,background,cpu_bound,rr_next_in_queue,bg_003,,,,,
+3890.0,DISPATCH,3,bg_003,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3902.0,PREEMPT,0,bg_005,background,cpu_bound,rr_next_in_queue,bg_004,,,,,
+3902.0,DISPATCH,0,bg_004,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3906.0,PREEMPT,1,bg_006,background,cpu_bound,rr_next_in_queue,bg_005,,,,,
+3906.0,DISPATCH,1,bg_005,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+3907.155,COMPLETE,,bg_005,background,done,,,,,,,cpu=1206.1ms preemptions=15
+3908.0,DISPATCH,1,bg_006,background,cpu_bound,rr_next_in_queue,,,,,,
+4636.248,COMPLETE,,bg_006,background,done,,,,,,,cpu=870.0ms preemptions=6
+5341.767,COMPLETE,,bg_004,background,done,,,,,,,cpu=3143.7ms preemptions=15
+5898.97,COMPLETE,,bg_003,background,done,,,,,,,cpu=4240.5ms preemptions=16
+7414.0,ARRIVE,,bg_007,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=701.5ms
+7414.0,DISPATCH,0,bg_007,background,cpu_bound,rr_next_in_queue,,,,,,
+8115.582,COMPLETE,,bg_007,background,done,,,,,,,cpu=701.5ms preemptions=0
+8182.0,ARRIVE,,bg_008,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1184.7ms
+8182.0,DISPATCH,0,bg_008,background,cpu_bound,rr_next_in_queue,,,,,,
+9366.845,COMPLETE,,bg_008,background,done,,,,,,,cpu=1184.7ms preemptions=0
+10538.0,ARRIVE,,bg_009,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=994.0ms
+10538.0,DISPATCH,0,bg_009,background,cpu_bound,rr_next_in_queue,,,,,,
+11532.079,COMPLETE,,bg_009,background,done,,,,,,,cpu=994.0ms preemptions=0
+11851.0,ARRIVE,,bg_010,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1772.3ms
+11851.0,DISPATCH,0,bg_010,background,cpu_bound,rr_next_in_queue,,,,,,
+12367.0,ARRIVE,,bg_011,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2088.1ms
+12367.0,DISPATCH,1,bg_011,background,cpu_bound,rr_next_in_queue,,,,,,
+12822.0,ARRIVE,,bg_012,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=372.0ms
+12822.0,DISPATCH,3,bg_012,background,cpu_bound,rr_next_in_queue,,,,,,
+13194.075,COMPLETE,,bg_012,background,done,,,,,,,cpu=372.0ms preemptions=0
+13623.36,COMPLETE,,bg_010,background,done,,,,,,,cpu=1772.3ms preemptions=0
+14455.194,COMPLETE,,bg_011,background,done,,,,,,,cpu=2088.1ms preemptions=0
+14477.0,ARRIVE,,bg_013,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=643.3ms
+14477.0,DISPATCH,0,bg_013,background,cpu_bound,rr_next_in_queue,,,,,,
+15120.357,COMPLETE,,bg_013,background,done,,,,,,,cpu=643.3ms preemptions=0
+15345.0,ARRIVE,,bg_014,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=860.4ms
+15345.0,DISPATCH,0,bg_014,background,cpu_bound,rr_next_in_queue,,,,,,
+16205.505,COMPLETE,,bg_014,background,done,,,,,,,cpu=860.4ms preemptions=0
+17093.0,ARRIVE,,bg_015,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1297.7ms
+17093.0,DISPATCH,0,bg_015,background,cpu_bound,rr_next_in_queue,,,,,,
+17727.0,ARRIVE,,bg_016,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1233.3ms
+17727.0,DISPATCH,1,bg_016,background,cpu_bound,rr_next_in_queue,,,,,,
+18268.0,ARRIVE,,bg_017,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2015.1ms
+18268.0,DISPATCH,3,bg_017,background,cpu_bound,rr_next_in_queue,,,,,,
+18390.841,COMPLETE,,bg_015,background,done,,,,,,,cpu=1297.7ms preemptions=0
+18464.0,ARRIVE,,bg_018,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1777.6ms
+18464.0,DISPATCH,0,bg_018,background,cpu_bound,rr_next_in_queue,,,,,,
+18931.0,ARRIVE,,bg_019,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=900.3ms
+18931.0,PREEMPT,3,bg_017,background,cpu_bound,rr_next_in_queue,bg_019,,,,,
+18931.0,DISPATCH,3,bg_019,background,cpu_bound,rr_next_in_queue,,,,,,
+18951.0,PREEMPT,2,real_972962,inference,prefill,rr_next_in_queue,bg_017,,,,,
+18951.0,DISPATCH,2,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+18955.0,PREEMPT,3,bg_019,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+18955.0,DISPATCH,3,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+18960.415,COMPLETE,,bg_016,background,done,,,,,,,cpu=1233.3ms preemptions=0
+18961.0,DISPATCH,1,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19463.0,ARRIVE,,bg_020,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2278.7ms
+19463.0,PREEMPT,3,real_972962,inference,prefill,rr_next_in_queue,bg_020,,,,,
+19463.0,DISPATCH,3,bg_020,background,cpu_bound,rr_next_in_queue,,,,,,
+19483.0,PREEMPT,2,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19483.0,DISPATCH,2,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19487.0,PREEMPT,3,bg_020,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19487.0,DISPATCH,3,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19503.0,PREEMPT,1,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19503.0,DISPATCH,1,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19507.0,PREEMPT,2,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19507.0,DISPATCH,2,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19511.0,PREEMPT,3,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19511.0,DISPATCH,3,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19523.0,PREEMPT,0,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19523.0,DISPATCH,0,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19527.0,PREEMPT,1,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19527.0,DISPATCH,1,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19531.0,PREEMPT,2,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19531.0,DISPATCH,2,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19535.0,PREEMPT,3,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19535.0,DISPATCH,3,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19547.0,PREEMPT,0,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19547.0,DISPATCH,0,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19551.0,PREEMPT,1,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19551.0,DISPATCH,1,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19555.0,PREEMPT,2,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19555.0,DISPATCH,2,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19559.0,PREEMPT,3,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19559.0,DISPATCH,3,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19571.0,PREEMPT,0,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19571.0,DISPATCH,0,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19575.0,PREEMPT,1,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19575.0,DISPATCH,1,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19579.0,PREEMPT,2,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19579.0,DISPATCH,2,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19583.0,PREEMPT,3,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19583.0,DISPATCH,3,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19595.0,PREEMPT,0,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19595.0,DISPATCH,0,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19599.0,PREEMPT,1,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19599.0,DISPATCH,1,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19603.0,PREEMPT,2,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19603.0,DISPATCH,2,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19607.0,PREEMPT,3,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19607.0,DISPATCH,3,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19619.0,PREEMPT,0,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19619.0,DISPATCH,0,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19623.0,PREEMPT,1,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19623.0,DISPATCH,1,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19627.0,PREEMPT,2,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19627.0,DISPATCH,2,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19631.0,PREEMPT,3,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19631.0,DISPATCH,3,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19643.0,PREEMPT,0,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19643.0,DISPATCH,0,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19647.0,PREEMPT,1,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19647.0,DISPATCH,1,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19651.0,PREEMPT,2,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19651.0,DISPATCH,2,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19655.0,PREEMPT,3,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19655.0,DISPATCH,3,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19667.0,PREEMPT,0,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19667.0,DISPATCH,0,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19671.0,PREEMPT,1,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19671.0,DISPATCH,1,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19675.0,PREEMPT,2,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19675.0,DISPATCH,2,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19679.0,PREEMPT,3,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19679.0,DISPATCH,3,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19691.0,PREEMPT,0,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19691.0,DISPATCH,0,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19695.0,PREEMPT,1,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19695.0,DISPATCH,1,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19699.0,PREEMPT,2,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19699.0,DISPATCH,2,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19703.0,PREEMPT,3,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19703.0,DISPATCH,3,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19715.0,PREEMPT,0,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19715.0,DISPATCH,0,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19719.0,PREEMPT,1,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19719.0,DISPATCH,1,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19723.0,PREEMPT,2,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19723.0,DISPATCH,2,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19727.0,PREEMPT,3,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19727.0,DISPATCH,3,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19739.0,PREEMPT,0,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19739.0,DISPATCH,0,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19743.0,PREEMPT,1,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19743.0,DISPATCH,1,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19747.0,PREEMPT,2,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19747.0,DISPATCH,2,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19751.0,PREEMPT,3,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19751.0,DISPATCH,3,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19763.0,PREEMPT,0,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19763.0,DISPATCH,0,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19767.0,PREEMPT,1,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19767.0,DISPATCH,1,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19771.0,PREEMPT,2,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19771.0,DISPATCH,2,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19775.0,PREEMPT,3,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19775.0,DISPATCH,3,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19787.0,PREEMPT,0,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19787.0,DISPATCH,0,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19791.0,PREEMPT,1,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19791.0,DISPATCH,1,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19795.0,PREEMPT,2,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19795.0,DISPATCH,2,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19799.0,PREEMPT,3,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19799.0,DISPATCH,3,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19811.0,PREEMPT,0,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19811.0,DISPATCH,0,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19815.0,PREEMPT,1,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19815.0,DISPATCH,1,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19819.0,PREEMPT,2,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19819.0,DISPATCH,2,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19823.0,PREEMPT,3,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19823.0,DISPATCH,3,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19835.0,PREEMPT,0,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19835.0,DISPATCH,0,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19839.0,PREEMPT,1,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19839.0,DISPATCH,1,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19843.0,PREEMPT,2,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19843.0,DISPATCH,2,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19847.0,PREEMPT,3,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19847.0,DISPATCH,3,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19859.0,PREEMPT,0,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19859.0,DISPATCH,0,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19863.0,PREEMPT,1,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19863.0,DISPATCH,1,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19867.0,PREEMPT,2,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19867.0,DISPATCH,2,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19871.0,PREEMPT,3,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19871.0,DISPATCH,3,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19883.0,PREEMPT,0,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19883.0,DISPATCH,0,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19887.0,PREEMPT,1,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19887.0,DISPATCH,1,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19891.0,PREEMPT,2,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19891.0,DISPATCH,2,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19895.0,PREEMPT,3,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19895.0,DISPATCH,3,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19907.0,PREEMPT,0,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19907.0,DISPATCH,0,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19911.0,PREEMPT,1,bg_018,background,cpu_bound,rr_next_in_queue,bg_017,,,,,
+19911.0,DISPATCH,1,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19915.0,PREEMPT,2,bg_020,background,cpu_bound,rr_next_in_queue,bg_018,,,,,
+19915.0,DISPATCH,2,bg_018,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19919.0,PREEMPT,3,bg_019,background,cpu_bound,rr_next_in_queue,bg_020,,,,,
+19919.0,DISPATCH,3,bg_020,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19931.0,PREEMPT,0,real_972962,inference,prefill,rr_next_in_queue,bg_019,,,,,
+19931.0,DISPATCH,0,bg_019,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+19935.0,PREEMPT,1,bg_017,background,cpu_bound,rr_next_in_queue,real_972962,,,,,
+19935.0,DISPATCH,1,real_972962,inference,prefill,rr_next_in_queue,,,,,, [migrated]
+19935.8,COMPLETE,,bg_019,background,done,,,,,,,cpu=900.3ms preemptions=16
+19936.0,DISPATCH,0,bg_017,background,cpu_bound,rr_next_in_queue,,,,,, [migrated]
+20327.272,COMPLETE,,bg_018,background,done,,,,,,,cpu=1777.6ms preemptions=14
+20402.975,COMPLETE,,bg_017,background,done,,,,,,,cpu=2015.1ms preemptions=17
+21034.0,ARRIVE,,bg_021,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2055.6ms
+21034.0,DISPATCH,0,bg_021,background,cpu_bound,rr_next_in_queue,,,,,,
+21843.822,COMPLETE,,bg_020,background,done,,,,,,,cpu=2278.7ms preemptions=15
+22186.0,ARRIVE,,bg_022,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1514.0ms
+22186.0,DISPATCH,2,bg_022,background,cpu_bound,rr_next_in_queue,,,,,,
+23089.716,COMPLETE,,bg_021,background,done,,,,,,,cpu=2055.6ms preemptions=0
+23147.0,ARRIVE,,bg_023,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2036.5ms
+23147.0,DISPATCH,0,bg_023,background,cpu_bound,rr_next_in_queue,,,,,,
+23388.28,COMPLETE,,real_972962,inference,done,,,,,,,cpu=23179.8ms preemptions=31
+23700.05,COMPLETE,,bg_022,background,done,,,,,,,cpu=1514.0ms preemptions=0
+25183.599,COMPLETE,,bg_023,background,done,,,,,,,cpu=2036.5ms preemptions=0

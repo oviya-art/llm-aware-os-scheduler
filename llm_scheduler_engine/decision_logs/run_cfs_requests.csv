@@ -1,0 +1,2 @@
+request_id,category,request_type,priority_metadata,arrival_time_s,deadline_target_itl_ms,ttft_budget_ms,ttft_ms,ttft_missed,tokens_generated,avg_itl_ms,p95_itl_ms,p99_itl_ms,max_itl_ms,itl_violation_count,itl_violation_rate_pct,min_slack_ms,avg_slack_ms,completion_ms,isolated_service_ms,slowdown,sla_attained,preemptions,migrations,trace_ttft_ms,trace_avg_itl_ms
+real_972962,realtime,standard,normal,0.0,45.0,800.0,21867.88,True,6,256.4,290.998,296.936,298.42,6,100.0,-253.42,-211.4,23406.28,23179.78,1.01,False,26,26,21641.38,

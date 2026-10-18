@@ -1,0 +1,5219 @@
+{
+  "schema_version": "1.0",
+  "module": "Member 1: Workload Simulation & Latency Profiling",
+  "export_timestamp_utc": "2026-10-15T17:41:46.297069+00:00",
+  "experiment_config": {
+    "mode": "simulation",
+    "scenario": "light_load",
+    "seed": 9,
+    "requests_count": 6,
+    "arrival_rate_rps": 0.6,
+    "avg_interference_factor": 1.015,
+    "is_simulated": true
+  },
+  "total_requests": 6,
+  "requests": [
+    {
+      "request_id": "req_0001",
+      "arrival_time_s": 1.0363,
+      "category": "short",
+      "request_type": "interactive",
+      "priority_metadata": "high",
+      "prompt_tokens": 24,
+      "requested_output_tokens": 27,
+      "deadline_target_itl_ms": 30.0,
+      "is_simulated": true,
+      "data_source": "SimulatedInferenceBackend (Synthetic Model)",
+      "ttft_ms": 40.732,
+      "total_generation_time_ms": 944.747,
+      "tokens_generated": 27,
+      "observed_avg_itl_ms": 33.482,
+      "observed_median_itl_ms": 31.424,
+      "observed_p95_itl_ms": 54.125,
+      "observed_p99_itl_ms": 60.794,
+      "observed_violation_count": 18,
+      "observed_violation_rate": 0.6667,
+      "has_observed_deadline_violation": true,
+      "observed_min_slack_ms": -32.55,
+      "observed_avg_slack_ms": -3.48,
+      "observed_p95_slack_ms": -24.12,
+      "prediction_method": "EWMA(alpha=0.35, window=10)",
+      "predicted_itl_ms": 31.49,
+      "predicted_slack_ms": -1.49,
+      "predicted_risk_level": "high",
+      "risk_reasoning": "Critical slack deficit: predicted slack is -1.49ms (-5.0% of deadline target 30.0ms).",
+      "token_records": [
+        {
+          "token_index": 1,
+          "timestamp_s": 1.10621,
+          "itl_ms": 29.179,
+          "is_simulated": true
+        },
+        {
+          "token_index": 2,
+          "timestamp_s": 1.16877,
+          "itl_ms": 62.555,
+          "is_simulated": true
+        },
+        {
+          "token_index": 3,
+          "timestamp_s": 1.20048,
+          "itl_ms": 31.714,
+          "is_simulated": true
+        },
+        {
+          "token_index": 4,
+          "timestamp_s": 1.23015,
+          "itl_ms": 29.668,
+          "is_simulated": true
+        },
+        {
+          "token_index": 5,
+          "timestamp_s": 1.26405,
+          "itl_ms": 33.904,
+          "is_simulated": true
+        },
+        {
+          "token_index": 6,
+          "timestamp_s": 1.29548,
+          "itl_ms": 31.424,
+          "is_simulated": true
+        },
+        {
+          "token_index": 7,
+          "timestamp_s": 1.32569,
+          "itl_ms": 30.215,
+          "is_simulated": true
+        },
+        {
+          "token_index": 8,
+          "timestamp_s": 1.35417,
+          "itl_ms": 28.482,
+          "is_simulated": true
+        },
+        {
+          "token_index": 9,
+          "timestamp_s": 1.37663,
+          "itl_ms": 22.461,
+          "is_simulated": true
+        },
+        {
+          "token_index": 10,
+          "timestamp_s": 1.40685,
+          "itl_ms": 30.222,
+          "is_simulated": true
+        },
+        {
+          "token_index": 11,
+          "timestamp_s": 1.433,
+          "itl_ms": 26.148,
+          "is_simulated": true
+        },
+        {
+          "token_index": 12,
+          "timestamp_s": 1.46748,
+          "itl_ms": 34.478,
+          "is_simulated": true
+        },
+        {
+          "token_index": 13,
+          "timestamp_s": 1.49539,
+          "itl_ms": 27.914,
+          "is_simulated": true
+        },
+        {
+          "token_index": 14,
+          "timestamp_s": 1.52084,
+          "itl_ms": 25.446,
+          "is_simulated": true
+        },
+        {
+          "token_index": 15,
+          "timestamp_s": 1.55112,
+          "itl_ms": 30.283,
+          "is_simulated": true
+        },
+        {
+          "token_index": 16,
+          "timestamp_s": 1.5841,
+          "itl_ms": 32.972,
+          "is_simulated": true
+        },
+        {
+          "token_index": 17,
+          "timestamp_s": 1.61696,
+          "itl_ms": 32.859,
+          "is_simulated": true
+        },
+        {
+          "token_index": 18,
+          "timestamp_s": 1.65456,
+          "itl_ms": 37.6,
+          "is_simulated": true
+        },
+        {
+          "token_index": 19,
+          "timestamp_s": 1.71034,
+          "itl_ms": 55.781,
+          "is_simulated": true
+        },
+        {
+          "token_index": 20,
+          "timestamp_s": 1.74374,
+          "itl_ms": 33.4,
+          "is_simulated": true
+        },
+        {
+          "token_index": 21,
+          "timestamp_s": 1.77794,
+          "itl_ms": 34.201,
+          "is_simulated": true
+        },
+        {
+          "token_index": 22,
+          "timestamp_s": 1.81159,
+          "itl_ms": 33.649,
+          "is_simulated": true
+        },
+        {
+          "token_index": 23,
+          "timestamp_s": 1.86185,
+          "itl_ms": 50.26,
+          "is_simulated": true
+        },
+        {
+          "token_index": 24,
+          "timestamp_s": 1.89092,
+          "itl_ms": 29.072,
+          "is_simulated": true
+        },
+        {
+          "token_index": 25,
+          "timestamp_s": 1.92295,
+          "itl_ms": 32.031,
+          "is_simulated": true
+        },
+        {
+          "token_index": 26,
+          "timestamp_s": 1.95365,
+          "itl_ms": 30.704,
+          "is_simulated": true
+        },
+        {
+          "token_index": 27,
+          "timestamp_s": 1.98105,
+          "itl_ms": 27.393,
+          "is_simulated": true
+        }
+      ]
+    },
+    {
+      "request_id": "req_0002",
+      "arrival_time_s": 4.3931,
+      "category": "short",
+      "request_type": "interactive",
+      "priority_metadata": "high",
+      "prompt_tokens": 48,
+      "requested_output_tokens": 45,
+      "deadline_target_itl_ms": 30.0,
+      "is_simulated": true,
+      "data_source": "SimulatedInferenceBackend (Synthetic Model)",
+      "ttft_ms": 41.911,
+      "total_generation_time_ms": 1495.523,
+      "tokens_generated": 45,
+      "observed_avg_itl_ms": 32.302,
+      "observed_median_itl_ms": 31.234,
+      "observed_p95_itl_ms": 42.161,
+      "observed_p99_itl_ms": 61.075,
+      "observed_violation_count": 26,
+      "observed_violation_rate": 0.5778,
+      "has_observed_deadline_violation": true,
+      "observed_min_slack_ms": -38.04,
+      "observed_avg_slack_ms": -2.3,
+      "observed_p95_slack_ms": -12.16,
+      "prediction_method": "EWMA(alpha=0.35, window=10)",
+      "predicted_itl_ms": 30.53,
+      "predicted_slack_ms": -0.53,
+      "predicted_risk_level": "high",
+      "risk_reasoning": "Critical slack deficit: predicted slack is -0.53ms (-1.8% of deadline target 30.0ms).",
+      "token_records": [
+        {
+          "token_index": 1,
+          "timestamp_s": 4.46709,
+          "itl_ms": 32.077,
+          "is_simulated": true
+        },
+        {
+          "token_index": 2,
+          "timestamp_s": 4.49972,
+          "itl_ms": 32.63,
+          "is_simulated": true
+        },
+        {
+          "token_index": 3,
+          "timestamp_s": 4.53437,
+          "itl_ms": 34.65,
+          "is_simulated": true
+        },
+        {
+          "token_index": 4,
+          "timestamp_s": 4.56018,
+          "itl_ms": 25.81,
+          "is_simulated": true
+        },
+        {
+          "token_index": 5,
+          "timestamp_s": 4.5889,
+          "itl_ms": 28.72,
+          "is_simulated": true
+        },
+        {
+          "token_index": 6,
+          "timestamp_s": 4.63172,
+          "itl_ms": 42.823,
+          "is_simulated": true
+        },
+        {
+          "token_index": 7,
+          "timestamp_s": 4.66168,
+          "itl_ms": 29.959,
+          "is_simulated": true
+        },
+        {
+          "token_index": 8,
+          "timestamp_s": 4.69452,
+          "itl_ms": 32.841,
+          "is_simulated": true
+        },
+        {
+          "token_index": 9,
+          "timestamp_s": 4.72409,
+          "itl_ms": 29.57,
+          "is_simulated": true
+        },
+        {
+          "token_index": 10,
+          "timestamp_s": 4.75092,
+          "itl_ms": 26.829,
+          "is_simulated": true
+        },
+        {
+          "token_index": 11,
+          "timestamp_s": 4.78524,
+          "itl_ms": 34.318,
+          "is_simulated": true
+        },
+        {
+          "token_index": 12,
+          "timestamp_s": 4.81839,
+          "itl_ms": 33.157,
+          "is_simulated": true
+        },
+        {
+          "token_index": 13,
+          "timestamp_s": 4.85045,
+          "itl_ms": 32.056,
+          "is_simulated": true
+        },
+        {
+          "token_index": 14,
+          "timestamp_s": 4.87738,
+          "itl_ms": 26.934,
+          "is_simulated": true
+        },
+        {
+          "token_index": 15,
+          "timestamp_s": 4.90883,
+          "itl_ms": 31.442,
+          "is_simulated": true
+        },
+        {
+          "token_index": 16,
+          "timestamp_s": 4.94549,
+          "itl_ms": 36.666,
+          "is_simulated": true
+        },
+        {
+          "token_index": 17,
+          "timestamp_s": 4.97658,
+          "itl_ms": 31.091,
+          "is_simulated": true
+        },
+        {
+          "token_index": 18,
+          "timestamp_s": 5.00782,
+          "itl_ms": 31.234,
+          "is_simulated": true
+        },
+        {
+          "token_index": 19,
+          "timestamp_s": 5.04192,
+          "itl_ms": 34.097,
+          "is_simulated": true
+        },
+        {
+          "token_index": 20,
+          "timestamp_s": 5.07114,
+          "itl_ms": 29.225,
+          "is_simulated": true
+        },
+        {
+          "token_index": 21,
+          "timestamp_s": 5.13918,
+          "itl_ms": 68.042,
+          "is_simulated": true
+        },
+        {
+          "token_index": 22,
+          "timestamp_s": 5.17101,
+          "itl_ms": 31.83,
+          "is_simulated": true
+        },
+        {
+          "token_index": 23,
+          "timestamp_s": 5.19749,
+          "itl_ms": 26.474,
+          "is_simulated": true
+        },
+        {
+          "token_index": 24,
+          "timestamp_s": 5.22756,
+          "itl_ms": 30.07,
+          "is_simulated": true
+        },
+        {
+          "token_index": 25,
+          "timestamp_s": 5.2542,
+          "itl_ms": 26.645,
+          "is_simulated": true
+        },
+        {
+          "token_index": 26,
+          "timestamp_s": 5.28178,
+          "itl_ms": 27.58,
+          "is_simulated": true
+        },
+        {
+          "token_index": 27,
+          "timestamp_s": 5.31414,
+          "itl_ms": 32.356,
+          "is_simulated": true
+        },
+        {
+          "token_index": 28,
+          "timestamp_s": 5.34342,
+          "itl_ms": 29.285,
+          "is_simulated": true
+        },
+        {
+          "token_index": 29,
+          "timestamp_s": 5.3719,
+          "itl_ms": 28.475,
+          "is_simulated": true
+        },
+        {
+          "token_index": 30,
+          "timestamp_s": 5.41141,
+          "itl_ms": 39.513,
+          "is_simulated": true
+        },
+        {
+          "token_index": 31,
+          "timestamp_s": 5.44478,
+          "itl_ms": 33.366,
+          "is_simulated": true
+        },
+        {
+          "token_index": 32,
+          "timestamp_s": 5.49699,
+          "itl_ms": 52.209,
+          "is_simulated": true
+        },
+        {
+          "token_index": 33,
+          "timestamp_s": 5.52693,
+          "itl_ms": 29.94,
+          "is_simulated": true
+        },
+        {
+          "token_index": 34,
+          "timestamp_s": 5.55356,
+          "itl_ms": 26.629,
+          "is_simulated": true
+        },
+        {
+          "token_index": 35,
+          "timestamp_s": 5.58705,
+          "itl_ms": 33.491,
+          "is_simulated": true
+        },
+        {
+          "token_index": 36,
+          "timestamp_s": 5.62029,
+          "itl_ms": 33.247,
+          "is_simulated": true
+        },
+        {
+          "token_index": 37,
+          "timestamp_s": 5.65417,
+          "itl_ms": 33.878,
+          "is_simulated": true
+        },
+        {
+          "token_index": 38,
+          "timestamp_s": 5.6794,
+          "itl_ms": 25.228,
+          "is_simulated": true
+        },
+        {
+          "token_index": 39,
+          "timestamp_s": 5.70788,
+          "itl_ms": 28.478,
+          "is_simulated": true
+        },
+        {
+          "token_index": 40,
+          "timestamp_s": 5.73652,
+          "itl_ms": 28.638,
+          "is_simulated": true
+        },
+        {
+          "token_index": 41,
+          "timestamp_s": 5.76111,
+          "itl_ms": 24.591,
+          "is_simulated": true
+        },
+        {
+          "token_index": 42,
+          "timestamp_s": 5.7942,
+          "itl_ms": 33.094,
+          "is_simulated": true
+        },
+        {
+          "token_index": 43,
+          "timestamp_s": 5.82947,
+          "itl_ms": 35.265,
+          "is_simulated": true
+        },
+        {
+          "token_index": 44,
+          "timestamp_s": 5.85821,
+          "itl_ms": 28.742,
+          "is_simulated": true
+        },
+        {
+          "token_index": 45,
+          "timestamp_s": 5.88862,
+          "itl_ms": 30.417,
+          "is_simulated": true
+        }
+      ]
+    },
+    {
+      "request_id": "req_0003",
+      "arrival_time_s": 8.2027,
+      "category": "short",
+      "request_type": "interactive",
+      "priority_metadata": "high",
+      "prompt_tokens": 51,
+      "requested_output_tokens": 55,
+      "deadline_target_itl_ms": 30.0,
+      "is_simulated": true,
+      "data_source": "SimulatedInferenceBackend (Synthetic Model)",
+      "ttft_ms": 42.567,
+      "total_generation_time_ms": 1735.973,
+      "tokens_generated": 55,
+      "observed_avg_itl_ms": 30.789,
+      "observed_median_itl_ms": 30.178,
+      "observed_p95_itl_ms": 35.169,
+      "observed_p99_itl_ms": 52.343,
+      "observed_violation_count": 29,
+      "observed_violation_rate": 0.5273,
+      "has_observed_deadline_violation": true,
+      "observed_min_slack_ms": -36.67,
+      "observed_avg_slack_ms": -0.79,
+      "observed_p95_slack_ms": -5.17,
+      "prediction_method": "EWMA(alpha=0.35, window=10)",
+      "predicted_itl_ms": 29.5,
+      "predicted_slack_ms": 0.5,
+      "predicted_risk_level": "high",
+      "risk_reasoning": "Critical slack deficit: predicted slack is 0.50ms (1.7% of deadline target 30.0ms).",
+      "token_records": [
+        {
+          "token_index": 1,
+          "timestamp_s": 8.27426,
+          "itl_ms": 28.993,
+          "is_simulated": true
+        },
+        {
+          "token_index": 2,
+          "timestamp_s": 8.30319,
+          "itl_ms": 28.931,
+          "is_simulated": true
+        },
+        {
+          "token_index": 3,
+          "timestamp_s": 8.33536,
+          "itl_ms": 32.17,
+          "is_simulated": true
+        },
+        {
+          "token_index": 4,
+          "timestamp_s": 8.36554,
+          "itl_ms": 30.178,
+          "is_simulated": true
+        },
+        {
+          "token_index": 5,
+          "timestamp_s": 8.39389,
+          "itl_ms": 28.352,
+          "is_simulated": true
+        },
+        {
+          "token_index": 6,
+          "timestamp_s": 8.42528,
+          "itl_ms": 31.393,
+          "is_simulated": true
+        },
+        {
+          "token_index": 7,
+          "timestamp_s": 8.49195,
+          "itl_ms": 66.666,
+          "is_simulated": true
+        },
+        {
+          "token_index": 8,
+          "timestamp_s": 8.52011,
+          "itl_ms": 28.16,
+          "is_simulated": true
+        },
+        {
+          "token_index": 9,
+          "timestamp_s": 8.54601,
+          "itl_ms": 25.903,
+          "is_simulated": true
+        },
+        {
+          "token_index": 10,
+          "timestamp_s": 8.57484,
+          "itl_ms": 28.828,
+          "is_simulated": true
+        },
+        {
+          "token_index": 11,
+          "timestamp_s": 8.60944,
+          "itl_ms": 34.602,
+          "is_simulated": true
+        },
+        {
+          "token_index": 12,
+          "timestamp_s": 8.64145,
+          "itl_ms": 32.011,
+          "is_simulated": true
+        },
+        {
+          "token_index": 13,
+          "timestamp_s": 8.67058,
+          "itl_ms": 29.123,
+          "is_simulated": true
+        },
+        {
+          "token_index": 14,
+          "timestamp_s": 8.69506,
+          "itl_ms": 24.479,
+          "is_simulated": true
+        },
+        {
+          "token_index": 15,
+          "timestamp_s": 8.72116,
+          "itl_ms": 26.109,
+          "is_simulated": true
+        },
+        {
+          "token_index": 16,
+          "timestamp_s": 8.75233,
+          "itl_ms": 31.169,
+          "is_simulated": true
+        },
+        {
+          "token_index": 17,
+          "timestamp_s": 8.77963,
+          "itl_ms": 27.3,
+          "is_simulated": true
+        },
+        {
+          "token_index": 18,
+          "timestamp_s": 8.8076,
+          "itl_ms": 27.962,
+          "is_simulated": true
+        },
+        {
+          "token_index": 19,
+          "timestamp_s": 8.84011,
+          "itl_ms": 32.51,
+          "is_simulated": true
+        },
+        {
+          "token_index": 20,
+          "timestamp_s": 8.86503,
+          "itl_ms": 24.926,
+          "is_simulated": true
+        },
+        {
+          "token_index": 21,
+          "timestamp_s": 8.89963,
+          "itl_ms": 34.598,
+          "is_simulated": true
+        },
+        {
+          "token_index": 22,
+          "timestamp_s": 8.93069,
+          "itl_ms": 31.058,
+          "is_simulated": true
+        },
+        {
+          "token_index": 23,
+          "timestamp_s": 8.95959,
+          "itl_ms": 28.898,
+          "is_simulated": true
+        },
+        {
+          "token_index": 24,
+          "timestamp_s": 8.99032,
+          "itl_ms": 30.732,
+          "is_simulated": true
+        },
+        {
+          "token_index": 25,
+          "timestamp_s": 9.02086,
+          "itl_ms": 30.536,
+          "is_simulated": true
+        },
+        {
+          "token_index": 26,
+          "timestamp_s": 9.05202,
+          "itl_ms": 31.164,
+          "is_simulated": true
+        },
+        {
+          "token_index": 27,
+          "timestamp_s": 9.08124,
+          "itl_ms": 29.217,
+          "is_simulated": true
+        },
+        {
+          "token_index": 28,
+          "timestamp_s": 9.11106,
+          "itl_ms": 29.822,
+          "is_simulated": true
+        },
+        {
+          "token_index": 29,
+          "timestamp_s": 9.14115,
+          "itl_ms": 30.094,
+          "is_simulated": true
+        },
+        {
+          "token_index": 30,
+          "timestamp_s": 9.1707,
+          "itl_ms": 29.551,
+          "is_simulated": true
+        },
+        {
+          "token_index": 31,
+          "timestamp_s": 9.21084,
+          "itl_ms": 40.141,
+          "is_simulated": true
+        },
+        {
+          "token_index": 32,
+          "timestamp_s": 9.23933,
+          "itl_ms": 28.483,
+          "is_simulated": true
+        },
+        {
+          "token_index": 33,
+          "timestamp_s": 9.26785,
+          "itl_ms": 28.524,
+          "is_simulated": true
+        },
+        {
+          "token_index": 34,
+          "timestamp_s": 9.29992,
+          "itl_ms": 32.065,
+          "is_simulated": true
+        },
+        {
+          "token_index": 35,
+          "timestamp_s": 9.33022,
+          "itl_ms": 30.305,
+          "is_simulated": true
+        },
+        {
+          "token_index": 36,
+          "timestamp_s": 9.36189,
+          "itl_ms": 31.667,
+          "is_simulated": true
+        },
+        {
+          "token_index": 37,
+          "timestamp_s": 9.39523,
+          "itl_ms": 33.341,
+          "is_simulated": true
+        },
+        {
+          "token_index": 38,
+          "timestamp_s": 9.42473,
+          "itl_ms": 29.497,
+          "is_simulated": true
+        },
+        {
+          "token_index": 39,
+          "timestamp_s": 9.4514,
+          "itl_ms": 26.671,
+          "is_simulated": true
+        },
+        {
+          "token_index": 40,
+          "timestamp_s": 9.48093,
+          "itl_ms": 29.537,
+          "is_simulated": true
+        },
+        {
+          "token_index": 41,
+          "timestamp_s": 9.51076,
+          "itl_ms": 29.831,
+          "is_simulated": true
+        },
+        {
+          "token_index": 42,
+          "timestamp_s": 9.54499,
+          "itl_ms": 34.224,
+          "is_simulated": true
+        },
+        {
+          "token_index": 43,
+          "timestamp_s": 9.57568,
+          "itl_ms": 30.697,
+          "is_simulated": true
+        },
+        {
+          "token_index": 44,
+          "timestamp_s": 9.60543,
+          "itl_ms": 29.744,
+          "is_simulated": true
+        },
+        {
+          "token_index": 45,
+          "timestamp_s": 9.63792,
+          "itl_ms": 32.489,
+          "is_simulated": true
+        },
+        {
+          "token_index": 46,
+          "timestamp_s": 9.66886,
+          "itl_ms": 30.946,
+          "is_simulated": true
+        },
+        {
+          "token_index": 47,
+          "timestamp_s": 9.69909,
+          "itl_ms": 30.223,
+          "is_simulated": true
+        },
+        {
+          "token_index": 48,
+          "timestamp_s": 9.73028,
+          "itl_ms": 31.196,
+          "is_simulated": true
+        },
+        {
+          "token_index": 49,
+          "timestamp_s": 9.76324,
+          "itl_ms": 32.963,
+          "is_simulated": true
+        },
+        {
+          "token_index": 50,
+          "timestamp_s": 9.78418,
+          "itl_ms": 20.936,
+          "is_simulated": true
+        },
+        {
+          "token_index": 51,
+          "timestamp_s": 9.82067,
+          "itl_ms": 36.491,
+          "is_simulated": true
+        },
+        {
+          "token_index": 52,
+          "timestamp_s": 9.84765,
+          "itl_ms": 26.979,
+          "is_simulated": true
+        },
+        {
+          "token_index": 53,
+          "timestamp_s": 9.88019,
+          "itl_ms": 32.537,
+          "is_simulated": true
+        },
+        {
+          "token_index": 54,
+          "timestamp_s": 9.9119,
+          "itl_ms": 31.711,
+          "is_simulated": true
+        },
+        {
+          "token_index": 55,
+          "timestamp_s": 9.93867,
+          "itl_ms": 26.773,
+          "is_simulated": true
+        }
+      ]
+    },
+    {
+      "request_id": "req_0004",
+      "arrival_time_s": 10.2098,
+      "category": "medium",
+      "request_type": "standard",
+      "priority_metadata": "normal",
+      "prompt_tokens": 214,
+      "requested_output_tokens": 244,
+      "deadline_target_itl_ms": 50.0,
+      "is_simulated": true,
+      "data_source": "SimulatedInferenceBackend (Synthetic Model)",
+      "ttft_ms": 76.801,
+      "total_generation_time_ms": 13065.628,
+      "tokens_generated": 244,
+      "observed_avg_itl_ms": 53.233,
+      "observed_median_itl_ms": 52.477,
+      "observed_p95_itl_ms": 60.377,
+      "observed_p99_itl_ms": 84.707,
+      "observed_violation_count": 179,
+      "observed_violation_rate": 0.7336,
+      "has_observed_deadline_violation": true,
+      "observed_min_slack_ms": -42.33,
+      "observed_avg_slack_ms": -3.23,
+      "observed_p95_slack_ms": -10.38,
+      "prediction_method": "EWMA(alpha=0.35, window=10)",
+      "predicted_itl_ms": 51.05,
+      "predicted_slack_ms": -1.05,
+      "predicted_risk_level": "high",
+      "risk_reasoning": "Critical slack deficit: predicted slack is -1.05ms (-2.1% of deadline target 50.0ms).",
+      "token_records": [
+        {
+          "token_index": 1,
+          "timestamp_s": 10.33888,
+          "itl_ms": 52.275,
+          "is_simulated": true
+        },
+        {
+          "token_index": 2,
+          "timestamp_s": 10.39031,
+          "itl_ms": 51.43,
+          "is_simulated": true
+        },
+        {
+          "token_index": 3,
+          "timestamp_s": 10.44641,
+          "itl_ms": 56.104,
+          "is_simulated": true
+        },
+        {
+          "token_index": 4,
+          "timestamp_s": 10.49633,
+          "itl_ms": 49.923,
+          "is_simulated": true
+        },
+        {
+          "token_index": 5,
+          "timestamp_s": 10.5493,
+          "itl_ms": 52.963,
+          "is_simulated": true
+        },
+        {
+          "token_index": 6,
+          "timestamp_s": 10.60358,
+          "itl_ms": 54.287,
+          "is_simulated": true
+        },
+        {
+          "token_index": 7,
+          "timestamp_s": 10.65969,
+          "itl_ms": 56.112,
+          "is_simulated": true
+        },
+        {
+          "token_index": 8,
+          "timestamp_s": 10.71072,
+          "itl_ms": 51.023,
+          "is_simulated": true
+        },
+        {
+          "token_index": 9,
+          "timestamp_s": 10.76115,
+          "itl_ms": 50.432,
+          "is_simulated": true
+        },
+        {
+          "token_index": 10,
+          "timestamp_s": 10.80854,
+          "itl_ms": 47.392,
+          "is_simulated": true
+        },
+        {
+          "token_index": 11,
+          "timestamp_s": 10.86227,
+          "itl_ms": 53.726,
+          "is_simulated": true
+        },
+        {
+          "token_index": 12,
+          "timestamp_s": 10.91411,
+          "itl_ms": 51.841,
+          "is_simulated": true
+        },
+        {
+          "token_index": 13,
+          "timestamp_s": 10.96371,
+          "itl_ms": 49.601,
+          "is_simulated": true
+        },
+        {
+          "token_index": 14,
+          "timestamp_s": 11.0204,
+          "itl_ms": 56.691,
+          "is_simulated": true
+        },
+        {
+          "token_index": 15,
+          "timestamp_s": 11.07306,
+          "itl_ms": 52.654,
+          "is_simulated": true
+        },
+        {
+          "token_index": 16,
+          "timestamp_s": 11.12207,
+          "itl_ms": 49.015,
+          "is_simulated": true
+        },
+        {
+          "token_index": 17,
+          "timestamp_s": 11.18035,
+          "itl_ms": 58.279,
+          "is_simulated": true
+        },
+        {
+          "token_index": 18,
+          "timestamp_s": 11.23183,
+          "itl_ms": 51.484,
+          "is_simulated": true
+        },
+        {
+          "token_index": 19,
+          "timestamp_s": 11.28101,
+          "itl_ms": 49.179,
+          "is_simulated": true
+        },
+        {
+          "token_index": 20,
+          "timestamp_s": 11.34131,
+          "itl_ms": 60.298,
+          "is_simulated": true
+        },
+        {
+          "token_index": 21,
+          "timestamp_s": 11.39397,
+          "itl_ms": 52.657,
+          "is_simulated": true
+        },
+        {
+          "token_index": 22,
+          "timestamp_s": 11.44692,
+          "itl_ms": 52.949,
+          "is_simulated": true
+        },
+        {
+          "token_index": 23,
+          "timestamp_s": 11.50042,
+          "itl_ms": 53.502,
+          "is_simulated": true
+        },
+        {
+          "token_index": 24,
+          "timestamp_s": 11.55035,
+          "itl_ms": 49.934,
+          "is_simulated": true
+        },
+        {
+          "token_index": 25,
+          "timestamp_s": 11.5995,
+          "itl_ms": 49.151,
+          "is_simulated": true
+        },
+        {
+          "token_index": 26,
+          "timestamp_s": 11.6553,
+          "itl_ms": 55.796,
+          "is_simulated": true
+        },
+        {
+          "token_index": 27,
+          "timestamp_s": 11.71159,
+          "itl_ms": 56.284,
+          "is_simulated": true
+        },
+        {
+          "token_index": 28,
+          "timestamp_s": 11.76215,
+          "itl_ms": 50.56,
+          "is_simulated": true
+        },
+        {
+          "token_index": 29,
+          "timestamp_s": 11.81749,
+          "itl_ms": 55.35,
+          "is_simulated": true
+        },
+        {
+          "token_index": 30,
+          "timestamp_s": 11.90983,
+          "itl_ms": 92.331,
+          "is_simulated": true
+        },
+        {
+          "token_index": 31,
+          "timestamp_s": 11.98903,
+          "itl_ms": 79.207,
+          "is_simulated": true
+        },
+        {
+          "token_index": 32,
+          "timestamp_s": 12.04478,
+          "itl_ms": 55.746,
+          "is_simulated": true
+        },
+        {
+          "token_index": 33,
+          "timestamp_s": 12.09278,
+          "itl_ms": 48.003,
+          "is_simulated": true
+        },
+        {
+          "token_index": 34,
+          "timestamp_s": 12.14459,
+          "itl_ms": 51.81,
+          "is_simulated": true
+        },
+        {
+          "token_index": 35,
+          "timestamp_s": 12.1987,
+          "itl_ms": 54.111,
+          "is_simulated": true
+        },
+        {
+          "token_index": 36,
+          "timestamp_s": 12.25117,
+          "itl_ms": 52.468,
+          "is_simulated": true
+        },
+        {
+          "token_index": 37,
+          "timestamp_s": 12.30652,
+          "itl_ms": 55.35,
+          "is_simulated": true
+        },
+        {
+          "token_index": 38,
+          "timestamp_s": 12.35493,
+          "itl_ms": 48.41,
+          "is_simulated": true
+        },
+        {
+          "token_index": 39,
+          "timestamp_s": 12.42577,
+          "itl_ms": 70.845,
+          "is_simulated": true
+        },
+        {
+          "token_index": 40,
+          "timestamp_s": 12.47884,
+          "itl_ms": 53.067,
+          "is_simulated": true
+        },
+        {
+          "token_index": 41,
+          "timestamp_s": 12.5256,
+          "itl_ms": 46.763,
+          "is_simulated": true
+        },
+        {
+          "token_index": 42,
+          "timestamp_s": 12.57882,
+          "itl_ms": 53.213,
+          "is_simulated": true
+        },
+        {
+          "token_index": 43,
+          "timestamp_s": 12.63535,
+          "itl_ms": 56.527,
+          "is_simulated": true
+        },
+        {
+          "token_index": 44,
+          "timestamp_s": 12.68907,
+          "itl_ms": 53.721,
+          "is_simulated": true
+        },
+        {
+          "token_index": 45,
+          "timestamp_s": 12.74647,
+          "itl_ms": 57.407,
+          "is_simulated": true
+        },
+        {
+          "token_index": 46,
+          "timestamp_s": 12.80713,
+          "itl_ms": 60.655,
+          "is_simulated": true
+        },
+        {
+          "token_index": 47,
+          "timestamp_s": 12.85917,
+          "itl_ms": 52.045,
+          "is_simulated": true
+        },
+        {
+          "token_index": 48,
+          "timestamp_s": 12.91742,
+          "itl_ms": 58.248,
+          "is_simulated": true
+        },
+        {
+          "token_index": 49,
+          "timestamp_s": 12.972,
+          "itl_ms": 54.575,
+          "is_simulated": true
+        },
+        {
+          "token_index": 50,
+          "timestamp_s": 13.01775,
+          "itl_ms": 45.754,
+          "is_simulated": true
+        },
+        {
+          "token_index": 51,
+          "timestamp_s": 13.06291,
+          "itl_ms": 45.157,
+          "is_simulated": true
+        },
+        {
+          "token_index": 52,
+          "timestamp_s": 13.1165,
+          "itl_ms": 53.597,
+          "is_simulated": true
+        },
+        {
+          "token_index": 53,
+          "timestamp_s": 13.16826,
+          "itl_ms": 51.757,
+          "is_simulated": true
+        },
+        {
+          "token_index": 54,
+          "timestamp_s": 13.22141,
+          "itl_ms": 53.15,
+          "is_simulated": true
+        },
+        {
+          "token_index": 55,
+          "timestamp_s": 13.26395,
+          "itl_ms": 42.54,
+          "is_simulated": true
+        },
+        {
+          "token_index": 56,
+          "timestamp_s": 13.3202,
+          "itl_ms": 56.246,
+          "is_simulated": true
+        },
+        {
+          "token_index": 57,
+          "timestamp_s": 13.37044,
+          "itl_ms": 50.24,
+          "is_simulated": true
+        },
+        {
+          "token_index": 58,
+          "timestamp_s": 13.42311,
+          "itl_ms": 52.676,
+          "is_simulated": true
+        },
+        {
+          "token_index": 59,
+          "timestamp_s": 13.47631,
+          "itl_ms": 53.202,
+          "is_simulated": true
+        },
+        {
+          "token_index": 60,
+          "timestamp_s": 13.53053,
+          "itl_ms": 54.215,
+          "is_simulated": true
+        },
+        {
+          "token_index": 61,
+          "timestamp_s": 13.58919,
+          "itl_ms": 58.659,
+          "is_simulated": true
+        },
+        {
+          "token_index": 62,
+          "timestamp_s": 13.641,
+          "itl_ms": 51.808,
+          "is_simulated": true
+        },
+        {
+          "token_index": 63,
+          "timestamp_s": 13.69404,
+          "itl_ms": 53.044,
+          "is_simulated": true
+        },
+        {
+          "token_index": 64,
+          "timestamp_s": 13.7371,
+          "itl_ms": 43.063,
+          "is_simulated": true
+        },
+        {
+          "token_index": 65,
+          "timestamp_s": 13.79189,
+          "itl_ms": 54.785,
+          "is_simulated": true
+        },
+        {
+          "token_index": 66,
+          "timestamp_s": 13.84694,
+          "itl_ms": 55.05,
+          "is_simulated": true
+        },
+        {
+          "token_index": 67,
+          "timestamp_s": 13.90278,
+          "itl_ms": 55.845,
+          "is_simulated": true
+        },
+        {
+          "token_index": 68,
+          "timestamp_s": 13.95013,
+          "itl_ms": 47.342,
+          "is_simulated": true
+        },
+        {
+          "token_index": 69,
+          "timestamp_s": 14.00153,
+          "itl_ms": 51.401,
+          "is_simulated": true
+        },
+        {
+          "token_index": 70,
+          "timestamp_s": 14.05548,
+          "itl_ms": 53.95,
+          "is_simulated": true
+        },
+        {
+          "token_index": 71,
+          "timestamp_s": 14.1066,
+          "itl_ms": 51.118,
+          "is_simulated": true
+        },
+        {
+          "token_index": 72,
+          "timestamp_s": 14.15631,
+          "itl_ms": 49.716,
+          "is_simulated": true
+        },
+        {
+          "token_index": 73,
+          "timestamp_s": 14.21022,
+          "itl_ms": 53.906,
+          "is_simulated": true
+        },
+        {
+          "token_index": 74,
+          "timestamp_s": 14.26532,
+          "itl_ms": 55.103,
+          "is_simulated": true
+        },
+        {
+          "token_index": 75,
+          "timestamp_s": 14.3132,
+          "itl_ms": 47.873,
+          "is_simulated": true
+        },
+        {
+          "token_index": 76,
+          "timestamp_s": 14.36253,
+          "itl_ms": 49.333,
+          "is_simulated": true
+        },
+        {
+          "token_index": 77,
+          "timestamp_s": 14.41427,
+          "itl_ms": 51.743,
+          "is_simulated": true
+        },
+        {
+          "token_index": 78,
+          "timestamp_s": 14.46602,
+          "itl_ms": 51.751,
+          "is_simulated": true
+        },
+        {
+          "token_index": 79,
+          "timestamp_s": 14.51862,
+          "itl_ms": 52.601,
+          "is_simulated": true
+        },
+        {
+          "token_index": 80,
+          "timestamp_s": 14.56762,
+          "itl_ms": 49.0,
+          "is_simulated": true
+        },
+        {
+          "token_index": 81,
+          "timestamp_s": 14.61916,
+          "itl_ms": 51.537,
+          "is_simulated": true
+        },
+        {
+          "token_index": 82,
+          "timestamp_s": 14.67532,
+          "itl_ms": 56.159,
+          "is_simulated": true
+        },
+        {
+          "token_index": 83,
+          "timestamp_s": 14.7278,
+          "itl_ms": 52.486,
+          "is_simulated": true
+        },
+        {
+          "token_index": 84,
+          "timestamp_s": 14.78025,
+          "itl_ms": 52.45,
+          "is_simulated": true
+        },
+        {
+          "token_index": 85,
+          "timestamp_s": 14.83461,
+          "itl_ms": 54.358,
+          "is_simulated": true
+        },
+        {
+          "token_index": 86,
+          "timestamp_s": 14.88315,
+          "itl_ms": 48.536,
+          "is_simulated": true
+        },
+        {
+          "token_index": 87,
+          "timestamp_s": 14.93904,
+          "itl_ms": 55.89,
+          "is_simulated": true
+        },
+        {
+          "token_index": 88,
+          "timestamp_s": 14.9903,
+          "itl_ms": 51.26,
+          "is_simulated": true
+        },
+        {
+          "token_index": 89,
+          "timestamp_s": 15.04211,
+          "itl_ms": 51.81,
+          "is_simulated": true
+        },
+        {
+          "token_index": 90,
+          "timestamp_s": 15.0949,
+          "itl_ms": 52.79,
+          "is_simulated": true
+        },
+        {
+          "token_index": 91,
+          "timestamp_s": 15.14721,
+          "itl_ms": 52.309,
+          "is_simulated": true
+        },
+        {
+          "token_index": 92,
+          "timestamp_s": 15.19638,
+          "itl_ms": 49.175,
+          "is_simulated": true
+        },
+        {
+          "token_index": 93,
+          "timestamp_s": 15.25211,
+          "itl_ms": 55.725,
+          "is_simulated": true
+        },
+        {
+          "token_index": 94,
+          "timestamp_s": 15.30264,
+          "itl_ms": 50.53,
+          "is_simulated": true
+        },
+        {
+          "token_index": 95,
+          "timestamp_s": 15.34923,
+          "itl_ms": 46.591,
+          "is_simulated": true
+        },
+        {
+          "token_index": 96,
+          "timestamp_s": 15.39743,
+          "itl_ms": 48.197,
+          "is_simulated": true
+        },
+        {
+          "token_index": 97,
+          "timestamp_s": 15.44762,
+          "itl_ms": 50.19,
+          "is_simulated": true
+        },
+        {
+          "token_index": 98,
+          "timestamp_s": 15.49565,
+          "itl_ms": 48.034,
+          "is_simulated": true
+        },
+        {
+          "token_index": 99,
+          "timestamp_s": 15.54112,
+          "itl_ms": 45.471,
+          "is_simulated": true
+        },
+        {
+          "token_index": 100,
+          "timestamp_s": 15.59397,
+          "itl_ms": 52.854,
+          "is_simulated": true
+        },
+        {
+          "token_index": 101,
+          "timestamp_s": 15.64548,
+          "itl_ms": 51.504,
+          "is_simulated": true
+        },
+        {
+          "token_index": 102,
+          "timestamp_s": 15.69468,
+          "itl_ms": 49.204,
+          "is_simulated": true
+        },
+        {
+          "token_index": 103,
+          "timestamp_s": 15.74758,
+          "itl_ms": 52.896,
+          "is_simulated": true
+        },
+        {
+          "token_index": 104,
+          "timestamp_s": 15.79965,
+          "itl_ms": 52.076,
+          "is_simulated": true
+        },
+        {
+          "token_index": 105,
+          "timestamp_s": 15.85005,
+          "itl_ms": 50.392,
+          "is_simulated": true
+        },
+        {
+          "token_index": 106,
+          "timestamp_s": 15.90105,
+          "itl_ms": 51.002,
+          "is_simulated": true
+        },
+        {
+          "token_index": 107,
+          "timestamp_s": 15.9508,
+          "itl_ms": 49.755,
+          "is_simulated": true
+        },
+        {
+          "token_index": 108,
+          "timestamp_s": 16.01119,
+          "itl_ms": 60.391,
+          "is_simulated": true
+        },
+        {
+          "token_index": 109,
+          "timestamp_s": 16.06689,
+          "itl_ms": 55.694,
+          "is_simulated": true
+        },
+        {
+          "token_index": 110,
+          "timestamp_s": 16.12114,
+          "itl_ms": 54.256,
+          "is_simulated": true
+        },
+        {
+          "token_index": 111,
+          "timestamp_s": 16.17805,
+          "itl_ms": 56.909,
+          "is_simulated": true
+        },
+        {
+          "token_index": 112,
+          "timestamp_s": 16.22952,
+          "itl_ms": 51.465,
+          "is_simulated": true
+        },
+        {
+          "token_index": 113,
+          "timestamp_s": 16.28195,
+          "itl_ms": 52.433,
+          "is_simulated": true
+        },
+        {
+          "token_index": 114,
+          "timestamp_s": 16.3433,
+          "itl_ms": 61.35,
+          "is_simulated": true
+        },
+        {
+          "token_index": 115,
+          "timestamp_s": 16.39207,
+          "itl_ms": 48.77,
+          "is_simulated": true
+        },
+        {
+          "token_index": 116,
+          "timestamp_s": 16.44461,
+          "itl_ms": 52.537,
+          "is_simulated": true
+        },
+        {
+          "token_index": 117,
+          "timestamp_s": 16.51683,
+          "itl_ms": 72.226,
+          "is_simulated": true
+        },
+        {
+          "token_index": 118,
+          "timestamp_s": 16.56677,
+          "itl_ms": 49.939,
+          "is_simulated": true
+        },
+        {
+          "token_index": 119,
+          "timestamp_s": 16.61774,
+          "itl_ms": 50.961,
+          "is_simulated": true
+        },
+        {
+          "token_index": 120,
+          "timestamp_s": 16.66838,
+          "itl_ms": 50.649,
+          "is_simulated": true
+        },
+        {
+          "token_index": 121,
+          "timestamp_s": 16.73,
+          "itl_ms": 61.617,
+          "is_simulated": true
+        },
+        {
+          "token_index": 122,
+          "timestamp_s": 16.7768,
+          "itl_ms": 46.798,
+          "is_simulated": true
+        },
+        {
+          "token_index": 123,
+          "timestamp_s": 16.828,
+          "itl_ms": 51.198,
+          "is_simulated": true
+        },
+        {
+          "token_index": 124,
+          "timestamp_s": 16.88196,
+          "itl_ms": 53.963,
+          "is_simulated": true
+        },
+        {
+          "token_index": 125,
+          "timestamp_s": 16.93251,
+          "itl_ms": 50.55,
+          "is_simulated": true
+        },
+        {
+          "token_index": 126,
+          "timestamp_s": 16.9786,
+          "itl_ms": 46.087,
+          "is_simulated": true
+        },
+        {
+          "token_index": 127,
+          "timestamp_s": 17.03166,
+          "itl_ms": 53.064,
+          "is_simulated": true
+        },
+        {
+          "token_index": 128,
+          "timestamp_s": 17.08112,
+          "itl_ms": 49.464,
+          "is_simulated": true
+        },
+        {
+          "token_index": 129,
+          "timestamp_s": 17.12752,
+          "itl_ms": 46.399,
+          "is_simulated": true
+        },
+        {
+          "token_index": 130,
+          "timestamp_s": 17.17687,
+          "itl_ms": 49.347,
+          "is_simulated": true
+        },
+        {
+          "token_index": 131,
+          "timestamp_s": 17.22586,
+          "itl_ms": 48.992,
+          "is_simulated": true
+        },
+        {
+          "token_index": 132,
+          "timestamp_s": 17.27899,
+          "itl_ms": 53.124,
+          "is_simulated": true
+        },
+        {
+          "token_index": 133,
+          "timestamp_s": 17.32533,
+          "itl_ms": 46.339,
+          "is_simulated": true
+        },
+        {
+          "token_index": 134,
+          "timestamp_s": 17.37359,
+          "itl_ms": 48.266,
+          "is_simulated": true
+        },
+        {
+          "token_index": 135,
+          "timestamp_s": 17.42333,
+          "itl_ms": 49.743,
+          "is_simulated": true
+        },
+        {
+          "token_index": 136,
+          "timestamp_s": 17.47397,
+          "itl_ms": 50.633,
+          "is_simulated": true
+        },
+        {
+          "token_index": 137,
+          "timestamp_s": 17.52179,
+          "itl_ms": 47.827,
+          "is_simulated": true
+        },
+        {
+          "token_index": 138,
+          "timestamp_s": 17.57687,
+          "itl_ms": 55.078,
+          "is_simulated": true
+        },
+        {
+          "token_index": 139,
+          "timestamp_s": 17.6292,
+          "itl_ms": 52.331,
+          "is_simulated": true
+        },
+        {
+          "token_index": 140,
+          "timestamp_s": 17.68682,
+          "itl_ms": 57.616,
+          "is_simulated": true
+        },
+        {
+          "token_index": 141,
+          "timestamp_s": 17.73769,
+          "itl_ms": 50.868,
+          "is_simulated": true
+        },
+        {
+          "token_index": 142,
+          "timestamp_s": 17.79719,
+          "itl_ms": 59.503,
+          "is_simulated": true
+        },
+        {
+          "token_index": 143,
+          "timestamp_s": 17.8496,
+          "itl_ms": 52.415,
+          "is_simulated": true
+        },
+        {
+          "token_index": 144,
+          "timestamp_s": 17.89551,
+          "itl_ms": 45.905,
+          "is_simulated": true
+        },
+        {
+          "token_index": 145,
+          "timestamp_s": 17.94689,
+          "itl_ms": 51.384,
+          "is_simulated": true
+        },
+        {
+          "token_index": 146,
+          "timestamp_s": 18.00437,
+          "itl_ms": 57.472,
+          "is_simulated": true
+        },
+        {
+          "token_index": 147,
+          "timestamp_s": 18.06516,
+          "itl_ms": 60.795,
+          "is_simulated": true
+        },
+        {
+          "token_index": 148,
+          "timestamp_s": 18.10981,
+          "itl_ms": 44.647,
+          "is_simulated": true
+        },
+        {
+          "token_index": 149,
+          "timestamp_s": 18.16299,
+          "itl_ms": 53.18,
+          "is_simulated": true
+        },
+        {
+          "token_index": 150,
+          "timestamp_s": 18.2229,
+          "itl_ms": 59.909,
+          "is_simulated": true
+        },
+        {
+          "token_index": 151,
+          "timestamp_s": 18.26999,
+          "itl_ms": 47.093,
+          "is_simulated": true
+        },
+        {
+          "token_index": 152,
+          "timestamp_s": 18.31694,
+          "itl_ms": 46.955,
+          "is_simulated": true
+        },
+        {
+          "token_index": 153,
+          "timestamp_s": 18.36486,
+          "itl_ms": 47.916,
+          "is_simulated": true
+        },
+        {
+          "token_index": 154,
+          "timestamp_s": 18.41057,
+          "itl_ms": 45.713,
+          "is_simulated": true
+        },
+        {
+          "token_index": 155,
+          "timestamp_s": 18.46468,
+          "itl_ms": 54.106,
+          "is_simulated": true
+        },
+        {
+          "token_index": 156,
+          "timestamp_s": 18.51853,
+          "itl_ms": 53.846,
+          "is_simulated": true
+        },
+        {
+          "token_index": 157,
+          "timestamp_s": 18.57728,
+          "itl_ms": 58.758,
+          "is_simulated": true
+        },
+        {
+          "token_index": 158,
+          "timestamp_s": 18.63489,
+          "itl_ms": 57.609,
+          "is_simulated": true
+        },
+        {
+          "token_index": 159,
+          "timestamp_s": 18.69001,
+          "itl_ms": 55.119,
+          "is_simulated": true
+        },
+        {
+          "token_index": 160,
+          "timestamp_s": 18.73911,
+          "itl_ms": 49.097,
+          "is_simulated": true
+        },
+        {
+          "token_index": 161,
+          "timestamp_s": 18.79155,
+          "itl_ms": 52.444,
+          "is_simulated": true
+        },
+        {
+          "token_index": 162,
+          "timestamp_s": 18.84449,
+          "itl_ms": 52.943,
+          "is_simulated": true
+        },
+        {
+          "token_index": 163,
+          "timestamp_s": 18.8979,
+          "itl_ms": 53.409,
+          "is_simulated": true
+        },
+        {
+          "token_index": 164,
+          "timestamp_s": 18.95041,
+          "itl_ms": 52.509,
+          "is_simulated": true
+        },
+        {
+          "token_index": 165,
+          "timestamp_s": 18.99582,
+          "itl_ms": 45.412,
+          "is_simulated": true
+        },
+        {
+          "token_index": 166,
+          "timestamp_s": 19.04889,
+          "itl_ms": 53.068,
+          "is_simulated": true
+        },
+        {
+          "token_index": 167,
+          "timestamp_s": 19.10663,
+          "itl_ms": 57.741,
+          "is_simulated": true
+        },
+        {
+          "token_index": 168,
+          "timestamp_s": 19.15421,
+          "itl_ms": 47.576,
+          "is_simulated": true
+        },
+        {
+          "token_index": 169,
+          "timestamp_s": 19.20651,
+          "itl_ms": 52.298,
+          "is_simulated": true
+        },
+        {
+          "token_index": 170,
+          "timestamp_s": 19.25828,
+          "itl_ms": 51.768,
+          "is_simulated": true
+        },
+        {
+          "token_index": 171,
+          "timestamp_s": 19.31309,
+          "itl_ms": 54.817,
+          "is_simulated": true
+        },
+        {
+          "token_index": 172,
+          "timestamp_s": 19.37106,
+          "itl_ms": 57.963,
+          "is_simulated": true
+        },
+        {
+          "token_index": 173,
+          "timestamp_s": 19.45705,
+          "itl_ms": 85.997,
+          "is_simulated": true
+        },
+        {
+          "token_index": 174,
+          "timestamp_s": 19.51201,
+          "itl_ms": 54.959,
+          "is_simulated": true
+        },
+        {
+          "token_index": 175,
+          "timestamp_s": 19.56731,
+          "itl_ms": 55.303,
+          "is_simulated": true
+        },
+        {
+          "token_index": 176,
+          "timestamp_s": 19.61592,
+          "itl_ms": 48.604,
+          "is_simulated": true
+        },
+        {
+          "token_index": 177,
+          "timestamp_s": 19.67098,
+          "itl_ms": 55.064,
+          "is_simulated": true
+        },
+        {
+          "token_index": 178,
+          "timestamp_s": 19.71967,
+          "itl_ms": 48.689,
+          "is_simulated": true
+        },
+        {
+          "token_index": 179,
+          "timestamp_s": 19.77746,
+          "itl_ms": 57.789,
+          "is_simulated": true
+        },
+        {
+          "token_index": 180,
+          "timestamp_s": 19.83089,
+          "itl_ms": 53.428,
+          "is_simulated": true
+        },
+        {
+          "token_index": 181,
+          "timestamp_s": 19.88376,
+          "itl_ms": 52.874,
+          "is_simulated": true
+        },
+        {
+          "token_index": 182,
+          "timestamp_s": 19.93413,
+          "itl_ms": 50.366,
+          "is_simulated": true
+        },
+        {
+          "token_index": 183,
+          "timestamp_s": 19.98813,
+          "itl_ms": 54.003,
+          "is_simulated": true
+        },
+        {
+          "token_index": 184,
+          "timestamp_s": 20.04496,
+          "itl_ms": 56.828,
+          "is_simulated": true
+        },
+        {
+          "token_index": 185,
+          "timestamp_s": 20.09511,
+          "itl_ms": 50.146,
+          "is_simulated": true
+        },
+        {
+          "token_index": 186,
+          "timestamp_s": 20.14793,
+          "itl_ms": 52.821,
+          "is_simulated": true
+        },
+        {
+          "token_index": 187,
+          "timestamp_s": 20.20112,
+          "itl_ms": 53.198,
+          "is_simulated": true
+        },
+        {
+          "token_index": 188,
+          "timestamp_s": 20.25682,
+          "itl_ms": 55.693,
+          "is_simulated": true
+        },
+        {
+          "token_index": 189,
+          "timestamp_s": 20.31463,
+          "itl_ms": 57.817,
+          "is_simulated": true
+        },
+        {
+          "token_index": 190,
+          "timestamp_s": 20.37119,
+          "itl_ms": 56.56,
+          "is_simulated": true
+        },
+        {
+          "token_index": 191,
+          "timestamp_s": 20.42957,
+          "itl_ms": 58.378,
+          "is_simulated": true
+        },
+        {
+          "token_index": 192,
+          "timestamp_s": 20.48882,
+          "itl_ms": 59.248,
+          "is_simulated": true
+        },
+        {
+          "token_index": 193,
+          "timestamp_s": 20.54439,
+          "itl_ms": 55.571,
+          "is_simulated": true
+        },
+        {
+          "token_index": 194,
+          "timestamp_s": 20.59471,
+          "itl_ms": 50.314,
+          "is_simulated": true
+        },
+        {
+          "token_index": 195,
+          "timestamp_s": 20.64229,
+          "itl_ms": 47.582,
+          "is_simulated": true
+        },
+        {
+          "token_index": 196,
+          "timestamp_s": 20.69336,
+          "itl_ms": 51.077,
+          "is_simulated": true
+        },
+        {
+          "token_index": 197,
+          "timestamp_s": 20.75062,
+          "itl_ms": 57.259,
+          "is_simulated": true
+        },
+        {
+          "token_index": 198,
+          "timestamp_s": 20.8025,
+          "itl_ms": 51.876,
+          "is_simulated": true
+        },
+        {
+          "token_index": 199,
+          "timestamp_s": 20.85808,
+          "itl_ms": 55.585,
+          "is_simulated": true
+        },
+        {
+          "token_index": 200,
+          "timestamp_s": 20.94707,
+          "itl_ms": 88.99,
+          "is_simulated": true
+        },
+        {
+          "token_index": 201,
+          "timestamp_s": 20.99501,
+          "itl_ms": 47.932,
+          "is_simulated": true
+        },
+        {
+          "token_index": 202,
+          "timestamp_s": 21.047,
+          "itl_ms": 51.993,
+          "is_simulated": true
+        },
+        {
+          "token_index": 203,
+          "timestamp_s": 21.09467,
+          "itl_ms": 47.668,
+          "is_simulated": true
+        },
+        {
+          "token_index": 204,
+          "timestamp_s": 21.1464,
+          "itl_ms": 51.734,
+          "is_simulated": true
+        },
+        {
+          "token_index": 205,
+          "timestamp_s": 21.22364,
+          "itl_ms": 77.233,
+          "is_simulated": true
+        },
+        {
+          "token_index": 206,
+          "timestamp_s": 21.27615,
+          "itl_ms": 52.518,
+          "is_simulated": true
+        },
+        {
+          "token_index": 207,
+          "timestamp_s": 21.35915,
+          "itl_ms": 82.996,
+          "is_simulated": true
+        },
+        {
+          "token_index": 208,
+          "timestamp_s": 21.41465,
+          "itl_ms": 55.505,
+          "is_simulated": true
+        },
+        {
+          "token_index": 209,
+          "timestamp_s": 21.4621,
+          "itl_ms": 47.45,
+          "is_simulated": true
+        },
+        {
+          "token_index": 210,
+          "timestamp_s": 21.51663,
+          "itl_ms": 54.525,
+          "is_simulated": true
+        },
+        {
+          "token_index": 211,
+          "timestamp_s": 21.57487,
+          "itl_ms": 58.241,
+          "is_simulated": true
+        },
+        {
+          "token_index": 212,
+          "timestamp_s": 21.61755,
+          "itl_ms": 42.683,
+          "is_simulated": true
+        },
+        {
+          "token_index": 213,
+          "timestamp_s": 21.67366,
+          "itl_ms": 56.104,
+          "is_simulated": true
+        },
+        {
+          "token_index": 214,
+          "timestamp_s": 21.72621,
+          "itl_ms": 52.554,
+          "is_simulated": true
+        },
+        {
+          "token_index": 215,
+          "timestamp_s": 21.77987,
+          "itl_ms": 53.656,
+          "is_simulated": true
+        },
+        {
+          "token_index": 216,
+          "timestamp_s": 21.8331,
+          "itl_ms": 53.233,
+          "is_simulated": true
+        },
+        {
+          "token_index": 217,
+          "timestamp_s": 21.88316,
+          "itl_ms": 50.062,
+          "is_simulated": true
+        },
+        {
+          "token_index": 218,
+          "timestamp_s": 21.93123,
+          "itl_ms": 48.067,
+          "is_simulated": true
+        },
+        {
+          "token_index": 219,
+          "timestamp_s": 21.9883,
+          "itl_ms": 57.073,
+          "is_simulated": true
+        },
+        {
+          "token_index": 220,
+          "timestamp_s": 22.04034,
+          "itl_ms": 52.036,
+          "is_simulated": true
+        },
+        {
+          "token_index": 221,
+          "timestamp_s": 22.09041,
+          "itl_ms": 50.07,
+          "is_simulated": true
+        },
+        {
+          "token_index": 222,
+          "timestamp_s": 22.14623,
+          "itl_ms": 55.823,
+          "is_simulated": true
+        },
+        {
+          "token_index": 223,
+          "timestamp_s": 22.19336,
+          "itl_ms": 47.132,
+          "is_simulated": true
+        },
+        {
+          "token_index": 224,
+          "timestamp_s": 22.24968,
+          "itl_ms": 56.322,
+          "is_simulated": true
+        },
+        {
+          "token_index": 225,
+          "timestamp_s": 22.29967,
+          "itl_ms": 49.99,
+          "is_simulated": true
+        },
+        {
+          "token_index": 226,
+          "timestamp_s": 22.34664,
+          "itl_ms": 46.966,
+          "is_simulated": true
+        },
+        {
+          "token_index": 227,
+          "timestamp_s": 22.40128,
+          "itl_ms": 54.635,
+          "is_simulated": true
+        },
+        {
+          "token_index": 228,
+          "timestamp_s": 22.45408,
+          "itl_ms": 52.803,
+          "is_simulated": true
+        },
+        {
+          "token_index": 229,
+          "timestamp_s": 22.50807,
+          "itl_ms": 53.995,
+          "is_simulated": true
+        },
+        {
+          "token_index": 230,
+          "timestamp_s": 22.55705,
+          "itl_ms": 48.978,
+          "is_simulated": true
+        },
+        {
+          "token_index": 231,
+          "timestamp_s": 22.6085,
+          "itl_ms": 51.445,
+          "is_simulated": true
+        },
+        {
+          "token_index": 232,
+          "timestamp_s": 22.65819,
+          "itl_ms": 49.688,
+          "is_simulated": true
+        },
+        {
+          "token_index": 233,
+          "timestamp_s": 22.71037,
+          "itl_ms": 52.186,
+          "is_simulated": true
+        },
+        {
+          "token_index": 234,
+          "timestamp_s": 22.76002,
+          "itl_ms": 49.651,
+          "is_simulated": true
+        },
+        {
+          "token_index": 235,
+          "timestamp_s": 22.81257,
+          "itl_ms": 52.548,
+          "is_simulated": true
+        },
+        {
+          "token_index": 236,
+          "timestamp_s": 22.8593,
+          "itl_ms": 46.733,
+          "is_simulated": true
+        },
+        {
+          "token_index": 237,
+          "timestamp_s": 22.91413,
+          "itl_ms": 54.83,
+          "is_simulated": true
+        },
+        {
+          "token_index": 238,
+          "timestamp_s": 22.96529,
+          "itl_ms": 51.155,
+          "is_simulated": true
+        },
+        {
+          "token_index": 239,
+          "timestamp_s": 23.01567,
+          "itl_ms": 50.376,
+          "is_simulated": true
+        },
+        {
+          "token_index": 240,
+          "timestamp_s": 23.06744,
+          "itl_ms": 51.77,
+          "is_simulated": true
+        },
+        {
+          "token_index": 241,
+          "timestamp_s": 23.12641,
+          "itl_ms": 58.971,
+          "is_simulated": true
+        },
+        {
+          "token_index": 242,
+          "timestamp_s": 23.17099,
+          "itl_ms": 44.584,
+          "is_simulated": true
+        },
+        {
+          "token_index": 243,
+          "timestamp_s": 23.22768,
+          "itl_ms": 56.685,
+          "is_simulated": true
+        },
+        {
+          "token_index": 244,
+          "timestamp_s": 23.27543,
+          "itl_ms": 47.755,
+          "is_simulated": true
+        }
+      ]
+    },
+    {
+      "request_id": "req_0005",
+      "arrival_time_s": 15.0811,
+      "category": "long",
+      "request_type": "batch",
+      "priority_metadata": "low",
+      "prompt_tokens": 1377,
+      "requested_output_tokens": 416,
+      "deadline_target_itl_ms": 100.0,
+      "is_simulated": true,
+      "data_source": "SimulatedInferenceBackend (Synthetic Model)",
+      "ttft_ms": 282.376,
+      "total_generation_time_ms": 42328.451,
+      "tokens_generated": 416,
+      "observed_avg_itl_ms": 101.072,
+      "observed_median_itl_ms": 100.483,
+      "observed_p95_itl_ms": 106.553,
+      "observed_p99_itl_ms": 134.076,
+      "observed_violation_count": 223,
+      "observed_violation_rate": 0.5361,
+      "has_observed_deadline_violation": true,
+      "observed_min_slack_ms": -48.27,
+      "observed_avg_slack_ms": -1.07,
+      "observed_p95_slack_ms": -6.55,
+      "prediction_method": "EWMA(alpha=0.35, window=10)",
+      "predicted_itl_ms": 101.4,
+      "predicted_slack_ms": -1.4,
+      "predicted_risk_level": "high",
+      "risk_reasoning": "Critical slack deficit: predicted slack is -1.40ms (-1.4% of deadline target 100.0ms).",
+      "token_records": [
+        {
+          "token_index": 1,
+          "timestamp_s": 15.45838,
+          "itl_ms": 94.904,
+          "is_simulated": true
+        },
+        {
+          "token_index": 2,
+          "timestamp_s": 15.55934,
+          "itl_ms": 100.958,
+          "is_simulated": true
+        },
+        {
+          "token_index": 3,
+          "timestamp_s": 15.65979,
+          "itl_ms": 100.449,
+          "is_simulated": true
+        },
+        {
+          "token_index": 4,
+          "timestamp_s": 15.75869,
+          "itl_ms": 98.902,
+          "is_simulated": true
+        },
+        {
+          "token_index": 5,
+          "timestamp_s": 15.85798,
+          "itl_ms": 99.293,
+          "is_simulated": true
+        },
+        {
+          "token_index": 6,
+          "timestamp_s": 15.95513,
+          "itl_ms": 97.146,
+          "is_simulated": true
+        },
+        {
+          "token_index": 7,
+          "timestamp_s": 16.05682,
+          "itl_ms": 101.696,
+          "is_simulated": true
+        },
+        {
+          "token_index": 8,
+          "timestamp_s": 16.15676,
+          "itl_ms": 99.932,
+          "is_simulated": true
+        },
+        {
+          "token_index": 9,
+          "timestamp_s": 16.25454,
+          "itl_ms": 97.779,
+          "is_simulated": true
+        },
+        {
+          "token_index": 10,
+          "timestamp_s": 16.35557,
+          "itl_ms": 101.032,
+          "is_simulated": true
+        },
+        {
+          "token_index": 11,
+          "timestamp_s": 16.45594,
+          "itl_ms": 100.375,
+          "is_simulated": true
+        },
+        {
+          "token_index": 12,
+          "timestamp_s": 16.55505,
+          "itl_ms": 99.107,
+          "is_simulated": true
+        },
+        {
+          "token_index": 13,
+          "timestamp_s": 16.66271,
+          "itl_ms": 107.657,
+          "is_simulated": true
+        },
+        {
+          "token_index": 14,
+          "timestamp_s": 16.76364,
+          "itl_ms": 100.938,
+          "is_simulated": true
+        },
+        {
+          "token_index": 15,
+          "timestamp_s": 16.86437,
+          "itl_ms": 100.726,
+          "is_simulated": true
+        },
+        {
+          "token_index": 16,
+          "timestamp_s": 16.96808,
+          "itl_ms": 103.708,
+          "is_simulated": true
+        },
+        {
+          "token_index": 17,
+          "timestamp_s": 17.09931,
+          "itl_ms": 131.232,
+          "is_simulated": true
+        },
+        {
+          "token_index": 18,
+          "timestamp_s": 17.20052,
+          "itl_ms": 101.212,
+          "is_simulated": true
+        },
+        {
+          "token_index": 19,
+          "timestamp_s": 17.30237,
+          "itl_ms": 101.845,
+          "is_simulated": true
+        },
+        {
+          "token_index": 20,
+          "timestamp_s": 17.39959,
+          "itl_ms": 97.229,
+          "is_simulated": true
+        },
+        {
+          "token_index": 21,
+          "timestamp_s": 17.50308,
+          "itl_ms": 103.483,
+          "is_simulated": true
+        },
+        {
+          "token_index": 22,
+          "timestamp_s": 17.60835,
+          "itl_ms": 105.272,
+          "is_simulated": true
+        },
+        {
+          "token_index": 23,
+          "timestamp_s": 17.70662,
+          "itl_ms": 98.266,
+          "is_simulated": true
+        },
+        {
+          "token_index": 24,
+          "timestamp_s": 17.80886,
+          "itl_ms": 102.248,
+          "is_simulated": true
+        },
+        {
+          "token_index": 25,
+          "timestamp_s": 17.90909,
+          "itl_ms": 100.222,
+          "is_simulated": true
+        },
+        {
+          "token_index": 26,
+          "timestamp_s": 18.00698,
+          "itl_ms": 97.892,
+          "is_simulated": true
+        },
+        {
+          "token_index": 27,
+          "timestamp_s": 18.10974,
+          "itl_ms": 102.763,
+          "is_simulated": true
+        },
+        {
+          "token_index": 28,
+          "timestamp_s": 18.20451,
+          "itl_ms": 94.767,
+          "is_simulated": true
+        },
+        {
+          "token_index": 29,
+          "timestamp_s": 18.30508,
+          "itl_ms": 100.567,
+          "is_simulated": true
+        },
+        {
+          "token_index": 30,
+          "timestamp_s": 18.40274,
+          "itl_ms": 97.661,
+          "is_simulated": true
+        },
+        {
+          "token_index": 31,
+          "timestamp_s": 18.50527,
+          "itl_ms": 102.538,
+          "is_simulated": true
+        },
+        {
+          "token_index": 32,
+          "timestamp_s": 18.60651,
+          "itl_ms": 101.24,
+          "is_simulated": true
+        },
+        {
+          "token_index": 33,
+          "timestamp_s": 18.70531,
+          "itl_ms": 98.799,
+          "is_simulated": true
+        },
+        {
+          "token_index": 34,
+          "timestamp_s": 18.8039,
+          "itl_ms": 98.584,
+          "is_simulated": true
+        },
+        {
+          "token_index": 35,
+          "timestamp_s": 18.90754,
+          "itl_ms": 103.641,
+          "is_simulated": true
+        },
+        {
+          "token_index": 36,
+          "timestamp_s": 19.00444,
+          "itl_ms": 96.907,
+          "is_simulated": true
+        },
+        {
+          "token_index": 37,
+          "timestamp_s": 19.10433,
+          "itl_ms": 99.885,
+          "is_simulated": true
+        },
+        {
+          "token_index": 38,
+          "timestamp_s": 19.20484,
+          "itl_ms": 100.509,
+          "is_simulated": true
+        },
+        {
+          "token_index": 39,
+          "timestamp_s": 19.30595,
+          "itl_ms": 101.115,
+          "is_simulated": true
+        },
+        {
+          "token_index": 40,
+          "timestamp_s": 19.40472,
+          "itl_ms": 98.769,
+          "is_simulated": true
+        },
+        {
+          "token_index": 41,
+          "timestamp_s": 19.50671,
+          "itl_ms": 101.984,
+          "is_simulated": true
+        },
+        {
+          "token_index": 42,
+          "timestamp_s": 19.59949,
+          "itl_ms": 92.787,
+          "is_simulated": true
+        },
+        {
+          "token_index": 43,
+          "timestamp_s": 19.69561,
+          "itl_ms": 96.113,
+          "is_simulated": true
+        },
+        {
+          "token_index": 44,
+          "timestamp_s": 19.78925,
+          "itl_ms": 93.64,
+          "is_simulated": true
+        },
+        {
+          "token_index": 45,
+          "timestamp_s": 19.88497,
+          "itl_ms": 95.72,
+          "is_simulated": true
+        },
+        {
+          "token_index": 46,
+          "timestamp_s": 20.02683,
+          "itl_ms": 141.861,
+          "is_simulated": true
+        },
+        {
+          "token_index": 47,
+          "timestamp_s": 20.1281,
+          "itl_ms": 101.274,
+          "is_simulated": true
+        },
+        {
+          "token_index": 48,
+          "timestamp_s": 20.22219,
+          "itl_ms": 94.085,
+          "is_simulated": true
+        },
+        {
+          "token_index": 49,
+          "timestamp_s": 20.32216,
+          "itl_ms": 99.974,
+          "is_simulated": true
+        },
+        {
+          "token_index": 50,
+          "timestamp_s": 20.4153,
+          "itl_ms": 93.136,
+          "is_simulated": true
+        },
+        {
+          "token_index": 51,
+          "timestamp_s": 20.52078,
+          "itl_ms": 105.486,
+          "is_simulated": true
+        },
+        {
+          "token_index": 52,
+          "timestamp_s": 20.62661,
+          "itl_ms": 105.828,
+          "is_simulated": true
+        },
+        {
+          "token_index": 53,
+          "timestamp_s": 20.72862,
+          "itl_ms": 102.009,
+          "is_simulated": true
+        },
+        {
+          "token_index": 54,
+          "timestamp_s": 20.82939,
+          "itl_ms": 100.766,
+          "is_simulated": true
+        },
+        {
+          "token_index": 55,
+          "timestamp_s": 20.927,
+          "itl_ms": 97.613,
+          "is_simulated": true
+        },
+        {
+          "token_index": 56,
+          "timestamp_s": 21.02714,
+          "itl_ms": 100.144,
+          "is_simulated": true
+        },
+        {
+          "token_index": 57,
+          "timestamp_s": 21.12698,
+          "itl_ms": 99.836,
+          "is_simulated": true
+        },
+        {
+          "token_index": 58,
+          "timestamp_s": 21.22681,
+          "itl_ms": 99.826,
+          "is_simulated": true
+        },
+        {
+          "token_index": 59,
+          "timestamp_s": 21.3266,
+          "itl_ms": 99.797,
+          "is_simulated": true
+        },
+        {
+          "token_index": 60,
+          "timestamp_s": 21.42741,
+          "itl_ms": 100.803,
+          "is_simulated": true
+        },
+        {
+          "token_index": 61,
+          "timestamp_s": 21.53152,
+          "itl_ms": 104.113,
+          "is_simulated": true
+        },
+        {
+          "token_index": 62,
+          "timestamp_s": 21.62655,
+          "itl_ms": 95.031,
+          "is_simulated": true
+        },
+        {
+          "token_index": 63,
+          "timestamp_s": 21.72764,
+          "itl_ms": 101.09,
+          "is_simulated": true
+        },
+        {
+          "token_index": 64,
+          "timestamp_s": 21.83322,
+          "itl_ms": 105.58,
+          "is_simulated": true
+        },
+        {
+          "token_index": 65,
+          "timestamp_s": 21.93749,
+          "itl_ms": 104.269,
+          "is_simulated": true
+        },
+        {
+          "token_index": 66,
+          "timestamp_s": 22.03266,
+          "itl_ms": 95.171,
+          "is_simulated": true
+        },
+        {
+          "token_index": 67,
+          "timestamp_s": 22.13066,
+          "itl_ms": 97.998,
+          "is_simulated": true
+        },
+        {
+          "token_index": 68,
+          "timestamp_s": 22.23477,
+          "itl_ms": 104.109,
+          "is_simulated": true
+        },
+        {
+          "token_index": 69,
+          "timestamp_s": 22.33613,
+          "itl_ms": 101.363,
+          "is_simulated": true
+        },
+        {
+          "token_index": 70,
+          "timestamp_s": 22.44043,
+          "itl_ms": 104.297,
+          "is_simulated": true
+        },
+        {
+          "token_index": 71,
+          "timestamp_s": 22.54384,
+          "itl_ms": 103.414,
+          "is_simulated": true
+        },
+        {
+          "token_index": 72,
+          "timestamp_s": 22.65305,
+          "itl_ms": 109.205,
+          "is_simulated": true
+        },
+        {
+          "token_index": 73,
+          "timestamp_s": 22.75616,
+          "itl_ms": 103.116,
+          "is_simulated": true
+        },
+        {
+          "token_index": 74,
+          "timestamp_s": 22.86064,
+          "itl_ms": 104.481,
+          "is_simulated": true
+        },
+        {
+          "token_index": 75,
+          "timestamp_s": 22.96229,
+          "itl_ms": 101.645,
+          "is_simulated": true
+        },
+        {
+          "token_index": 76,
+          "timestamp_s": 23.06191,
+          "itl_ms": 99.62,
+          "is_simulated": true
+        },
+        {
+          "token_index": 77,
+          "timestamp_s": 23.15666,
+          "itl_ms": 94.754,
+          "is_simulated": true
+        },
+        {
+          "token_index": 78,
+          "timestamp_s": 23.25783,
+          "itl_ms": 101.171,
+          "is_simulated": true
+        },
+        {
+          "token_index": 79,
+          "timestamp_s": 23.35785,
+          "itl_ms": 100.015,
+          "is_simulated": true
+        },
+        {
+          "token_index": 80,
+          "timestamp_s": 23.45792,
+          "itl_ms": 100.069,
+          "is_simulated": true
+        },
+        {
+          "token_index": 81,
+          "timestamp_s": 23.55711,
+          "itl_ms": 99.195,
+          "is_simulated": true
+        },
+        {
+          "token_index": 82,
+          "timestamp_s": 23.65645,
+          "itl_ms": 99.344,
+          "is_simulated": true
+        },
+        {
+          "token_index": 83,
+          "timestamp_s": 23.77318,
+          "itl_ms": 116.73,
+          "is_simulated": true
+        },
+        {
+          "token_index": 84,
+          "timestamp_s": 23.87482,
+          "itl_ms": 101.632,
+          "is_simulated": true
+        },
+        {
+          "token_index": 85,
+          "timestamp_s": 23.97224,
+          "itl_ms": 97.425,
+          "is_simulated": true
+        },
+        {
+          "token_index": 86,
+          "timestamp_s": 24.10484,
+          "itl_ms": 132.604,
+          "is_simulated": true
+        },
+        {
+          "token_index": 87,
+          "timestamp_s": 24.19761,
+          "itl_ms": 92.765,
+          "is_simulated": true
+        },
+        {
+          "token_index": 88,
+          "timestamp_s": 24.29782,
+          "itl_ms": 100.215,
+          "is_simulated": true
+        },
+        {
+          "token_index": 89,
+          "timestamp_s": 24.39606,
+          "itl_ms": 98.233,
+          "is_simulated": true
+        },
+        {
+          "token_index": 90,
+          "timestamp_s": 24.4988,
+          "itl_ms": 102.743,
+          "is_simulated": true
+        },
+        {
+          "token_index": 91,
+          "timestamp_s": 24.60313,
+          "itl_ms": 104.33,
+          "is_simulated": true
+        },
+        {
+          "token_index": 92,
+          "timestamp_s": 24.70608,
+          "itl_ms": 102.946,
+          "is_simulated": true
+        },
+        {
+          "token_index": 93,
+          "timestamp_s": 24.79983,
+          "itl_ms": 93.757,
+          "is_simulated": true
+        },
+        {
+          "token_index": 94,
+          "timestamp_s": 24.89946,
+          "itl_ms": 99.622,
+          "is_simulated": true
+        },
+        {
+          "token_index": 95,
+          "timestamp_s": 24.99922,
+          "itl_ms": 99.765,
+          "is_simulated": true
+        },
+        {
+          "token_index": 96,
+          "timestamp_s": 25.09719,
+          "itl_ms": 97.97,
+          "is_simulated": true
+        },
+        {
+          "token_index": 97,
+          "timestamp_s": 25.20074,
+          "itl_ms": 103.552,
+          "is_simulated": true
+        },
+        {
+          "token_index": 98,
+          "timestamp_s": 25.3022,
+          "itl_ms": 101.459,
+          "is_simulated": true
+        },
+        {
+          "token_index": 99,
+          "timestamp_s": 25.40175,
+          "itl_ms": 99.551,
+          "is_simulated": true
+        },
+        {
+          "token_index": 100,
+          "timestamp_s": 25.50033,
+          "itl_ms": 98.576,
+          "is_simulated": true
+        },
+        {
+          "token_index": 101,
+          "timestamp_s": 25.60206,
+          "itl_ms": 101.726,
+          "is_simulated": true
+        },
+        {
+          "token_index": 102,
+          "timestamp_s": 25.6981,
+          "itl_ms": 96.046,
+          "is_simulated": true
+        },
+        {
+          "token_index": 103,
+          "timestamp_s": 25.79916,
+          "itl_ms": 101.058,
+          "is_simulated": true
+        },
+        {
+          "token_index": 104,
+          "timestamp_s": 25.90239,
+          "itl_ms": 103.234,
+          "is_simulated": true
+        },
+        {
+          "token_index": 105,
+          "timestamp_s": 26.05066,
+          "itl_ms": 148.27,
+          "is_simulated": true
+        },
+        {
+          "token_index": 106,
+          "timestamp_s": 26.1558,
+          "itl_ms": 105.139,
+          "is_simulated": true
+        },
+        {
+          "token_index": 107,
+          "timestamp_s": 26.25944,
+          "itl_ms": 103.637,
+          "is_simulated": true
+        },
+        {
+          "token_index": 108,
+          "timestamp_s": 26.35743,
+          "itl_ms": 97.988,
+          "is_simulated": true
+        },
+        {
+          "token_index": 109,
+          "timestamp_s": 26.45578,
+          "itl_ms": 98.35,
+          "is_simulated": true
+        },
+        {
+          "token_index": 110,
+          "timestamp_s": 26.55575,
+          "itl_ms": 99.979,
+          "is_simulated": true
+        },
+        {
+          "token_index": 111,
+          "timestamp_s": 26.64977,
+          "itl_ms": 94.016,
+          "is_simulated": true
+        },
+        {
+          "token_index": 112,
+          "timestamp_s": 26.75107,
+          "itl_ms": 101.299,
+          "is_simulated": true
+        },
+        {
+          "token_index": 113,
+          "timestamp_s": 26.84231,
+          "itl_ms": 91.24,
+          "is_simulated": true
+        },
+        {
+          "token_index": 114,
+          "timestamp_s": 26.94767,
+          "itl_ms": 105.362,
+          "is_simulated": true
+        },
+        {
+          "token_index": 115,
+          "timestamp_s": 27.05482,
+          "itl_ms": 107.15,
+          "is_simulated": true
+        },
+        {
+          "token_index": 116,
+          "timestamp_s": 27.15322,
+          "itl_ms": 98.397,
+          "is_simulated": true
+        },
+        {
+          "token_index": 117,
+          "timestamp_s": 27.24822,
+          "itl_ms": 94.996,
+          "is_simulated": true
+        },
+        {
+          "token_index": 118,
+          "timestamp_s": 27.35303,
+          "itl_ms": 104.819,
+          "is_simulated": true
+        },
+        {
+          "token_index": 119,
+          "timestamp_s": 27.45083,
+          "itl_ms": 97.799,
+          "is_simulated": true
+        },
+        {
+          "token_index": 120,
+          "timestamp_s": 27.54692,
+          "itl_ms": 96.09,
+          "is_simulated": true
+        },
+        {
+          "token_index": 121,
+          "timestamp_s": 27.6423,
+          "itl_ms": 95.377,
+          "is_simulated": true
+        },
+        {
+          "token_index": 122,
+          "timestamp_s": 27.74291,
+          "itl_ms": 100.611,
+          "is_simulated": true
+        },
+        {
+          "token_index": 123,
+          "timestamp_s": 27.83884,
+          "itl_ms": 95.929,
+          "is_simulated": true
+        },
+        {
+          "token_index": 124,
+          "timestamp_s": 27.9356,
+          "itl_ms": 96.76,
+          "is_simulated": true
+        },
+        {
+          "token_index": 125,
+          "timestamp_s": 28.03098,
+          "itl_ms": 95.383,
+          "is_simulated": true
+        },
+        {
+          "token_index": 126,
+          "timestamp_s": 28.12959,
+          "itl_ms": 98.607,
+          "is_simulated": true
+        },
+        {
+          "token_index": 127,
+          "timestamp_s": 28.22473,
+          "itl_ms": 95.14,
+          "is_simulated": true
+        },
+        {
+          "token_index": 128,
+          "timestamp_s": 28.32899,
+          "itl_ms": 104.258,
+          "is_simulated": true
+        },
+        {
+          "token_index": 129,
+          "timestamp_s": 28.42527,
+          "itl_ms": 96.286,
+          "is_simulated": true
+        },
+        {
+          "token_index": 130,
+          "timestamp_s": 28.56889,
+          "itl_ms": 143.619,
+          "is_simulated": true
+        },
+        {
+          "token_index": 131,
+          "timestamp_s": 28.67317,
+          "itl_ms": 104.281,
+          "is_simulated": true
+        },
+        {
+          "token_index": 132,
+          "timestamp_s": 28.7768,
+          "itl_ms": 103.623,
+          "is_simulated": true
+        },
+        {
+          "token_index": 133,
+          "timestamp_s": 28.88187,
+          "itl_ms": 105.07,
+          "is_simulated": true
+        },
+        {
+          "token_index": 134,
+          "timestamp_s": 28.9805,
+          "itl_ms": 98.63,
+          "is_simulated": true
+        },
+        {
+          "token_index": 135,
+          "timestamp_s": 29.07858,
+          "itl_ms": 98.081,
+          "is_simulated": true
+        },
+        {
+          "token_index": 136,
+          "timestamp_s": 29.18308,
+          "itl_ms": 104.502,
+          "is_simulated": true
+        },
+        {
+          "token_index": 137,
+          "timestamp_s": 29.27859,
+          "itl_ms": 95.506,
+          "is_simulated": true
+        },
+        {
+          "token_index": 138,
+          "timestamp_s": 29.37772,
+          "itl_ms": 99.135,
+          "is_simulated": true
+        },
+        {
+          "token_index": 139,
+          "timestamp_s": 29.47799,
+          "itl_ms": 100.266,
+          "is_simulated": true
+        },
+        {
+          "token_index": 140,
+          "timestamp_s": 29.58562,
+          "itl_ms": 107.629,
+          "is_simulated": true
+        },
+        {
+          "token_index": 141,
+          "timestamp_s": 29.68412,
+          "itl_ms": 98.503,
+          "is_simulated": true
+        },
+        {
+          "token_index": 142,
+          "timestamp_s": 29.79722,
+          "itl_ms": 113.099,
+          "is_simulated": true
+        },
+        {
+          "token_index": 143,
+          "timestamp_s": 29.89141,
+          "itl_ms": 94.191,
+          "is_simulated": true
+        },
+        {
+          "token_index": 144,
+          "timestamp_s": 29.99783,
+          "itl_ms": 106.425,
+          "is_simulated": true
+        },
+        {
+          "token_index": 145,
+          "timestamp_s": 30.10198,
+          "itl_ms": 104.147,
+          "is_simulated": true
+        },
+        {
+          "token_index": 146,
+          "timestamp_s": 30.19682,
+          "itl_ms": 94.842,
+          "is_simulated": true
+        },
+        {
+          "token_index": 147,
+          "timestamp_s": 30.3019,
+          "itl_ms": 105.08,
+          "is_simulated": true
+        },
+        {
+          "token_index": 148,
+          "timestamp_s": 30.4033,
+          "itl_ms": 101.401,
+          "is_simulated": true
+        },
+        {
+          "token_index": 149,
+          "timestamp_s": 30.50039,
+          "itl_ms": 97.092,
+          "is_simulated": true
+        },
+        {
+          "token_index": 150,
+          "timestamp_s": 30.60324,
+          "itl_ms": 102.849,
+          "is_simulated": true
+        },
+        {
+          "token_index": 151,
+          "timestamp_s": 30.69987,
+          "itl_ms": 96.624,
+          "is_simulated": true
+        },
+        {
+          "token_index": 152,
+          "timestamp_s": 30.80424,
+          "itl_ms": 104.374,
+          "is_simulated": true
+        },
+        {
+          "token_index": 153,
+          "timestamp_s": 30.90372,
+          "itl_ms": 99.479,
+          "is_simulated": true
+        },
+        {
+          "token_index": 154,
+          "timestamp_s": 31.00246,
+          "itl_ms": 98.741,
+          "is_simulated": true
+        },
+        {
+          "token_index": 155,
+          "timestamp_s": 31.09998,
+          "itl_ms": 97.516,
+          "is_simulated": true
+        },
+        {
+          "token_index": 156,
+          "timestamp_s": 31.20455,
+          "itl_ms": 104.568,
+          "is_simulated": true
+        },
+        {
+          "token_index": 157,
+          "timestamp_s": 31.30445,
+          "itl_ms": 99.909,
+          "is_simulated": true
+        },
+        {
+          "token_index": 158,
+          "timestamp_s": 31.40431,
+          "itl_ms": 99.854,
+          "is_simulated": true
+        },
+        {
+          "token_index": 159,
+          "timestamp_s": 31.50522,
+          "itl_ms": 100.916,
+          "is_simulated": true
+        },
+        {
+          "token_index": 160,
+          "timestamp_s": 31.60353,
+          "itl_ms": 98.302,
+          "is_simulated": true
+        },
+        {
+          "token_index": 161,
+          "timestamp_s": 31.70632,
+          "itl_ms": 102.794,
+          "is_simulated": true
+        },
+        {
+          "token_index": 162,
+          "timestamp_s": 31.80221,
+          "itl_ms": 95.886,
+          "is_simulated": true
+        },
+        {
+          "token_index": 163,
+          "timestamp_s": 31.90329,
+          "itl_ms": 101.088,
+          "is_simulated": true
+        },
+        {
+          "token_index": 164,
+          "timestamp_s": 31.9979,
+          "itl_ms": 94.608,
+          "is_simulated": true
+        },
+        {
+          "token_index": 165,
+          "timestamp_s": 32.10019,
+          "itl_ms": 102.291,
+          "is_simulated": true
+        },
+        {
+          "token_index": 166,
+          "timestamp_s": 32.1977,
+          "itl_ms": 97.504,
+          "is_simulated": true
+        },
+        {
+          "token_index": 167,
+          "timestamp_s": 32.29825,
+          "itl_ms": 100.557,
+          "is_simulated": true
+        },
+        {
+          "token_index": 168,
+          "timestamp_s": 32.40445,
+          "itl_ms": 106.191,
+          "is_simulated": true
+        },
+        {
+          "token_index": 169,
+          "timestamp_s": 32.5033,
+          "itl_ms": 98.859,
+          "is_simulated": true
+        },
+        {
+          "token_index": 170,
+          "timestamp_s": 32.59383,
+          "itl_ms": 90.528,
+          "is_simulated": true
+        },
+        {
+          "token_index": 171,
+          "timestamp_s": 32.69678,
+          "itl_ms": 102.943,
+          "is_simulated": true
+        },
+        {
+          "token_index": 172,
+          "timestamp_s": 32.79964,
+          "itl_ms": 102.862,
+          "is_simulated": true
+        },
+        {
+          "token_index": 173,
+          "timestamp_s": 32.8959,
+          "itl_ms": 96.263,
+          "is_simulated": true
+        },
+        {
+          "token_index": 174,
+          "timestamp_s": 32.99271,
+          "itl_ms": 96.811,
+          "is_simulated": true
+        },
+        {
+          "token_index": 175,
+          "timestamp_s": 33.08923,
+          "itl_ms": 96.523,
+          "is_simulated": true
+        },
+        {
+          "token_index": 176,
+          "timestamp_s": 33.18511,
+          "itl_ms": 95.87,
+          "is_simulated": true
+        },
+        {
+          "token_index": 177,
+          "timestamp_s": 33.28832,
+          "itl_ms": 103.219,
+          "is_simulated": true
+        },
+        {
+          "token_index": 178,
+          "timestamp_s": 33.39165,
+          "itl_ms": 103.321,
+          "is_simulated": true
+        },
+        {
+          "token_index": 179,
+          "timestamp_s": 33.48743,
+          "itl_ms": 95.789,
+          "is_simulated": true
+        },
+        {
+          "token_index": 180,
+          "timestamp_s": 33.58533,
+          "itl_ms": 97.897,
+          "is_simulated": true
+        },
+        {
+          "token_index": 181,
+          "timestamp_s": 33.68541,
+          "itl_ms": 100.076,
+          "is_simulated": true
+        },
+        {
+          "token_index": 182,
+          "timestamp_s": 33.77974,
+          "itl_ms": 94.328,
+          "is_simulated": true
+        },
+        {
+          "token_index": 183,
+          "timestamp_s": 33.87393,
+          "itl_ms": 94.196,
+          "is_simulated": true
+        },
+        {
+          "token_index": 184,
+          "timestamp_s": 33.97317,
+          "itl_ms": 99.239,
+          "is_simulated": true
+        },
+        {
+          "token_index": 185,
+          "timestamp_s": 34.07294,
+          "itl_ms": 99.774,
+          "is_simulated": true
+        },
+        {
+          "token_index": 186,
+          "timestamp_s": 34.17059,
+          "itl_ms": 97.65,
+          "is_simulated": true
+        },
+        {
+          "token_index": 187,
+          "timestamp_s": 34.26876,
+          "itl_ms": 98.167,
+          "is_simulated": true
+        },
+        {
+          "token_index": 188,
+          "timestamp_s": 34.37117,
+          "itl_ms": 102.413,
+          "is_simulated": true
+        },
+        {
+          "token_index": 189,
+          "timestamp_s": 34.47188,
+          "itl_ms": 100.702,
+          "is_simulated": true
+        },
+        {
+          "token_index": 190,
+          "timestamp_s": 34.56961,
+          "itl_ms": 97.736,
+          "is_simulated": true
+        },
+        {
+          "token_index": 191,
+          "timestamp_s": 34.66588,
+          "itl_ms": 96.273,
+          "is_simulated": true
+        },
+        {
+          "token_index": 192,
+          "timestamp_s": 34.76999,
+          "itl_ms": 104.101,
+          "is_simulated": true
+        },
+        {
+          "token_index": 193,
+          "timestamp_s": 34.86722,
+          "itl_ms": 97.235,
+          "is_simulated": true
+        },
+        {
+          "token_index": 194,
+          "timestamp_s": 34.96714,
+          "itl_ms": 99.916,
+          "is_simulated": true
+        },
+        {
+          "token_index": 195,
+          "timestamp_s": 35.06764,
+          "itl_ms": 100.501,
+          "is_simulated": true
+        },
+        {
+          "token_index": 196,
+          "timestamp_s": 35.16719,
+          "itl_ms": 99.549,
+          "is_simulated": true
+        },
+        {
+          "token_index": 197,
+          "timestamp_s": 35.27106,
+          "itl_ms": 103.873,
+          "is_simulated": true
+        },
+        {
+          "token_index": 198,
+          "timestamp_s": 35.36418,
+          "itl_ms": 93.126,
+          "is_simulated": true
+        },
+        {
+          "token_index": 199,
+          "timestamp_s": 35.46795,
+          "itl_ms": 103.767,
+          "is_simulated": true
+        },
+        {
+          "token_index": 200,
+          "timestamp_s": 35.57296,
+          "itl_ms": 105.006,
+          "is_simulated": true
+        },
+        {
+          "token_index": 201,
+          "timestamp_s": 35.67293,
+          "itl_ms": 99.968,
+          "is_simulated": true
+        },
+        {
+          "token_index": 202,
+          "timestamp_s": 35.77466,
+          "itl_ms": 101.738,
+          "is_simulated": true
+        },
+        {
+          "token_index": 203,
+          "timestamp_s": 35.8702,
+          "itl_ms": 95.536,
+          "is_simulated": true
+        },
+        {
+          "token_index": 204,
+          "timestamp_s": 35.96755,
+          "itl_ms": 97.355,
+          "is_simulated": true
+        },
+        {
+          "token_index": 205,
+          "timestamp_s": 36.07192,
+          "itl_ms": 104.365,
+          "is_simulated": true
+        },
+        {
+          "token_index": 206,
+          "timestamp_s": 36.17375,
+          "itl_ms": 101.832,
+          "is_simulated": true
+        },
+        {
+          "token_index": 207,
+          "timestamp_s": 36.27305,
+          "itl_ms": 99.301,
+          "is_simulated": true
+        },
+        {
+          "token_index": 208,
+          "timestamp_s": 36.36798,
+          "itl_ms": 94.928,
+          "is_simulated": true
+        },
+        {
+          "token_index": 209,
+          "timestamp_s": 36.46335,
+          "itl_ms": 95.367,
+          "is_simulated": true
+        },
+        {
+          "token_index": 210,
+          "timestamp_s": 36.56589,
+          "itl_ms": 102.537,
+          "is_simulated": true
+        },
+        {
+          "token_index": 211,
+          "timestamp_s": 36.66639,
+          "itl_ms": 100.5,
+          "is_simulated": true
+        },
+        {
+          "token_index": 212,
+          "timestamp_s": 36.77168,
+          "itl_ms": 105.294,
+          "is_simulated": true
+        },
+        {
+          "token_index": 213,
+          "timestamp_s": 36.86663,
+          "itl_ms": 94.952,
+          "is_simulated": true
+        },
+        {
+          "token_index": 214,
+          "timestamp_s": 36.9696,
+          "itl_ms": 102.97,
+          "is_simulated": true
+        },
+        {
+          "token_index": 215,
+          "timestamp_s": 37.06351,
+          "itl_ms": 93.913,
+          "is_simulated": true
+        },
+        {
+          "token_index": 216,
+          "timestamp_s": 37.16113,
+          "itl_ms": 97.616,
+          "is_simulated": true
+        },
+        {
+          "token_index": 217,
+          "timestamp_s": 37.25857,
+          "itl_ms": 97.436,
+          "is_simulated": true
+        },
+        {
+          "token_index": 218,
+          "timestamp_s": 37.35654,
+          "itl_ms": 97.968,
+          "is_simulated": true
+        },
+        {
+          "token_index": 219,
+          "timestamp_s": 37.44964,
+          "itl_ms": 93.109,
+          "is_simulated": true
+        },
+        {
+          "token_index": 220,
+          "timestamp_s": 37.55085,
+          "itl_ms": 101.208,
+          "is_simulated": true
+        },
+        {
+          "token_index": 221,
+          "timestamp_s": 37.65175,
+          "itl_ms": 100.899,
+          "is_simulated": true
+        },
+        {
+          "token_index": 222,
+          "timestamp_s": 37.74857,
+          "itl_ms": 96.822,
+          "is_simulated": true
+        },
+        {
+          "token_index": 223,
+          "timestamp_s": 37.84997,
+          "itl_ms": 101.4,
+          "is_simulated": true
+        },
+        {
+          "token_index": 224,
+          "timestamp_s": 37.9517,
+          "itl_ms": 101.729,
+          "is_simulated": true
+        },
+        {
+          "token_index": 225,
+          "timestamp_s": 38.04977,
+          "itl_ms": 98.066,
+          "is_simulated": true
+        },
+        {
+          "token_index": 226,
+          "timestamp_s": 38.14549,
+          "itl_ms": 95.718,
+          "is_simulated": true
+        },
+        {
+          "token_index": 227,
+          "timestamp_s": 38.24703,
+          "itl_ms": 101.541,
+          "is_simulated": true
+        },
+        {
+          "token_index": 228,
+          "timestamp_s": 38.34904,
+          "itl_ms": 102.012,
+          "is_simulated": true
+        },
+        {
+          "token_index": 229,
+          "timestamp_s": 38.44958,
+          "itl_ms": 100.545,
+          "is_simulated": true
+        },
+        {
+          "token_index": 230,
+          "timestamp_s": 38.54946,
+          "itl_ms": 99.88,
+          "is_simulated": true
+        },
+        {
+          "token_index": 231,
+          "timestamp_s": 38.64856,
+          "itl_ms": 99.094,
+          "is_simulated": true
+        },
+        {
+          "token_index": 232,
+          "timestamp_s": 38.74927,
+          "itl_ms": 100.717,
+          "is_simulated": true
+        },
+        {
+          "token_index": 233,
+          "timestamp_s": 38.85478,
+          "itl_ms": 105.508,
+          "is_simulated": true
+        },
+        {
+          "token_index": 234,
+          "timestamp_s": 38.9637,
+          "itl_ms": 108.921,
+          "is_simulated": true
+        },
+        {
+          "token_index": 235,
+          "timestamp_s": 39.06296,
+          "itl_ms": 99.254,
+          "is_simulated": true
+        },
+        {
+          "token_index": 236,
+          "timestamp_s": 39.16596,
+          "itl_ms": 103.003,
+          "is_simulated": true
+        },
+        {
+          "token_index": 237,
+          "timestamp_s": 39.26916,
+          "itl_ms": 103.201,
+          "is_simulated": true
+        },
+        {
+          "token_index": 238,
+          "timestamp_s": 39.37254,
+          "itl_ms": 103.375,
+          "is_simulated": true
+        },
+        {
+          "token_index": 239,
+          "timestamp_s": 39.47215,
+          "itl_ms": 99.615,
+          "is_simulated": true
+        },
+        {
+          "token_index": 240,
+          "timestamp_s": 39.57283,
+          "itl_ms": 100.675,
+          "is_simulated": true
+        },
+        {
+          "token_index": 241,
+          "timestamp_s": 39.67069,
+          "itl_ms": 97.862,
+          "is_simulated": true
+        },
+        {
+          "token_index": 242,
+          "timestamp_s": 39.77668,
+          "itl_ms": 105.991,
+          "is_simulated": true
+        },
+        {
+          "token_index": 243,
+          "timestamp_s": 39.87903,
+          "itl_ms": 102.355,
+          "is_simulated": true
+        },
+        {
+          "token_index": 244,
+          "timestamp_s": 39.98229,
+          "itl_ms": 103.258,
+          "is_simulated": true
+        },
+        {
+          "token_index": 245,
+          "timestamp_s": 40.0853,
+          "itl_ms": 103.011,
+          "is_simulated": true
+        },
+        {
+          "token_index": 246,
+          "timestamp_s": 40.1853,
+          "itl_ms": 100.0,
+          "is_simulated": true
+        },
+        {
+          "token_index": 247,
+          "timestamp_s": 40.28643,
+          "itl_ms": 101.131,
+          "is_simulated": true
+        },
+        {
+          "token_index": 248,
+          "timestamp_s": 40.38786,
+          "itl_ms": 101.428,
+          "is_simulated": true
+        },
+        {
+          "token_index": 249,
+          "timestamp_s": 40.48619,
+          "itl_ms": 98.333,
+          "is_simulated": true
+        },
+        {
+          "token_index": 250,
+          "timestamp_s": 40.58213,
+          "itl_ms": 95.941,
+          "is_simulated": true
+        },
+        {
+          "token_index": 251,
+          "timestamp_s": 40.68373,
+          "itl_ms": 101.598,
+          "is_simulated": true
+        },
+        {
+          "token_index": 252,
+          "timestamp_s": 40.78505,
+          "itl_ms": 101.313,
+          "is_simulated": true
+        },
+        {
+          "token_index": 253,
+          "timestamp_s": 40.88373,
+          "itl_ms": 98.687,
+          "is_simulated": true
+        },
+        {
+          "token_index": 254,
+          "timestamp_s": 40.9863,
+          "itl_ms": 102.567,
+          "is_simulated": true
+        },
+        {
+          "token_index": 255,
+          "timestamp_s": 41.08199,
+          "itl_ms": 95.692,
+          "is_simulated": true
+        },
+        {
+          "token_index": 256,
+          "timestamp_s": 41.1787,
+          "itl_ms": 96.706,
+          "is_simulated": true
+        },
+        {
+          "token_index": 257,
+          "timestamp_s": 41.28269,
+          "itl_ms": 103.989,
+          "is_simulated": true
+        },
+        {
+          "token_index": 258,
+          "timestamp_s": 41.37737,
+          "itl_ms": 94.688,
+          "is_simulated": true
+        },
+        {
+          "token_index": 259,
+          "timestamp_s": 41.48055,
+          "itl_ms": 103.173,
+          "is_simulated": true
+        },
+        {
+          "token_index": 260,
+          "timestamp_s": 41.58039,
+          "itl_ms": 99.838,
+          "is_simulated": true
+        },
+        {
+          "token_index": 261,
+          "timestamp_s": 41.68497,
+          "itl_ms": 104.58,
+          "is_simulated": true
+        },
+        {
+          "token_index": 262,
+          "timestamp_s": 41.78579,
+          "itl_ms": 100.824,
+          "is_simulated": true
+        },
+        {
+          "token_index": 263,
+          "timestamp_s": 41.88663,
+          "itl_ms": 100.844,
+          "is_simulated": true
+        },
+        {
+          "token_index": 264,
+          "timestamp_s": 41.99269,
+          "itl_ms": 106.056,
+          "is_simulated": true
+        },
+        {
+          "token_index": 265,
+          "timestamp_s": 42.09094,
+          "itl_ms": 98.25,
+          "is_simulated": true
+        },
+        {
+          "token_index": 266,
+          "timestamp_s": 42.19029,
+          "itl_ms": 99.352,
+          "is_simulated": true
+        },
+        {
+          "token_index": 267,
+          "timestamp_s": 42.29423,
+          "itl_ms": 103.941,
+          "is_simulated": true
+        },
+        {
+          "token_index": 268,
+          "timestamp_s": 42.39768,
+          "itl_ms": 103.45,
+          "is_simulated": true
+        },
+        {
+          "token_index": 269,
+          "timestamp_s": 42.49683,
+          "itl_ms": 99.147,
+          "is_simulated": true
+        },
+        {
+          "token_index": 270,
+          "timestamp_s": 42.60501,
+          "itl_ms": 108.177,
+          "is_simulated": true
+        },
+        {
+          "token_index": 271,
+          "timestamp_s": 42.70065,
+          "itl_ms": 95.646,
+          "is_simulated": true
+        },
+        {
+          "token_index": 272,
+          "timestamp_s": 42.80255,
+          "itl_ms": 101.894,
+          "is_simulated": true
+        },
+        {
+          "token_index": 273,
+          "timestamp_s": 42.89908,
+          "itl_ms": 96.528,
+          "is_simulated": true
+        },
+        {
+          "token_index": 274,
+          "timestamp_s": 43.00164,
+          "itl_ms": 102.562,
+          "is_simulated": true
+        },
+        {
+          "token_index": 275,
+          "timestamp_s": 43.10157,
+          "itl_ms": 99.932,
+          "is_simulated": true
+        },
+        {
+          "token_index": 276,
+          "timestamp_s": 43.20399,
+          "itl_ms": 102.423,
+          "is_simulated": true
+        },
+        {
+          "token_index": 277,
+          "timestamp_s": 43.34297,
+          "itl_ms": 138.981,
+          "is_simulated": true
+        },
+        {
+          "token_index": 278,
+          "timestamp_s": 43.44127,
+          "itl_ms": 98.298,
+          "is_simulated": true
+        },
+        {
+          "token_index": 279,
+          "timestamp_s": 43.54036,
+          "itl_ms": 99.084,
+          "is_simulated": true
+        },
+        {
+          "token_index": 280,
+          "timestamp_s": 43.63741,
+          "itl_ms": 97.051,
+          "is_simulated": true
+        },
+        {
+          "token_index": 281,
+          "timestamp_s": 43.73787,
+          "itl_ms": 100.465,
+          "is_simulated": true
+        },
+        {
+          "token_index": 282,
+          "timestamp_s": 43.83799,
+          "itl_ms": 100.119,
+          "is_simulated": true
+        },
+        {
+          "token_index": 283,
+          "timestamp_s": 43.93405,
+          "itl_ms": 96.057,
+          "is_simulated": true
+        },
+        {
+          "token_index": 284,
+          "timestamp_s": 44.03953,
+          "itl_ms": 105.477,
+          "is_simulated": true
+        },
+        {
+          "token_index": 285,
+          "timestamp_s": 44.13728,
+          "itl_ms": 97.755,
+          "is_simulated": true
+        },
+        {
+          "token_index": 286,
+          "timestamp_s": 44.23756,
+          "itl_ms": 100.281,
+          "is_simulated": true
+        },
+        {
+          "token_index": 287,
+          "timestamp_s": 44.33384,
+          "itl_ms": 96.279,
+          "is_simulated": true
+        },
+        {
+          "token_index": 288,
+          "timestamp_s": 44.43768,
+          "itl_ms": 103.836,
+          "is_simulated": true
+        },
+        {
+          "token_index": 289,
+          "timestamp_s": 44.53984,
+          "itl_ms": 102.16,
+          "is_simulated": true
+        },
+        {
+          "token_index": 290,
+          "timestamp_s": 44.65418,
+          "itl_ms": 114.34,
+          "is_simulated": true
+        },
+        {
+          "token_index": 291,
+          "timestamp_s": 44.75236,
+          "itl_ms": 98.18,
+          "is_simulated": true
+        },
+        {
+          "token_index": 292,
+          "timestamp_s": 44.85239,
+          "itl_ms": 100.031,
+          "is_simulated": true
+        },
+        {
+          "token_index": 293,
+          "timestamp_s": 44.95457,
+          "itl_ms": 102.186,
+          "is_simulated": true
+        },
+        {
+          "token_index": 294,
+          "timestamp_s": 45.05002,
+          "itl_ms": 95.448,
+          "is_simulated": true
+        },
+        {
+          "token_index": 295,
+          "timestamp_s": 45.14964,
+          "itl_ms": 99.614,
+          "is_simulated": true
+        },
+        {
+          "token_index": 296,
+          "timestamp_s": 45.25377,
+          "itl_ms": 104.131,
+          "is_simulated": true
+        },
+        {
+          "token_index": 297,
+          "timestamp_s": 45.3505,
+          "itl_ms": 96.734,
+          "is_simulated": true
+        },
+        {
+          "token_index": 298,
+          "timestamp_s": 45.45242,
+          "itl_ms": 101.916,
+          "is_simulated": true
+        },
+        {
+          "token_index": 299,
+          "timestamp_s": 45.5554,
+          "itl_ms": 102.985,
+          "is_simulated": true
+        },
+        {
+          "token_index": 300,
+          "timestamp_s": 45.65796,
+          "itl_ms": 102.56,
+          "is_simulated": true
+        },
+        {
+          "token_index": 301,
+          "timestamp_s": 45.75774,
+          "itl_ms": 99.776,
+          "is_simulated": true
+        },
+        {
+          "token_index": 302,
+          "timestamp_s": 45.85857,
+          "itl_ms": 100.83,
+          "is_simulated": true
+        },
+        {
+          "token_index": 303,
+          "timestamp_s": 45.9556,
+          "itl_ms": 97.03,
+          "is_simulated": true
+        },
+        {
+          "token_index": 304,
+          "timestamp_s": 46.0492,
+          "itl_ms": 93.605,
+          "is_simulated": true
+        },
+        {
+          "token_index": 305,
+          "timestamp_s": 46.14658,
+          "itl_ms": 97.376,
+          "is_simulated": true
+        },
+        {
+          "token_index": 306,
+          "timestamp_s": 46.24757,
+          "itl_ms": 100.993,
+          "is_simulated": true
+        },
+        {
+          "token_index": 307,
+          "timestamp_s": 46.37872,
+          "itl_ms": 131.145,
+          "is_simulated": true
+        },
+        {
+          "token_index": 308,
+          "timestamp_s": 46.47465,
+          "itl_ms": 95.937,
+          "is_simulated": true
+        },
+        {
+          "token_index": 309,
+          "timestamp_s": 46.57628,
+          "itl_ms": 101.623,
+          "is_simulated": true
+        },
+        {
+          "token_index": 310,
+          "timestamp_s": 46.67998,
+          "itl_ms": 103.701,
+          "is_simulated": true
+        },
+        {
+          "token_index": 311,
+          "timestamp_s": 46.78608,
+          "itl_ms": 106.099,
+          "is_simulated": true
+        },
+        {
+          "token_index": 312,
+          "timestamp_s": 46.88661,
+          "itl_ms": 100.53,
+          "is_simulated": true
+        },
+        {
+          "token_index": 313,
+          "timestamp_s": 46.98583,
+          "itl_ms": 99.223,
+          "is_simulated": true
+        },
+        {
+          "token_index": 314,
+          "timestamp_s": 47.08502,
+          "itl_ms": 99.186,
+          "is_simulated": true
+        },
+        {
+          "token_index": 315,
+          "timestamp_s": 47.18687,
+          "itl_ms": 101.85,
+          "is_simulated": true
+        },
+        {
+          "token_index": 316,
+          "timestamp_s": 47.29006,
+          "itl_ms": 103.196,
+          "is_simulated": true
+        },
+        {
+          "token_index": 317,
+          "timestamp_s": 47.38994,
+          "itl_ms": 99.878,
+          "is_simulated": true
+        },
+        {
+          "token_index": 318,
+          "timestamp_s": 47.49219,
+          "itl_ms": 102.252,
+          "is_simulated": true
+        },
+        {
+          "token_index": 319,
+          "timestamp_s": 47.61524,
+          "itl_ms": 123.05,
+          "is_simulated": true
+        },
+        {
+          "token_index": 320,
+          "timestamp_s": 47.71413,
+          "itl_ms": 98.883,
+          "is_simulated": true
+        },
+        {
+          "token_index": 321,
+          "timestamp_s": 47.81534,
+          "itl_ms": 101.215,
+          "is_simulated": true
+        },
+        {
+          "token_index": 322,
+          "timestamp_s": 47.91316,
+          "itl_ms": 97.821,
+          "is_simulated": true
+        },
+        {
+          "token_index": 323,
+          "timestamp_s": 48.01568,
+          "itl_ms": 102.521,
+          "is_simulated": true
+        },
+        {
+          "token_index": 324,
+          "timestamp_s": 48.11281,
+          "itl_ms": 97.127,
+          "is_simulated": true
+        },
+        {
+          "token_index": 325,
+          "timestamp_s": 48.20777,
+          "itl_ms": 94.962,
+          "is_simulated": true
+        },
+        {
+          "token_index": 326,
+          "timestamp_s": 48.30601,
+          "itl_ms": 98.233,
+          "is_simulated": true
+        },
+        {
+          "token_index": 327,
+          "timestamp_s": 48.40782,
+          "itl_ms": 101.815,
+          "is_simulated": true
+        },
+        {
+          "token_index": 328,
+          "timestamp_s": 48.50677,
+          "itl_ms": 98.947,
+          "is_simulated": true
+        },
+        {
+          "token_index": 329,
+          "timestamp_s": 48.60544,
+          "itl_ms": 98.67,
+          "is_simulated": true
+        },
+        {
+          "token_index": 330,
+          "timestamp_s": 48.71027,
+          "itl_ms": 104.836,
+          "is_simulated": true
+        },
+        {
+          "token_index": 331,
+          "timestamp_s": 48.81118,
+          "itl_ms": 100.902,
+          "is_simulated": true
+        },
+        {
+          "token_index": 332,
+          "timestamp_s": 48.91068,
+          "itl_ms": 99.505,
+          "is_simulated": true
+        },
+        {
+          "token_index": 333,
+          "timestamp_s": 49.01405,
+          "itl_ms": 103.364,
+          "is_simulated": true
+        },
+        {
+          "token_index": 334,
+          "timestamp_s": 49.10753,
+          "itl_ms": 93.486,
+          "is_simulated": true
+        },
+        {
+          "token_index": 335,
+          "timestamp_s": 49.20397,
+          "itl_ms": 96.438,
+          "is_simulated": true
+        },
+        {
+          "token_index": 336,
+          "timestamp_s": 49.30907,
+          "itl_ms": 105.102,
+          "is_simulated": true
+        },
+        {
+          "token_index": 337,
+          "timestamp_s": 49.40692,
+          "itl_ms": 97.854,
+          "is_simulated": true
+        },
+        {
+          "token_index": 338,
+          "timestamp_s": 49.50749,
+          "itl_ms": 100.565,
+          "is_simulated": true
+        },
+        {
+          "token_index": 339,
+          "timestamp_s": 49.60724,
+          "itl_ms": 99.749,
+          "is_simulated": true
+        },
+        {
+          "token_index": 340,
+          "timestamp_s": 49.70923,
+          "itl_ms": 101.993,
+          "is_simulated": true
+        },
+        {
+          "token_index": 341,
+          "timestamp_s": 49.81326,
+          "itl_ms": 104.027,
+          "is_simulated": true
+        },
+        {
+          "token_index": 342,
+          "timestamp_s": 49.91576,
+          "itl_ms": 102.503,
+          "is_simulated": true
+        },
+        {
+          "token_index": 343,
+          "timestamp_s": 50.0501,
+          "itl_ms": 134.336,
+          "is_simulated": true
+        },
+        {
+          "token_index": 344,
+          "timestamp_s": 50.14602,
+          "itl_ms": 95.921,
+          "is_simulated": true
+        },
+        {
+          "token_index": 345,
+          "timestamp_s": 50.24673,
+          "itl_ms": 100.706,
+          "is_simulated": true
+        },
+        {
+          "token_index": 346,
+          "timestamp_s": 50.35173,
+          "itl_ms": 105.004,
+          "is_simulated": true
+        },
+        {
+          "token_index": 347,
+          "timestamp_s": 50.44805,
+          "itl_ms": 96.323,
+          "is_simulated": true
+        },
+        {
+          "token_index": 348,
+          "timestamp_s": 50.54647,
+          "itl_ms": 98.418,
+          "is_simulated": true
+        },
+        {
+          "token_index": 349,
+          "timestamp_s": 50.65052,
+          "itl_ms": 104.054,
+          "is_simulated": true
+        },
+        {
+          "token_index": 350,
+          "timestamp_s": 50.75443,
+          "itl_ms": 103.902,
+          "is_simulated": true
+        },
+        {
+          "token_index": 351,
+          "timestamp_s": 50.85613,
+          "itl_ms": 101.707,
+          "is_simulated": true
+        },
+        {
+          "token_index": 352,
+          "timestamp_s": 50.95714,
+          "itl_ms": 101.007,
+          "is_simulated": true
+        },
+        {
+          "token_index": 353,
+          "timestamp_s": 51.05306,
+          "itl_ms": 95.918,
+          "is_simulated": true
+        },
+        {
+          "token_index": 354,
+          "timestamp_s": 51.15475,
+          "itl_ms": 101.69,
+          "is_simulated": true
+        },
+        {
+          "token_index": 355,
+          "timestamp_s": 51.25756,
+          "itl_ms": 102.808,
+          "is_simulated": true
+        },
+        {
+          "token_index": 356,
+          "timestamp_s": 51.35679,
+          "itl_ms": 99.237,
+          "is_simulated": true
+        },
+        {
+          "token_index": 357,
+          "timestamp_s": 51.45486,
+          "itl_ms": 98.065,
+          "is_simulated": true
+        },
+        {
+          "token_index": 358,
+          "timestamp_s": 51.56281,
+          "itl_ms": 107.954,
+          "is_simulated": true
+        },
+        {
+          "token_index": 359,
+          "timestamp_s": 51.6644,
+          "itl_ms": 101.588,
+          "is_simulated": true
+        },
+        {
+          "token_index": 360,
+          "timestamp_s": 51.76699,
+          "itl_ms": 102.587,
+          "is_simulated": true
+        },
+        {
+          "token_index": 361,
+          "timestamp_s": 51.87324,
+          "itl_ms": 106.253,
+          "is_simulated": true
+        },
+        {
+          "token_index": 362,
+          "timestamp_s": 51.97285,
+          "itl_ms": 99.613,
+          "is_simulated": true
+        },
+        {
+          "token_index": 363,
+          "timestamp_s": 52.07602,
+          "itl_ms": 103.164,
+          "is_simulated": true
+        },
+        {
+          "token_index": 364,
+          "timestamp_s": 52.18199,
+          "itl_ms": 105.975,
+          "is_simulated": true
+        },
+        {
+          "token_index": 365,
+          "timestamp_s": 52.28075,
+          "itl_ms": 98.759,
+          "is_simulated": true
+        },
+        {
+          "token_index": 366,
+          "timestamp_s": 52.38044,
+          "itl_ms": 99.684,
+          "is_simulated": true
+        },
+        {
+          "token_index": 367,
+          "timestamp_s": 52.47779,
+          "itl_ms": 97.353,
+          "is_simulated": true
+        },
+        {
+          "token_index": 368,
+          "timestamp_s": 52.57266,
+          "itl_ms": 94.867,
+          "is_simulated": true
+        },
+        {
+          "token_index": 369,
+          "timestamp_s": 52.66706,
+          "itl_ms": 94.402,
+          "is_simulated": true
+        },
+        {
+          "token_index": 370,
+          "timestamp_s": 52.76657,
+          "itl_ms": 99.513,
+          "is_simulated": true
+        },
+        {
+          "token_index": 371,
+          "timestamp_s": 52.87165,
+          "itl_ms": 105.075,
+          "is_simulated": true
+        },
+        {
+          "token_index": 372,
+          "timestamp_s": 52.96404,
+          "itl_ms": 92.398,
+          "is_simulated": true
+        },
+        {
+          "token_index": 373,
+          "timestamp_s": 53.06495,
+          "itl_ms": 100.905,
+          "is_simulated": true
+        },
+        {
+          "token_index": 374,
+          "timestamp_s": 53.16724,
+          "itl_ms": 102.296,
+          "is_simulated": true
+        },
+        {
+          "token_index": 375,
+          "timestamp_s": 53.26212,
+          "itl_ms": 94.878,
+          "is_simulated": true
+        },
+        {
+          "token_index": 376,
+          "timestamp_s": 53.35973,
+          "itl_ms": 97.612,
+          "is_simulated": true
+        },
+        {
+          "token_index": 377,
+          "timestamp_s": 53.46183,
+          "itl_ms": 102.096,
+          "is_simulated": true
+        },
+        {
+          "token_index": 378,
+          "timestamp_s": 53.56278,
+          "itl_ms": 100.95,
+          "is_simulated": true
+        },
+        {
+          "token_index": 379,
+          "timestamp_s": 53.66673,
+          "itl_ms": 103.948,
+          "is_simulated": true
+        },
+        {
+          "token_index": 380,
+          "timestamp_s": 53.76874,
+          "itl_ms": 102.012,
+          "is_simulated": true
+        },
+        {
+          "token_index": 381,
+          "timestamp_s": 53.87542,
+          "itl_ms": 106.682,
+          "is_simulated": true
+        },
+        {
+          "token_index": 382,
+          "timestamp_s": 53.97823,
+          "itl_ms": 102.811,
+          "is_simulated": true
+        },
+        {
+          "token_index": 383,
+          "timestamp_s": 54.08332,
+          "itl_ms": 105.093,
+          "is_simulated": true
+        },
+        {
+          "token_index": 384,
+          "timestamp_s": 54.18071,
+          "itl_ms": 97.381,
+          "is_simulated": true
+        },
+        {
+          "token_index": 385,
+          "timestamp_s": 54.28216,
+          "itl_ms": 101.454,
+          "is_simulated": true
+        },
+        {
+          "token_index": 386,
+          "timestamp_s": 54.38225,
+          "itl_ms": 100.092,
+          "is_simulated": true
+        },
+        {
+          "token_index": 387,
+          "timestamp_s": 54.48161,
+          "itl_ms": 99.362,
+          "is_simulated": true
+        },
+        {
+          "token_index": 388,
+          "timestamp_s": 54.58056,
+          "itl_ms": 98.949,
+          "is_simulated": true
+        },
+        {
+          "token_index": 389,
+          "timestamp_s": 54.68193,
+          "itl_ms": 101.37,
+          "is_simulated": true
+        },
+        {
+          "token_index": 390,
+          "timestamp_s": 54.80605,
+          "itl_ms": 124.112,
+          "is_simulated": true
+        },
+        {
+          "token_index": 391,
+          "timestamp_s": 54.90663,
+          "itl_ms": 100.581,
+          "is_simulated": true
+        },
+        {
+          "token_index": 392,
+          "timestamp_s": 55.01187,
+          "itl_ms": 105.245,
+          "is_simulated": true
+        },
+        {
+          "token_index": 393,
+          "timestamp_s": 55.10817,
+          "itl_ms": 96.301,
+          "is_simulated": true
+        },
+        {
+          "token_index": 394,
+          "timestamp_s": 55.2076,
+          "itl_ms": 99.429,
+          "is_simulated": true
+        },
+        {
+          "token_index": 395,
+          "timestamp_s": 55.30247,
+          "itl_ms": 94.864,
+          "is_simulated": true
+        },
+        {
+          "token_index": 396,
+          "timestamp_s": 55.40121,
+          "itl_ms": 98.745,
+          "is_simulated": true
+        },
+        {
+          "token_index": 397,
+          "timestamp_s": 55.49736,
+          "itl_ms": 96.148,
+          "is_simulated": true
+        },
+        {
+          "token_index": 398,
+          "timestamp_s": 55.60003,
+          "itl_ms": 102.67,
+          "is_simulated": true
+        },
+        {
+          "token_index": 399,
+          "timestamp_s": 55.70154,
+          "itl_ms": 101.51,
+          "is_simulated": true
+        },
+        {
+          "token_index": 400,
+          "timestamp_s": 55.80483,
+          "itl_ms": 103.297,
+          "is_simulated": true
+        },
+        {
+          "token_index": 401,
+          "timestamp_s": 55.91134,
+          "itl_ms": 106.51,
+          "is_simulated": true
+        },
+        {
+          "token_index": 402,
+          "timestamp_s": 56.00738,
+          "itl_ms": 96.035,
+          "is_simulated": true
+        },
+        {
+          "token_index": 403,
+          "timestamp_s": 56.10795,
+          "itl_ms": 100.57,
+          "is_simulated": true
+        },
+        {
+          "token_index": 404,
+          "timestamp_s": 56.20834,
+          "itl_ms": 100.388,
+          "is_simulated": true
+        },
+        {
+          "token_index": 405,
+          "timestamp_s": 56.30801,
+          "itl_ms": 99.675,
+          "is_simulated": true
+        },
+        {
+          "token_index": 406,
+          "timestamp_s": 56.41017,
+          "itl_ms": 102.154,
+          "is_simulated": true
+        },
+        {
+          "token_index": 407,
+          "timestamp_s": 56.50807,
+          "itl_ms": 97.908,
+          "is_simulated": true
+        },
+        {
+          "token_index": 408,
+          "timestamp_s": 56.61034,
+          "itl_ms": 102.263,
+          "is_simulated": true
+        },
+        {
+          "token_index": 409,
+          "timestamp_s": 56.70752,
+          "itl_ms": 97.186,
+          "is_simulated": true
+        },
+        {
+          "token_index": 410,
+          "timestamp_s": 56.8087,
+          "itl_ms": 101.174,
+          "is_simulated": true
+        },
+        {
+          "token_index": 411,
+          "timestamp_s": 56.91046,
+          "itl_ms": 101.761,
+          "is_simulated": true
+        },
+        {
+          "token_index": 412,
+          "timestamp_s": 57.00565,
+          "itl_ms": 95.193,
+          "is_simulated": true
+        },
+        {
+          "token_index": 413,
+          "timestamp_s": 57.1022,
+          "itl_ms": 96.553,
+          "is_simulated": true
+        },
+        {
+          "token_index": 414,
+          "timestamp_s": 57.20271,
+          "itl_ms": 100.507,
+          "is_simulated": true
+        },
+        {
+          "token_index": 415,
+          "timestamp_s": 57.30656,
+          "itl_ms": 103.852,
+          "is_simulated": true
+        },
+        {
+          "token_index": 416,
+          "timestamp_s": 57.40955,
+          "itl_ms": 102.984,
+          "is_simulated": true
+        }
+      ]
+    },
+    {
+      "request_id": "req_0006",
+      "arrival_time_s": 15.3885,
+      "category": "short",
+      "request_type": "interactive",
+      "priority_metadata": "high",
+      "prompt_tokens": 24,
+      "requested_output_tokens": 48,
+      "deadline_target_itl_ms": 30.0,
+      "is_simulated": true,
+      "data_source": "SimulatedInferenceBackend (Synthetic Model)",
+      "ttft_ms": 37.876,
+      "total_generation_time_ms": 1488.716,
+      "tokens_generated": 48,
+      "observed_avg_itl_ms": 30.226,
+      "observed_median_itl_ms": 29.48,
+      "observed_p95_itl_ms": 35.821,
+      "observed_p99_itl_ms": 50.8,
+      "observed_violation_count": 22,
+      "observed_violation_rate": 0.4583,
+      "has_observed_deadline_violation": true,
+      "observed_min_slack_ms": -32.83,
+      "observed_avg_slack_ms": -0.23,
+      "observed_p95_slack_ms": -5.82,
+      "prediction_method": "EWMA(alpha=0.35, window=10)",
+      "predicted_itl_ms": 28.24,
+      "predicted_slack_ms": 1.76,
+      "predicted_risk_level": "high",
+      "risk_reasoning": "Critical slack deficit: predicted slack is 1.76ms (5.9% of deadline target 30.0ms).",
+      "token_records": [
+        {
+          "token_index": 1,
+          "timestamp_s": 15.4617,
+          "itl_ms": 35.321,
+          "is_simulated": true
+        },
+        {
+          "token_index": 2,
+          "timestamp_s": 15.49116,
+          "itl_ms": 29.465,
+          "is_simulated": true
+        },
+        {
+          "token_index": 3,
+          "timestamp_s": 15.52392,
+          "itl_ms": 32.762,
+          "is_simulated": true
+        },
+        {
+          "token_index": 4,
+          "timestamp_s": 15.55782,
+          "itl_ms": 33.898,
+          "is_simulated": true
+        },
+        {
+          "token_index": 5,
+          "timestamp_s": 15.58887,
+          "itl_ms": 31.044,
+          "is_simulated": true
+        },
+        {
+          "token_index": 6,
+          "timestamp_s": 15.61507,
+          "itl_ms": 26.199,
+          "is_simulated": true
+        },
+        {
+          "token_index": 7,
+          "timestamp_s": 15.65229,
+          "itl_ms": 37.229,
+          "is_simulated": true
+        },
+        {
+          "token_index": 8,
+          "timestamp_s": 15.68174,
+          "itl_ms": 29.442,
+          "is_simulated": true
+        },
+        {
+          "token_index": 9,
+          "timestamp_s": 15.70767,
+          "itl_ms": 25.931,
+          "is_simulated": true
+        },
+        {
+          "token_index": 10,
+          "timestamp_s": 15.73571,
+          "itl_ms": 28.048,
+          "is_simulated": true
+        },
+        {
+          "token_index": 11,
+          "timestamp_s": 15.76587,
+          "itl_ms": 30.151,
+          "is_simulated": true
+        },
+        {
+          "token_index": 12,
+          "timestamp_s": 15.79379,
+          "itl_ms": 27.925,
+          "is_simulated": true
+        },
+        {
+          "token_index": 13,
+          "timestamp_s": 15.82022,
+          "itl_ms": 26.427,
+          "is_simulated": true
+        },
+        {
+          "token_index": 14,
+          "timestamp_s": 15.84775,
+          "itl_ms": 27.536,
+          "is_simulated": true
+        },
+        {
+          "token_index": 15,
+          "timestamp_s": 15.88002,
+          "itl_ms": 32.27,
+          "is_simulated": true
+        },
+        {
+          "token_index": 16,
+          "timestamp_s": 15.90514,
+          "itl_ms": 25.116,
+          "is_simulated": true
+        },
+        {
+          "token_index": 17,
+          "timestamp_s": 15.937,
+          "itl_ms": 31.858,
+          "is_simulated": true
+        },
+        {
+          "token_index": 18,
+          "timestamp_s": 15.96938,
+          "itl_ms": 32.385,
+          "is_simulated": true
+        },
+        {
+          "token_index": 19,
+          "timestamp_s": 16.00047,
+          "itl_ms": 31.087,
+          "is_simulated": true
+        },
+        {
+          "token_index": 20,
+          "timestamp_s": 16.02864,
+          "itl_ms": 28.175,
+          "is_simulated": true
+        },
+        {
+          "token_index": 21,
+          "timestamp_s": 16.04996,
+          "itl_ms": 21.321,
+          "is_simulated": true
+        },
+        {
+          "token_index": 22,
+          "timestamp_s": 16.07657,
+          "itl_ms": 26.606,
+          "is_simulated": true
+        },
+        {
+          "token_index": 23,
+          "timestamp_s": 16.10721,
+          "itl_ms": 30.638,
+          "is_simulated": true
+        },
+        {
+          "token_index": 24,
+          "timestamp_s": 16.13855,
+          "itl_ms": 31.342,
+          "is_simulated": true
+        },
+        {
+          "token_index": 25,
+          "timestamp_s": 16.16492,
+          "itl_ms": 26.371,
+          "is_simulated": true
+        },
+        {
+          "token_index": 26,
+          "timestamp_s": 16.19942,
+          "itl_ms": 34.504,
+          "is_simulated": true
+        },
+        {
+          "token_index": 27,
+          "timestamp_s": 16.22742,
+          "itl_ms": 27.999,
+          "is_simulated": true
+        },
+        {
+          "token_index": 28,
+          "timestamp_s": 16.25673,
+          "itl_ms": 29.303,
+          "is_simulated": true
+        },
+        {
+          "token_index": 29,
+          "timestamp_s": 16.28363,
+          "itl_ms": 26.904,
+          "is_simulated": true
+        },
+        {
+          "token_index": 30,
+          "timestamp_s": 16.31822,
+          "itl_ms": 34.593,
+          "is_simulated": true
+        },
+        {
+          "token_index": 31,
+          "timestamp_s": 16.34912,
+          "itl_ms": 30.896,
+          "is_simulated": true
+        },
+        {
+          "token_index": 32,
+          "timestamp_s": 16.38521,
+          "itl_ms": 36.09,
+          "is_simulated": true
+        },
+        {
+          "token_index": 33,
+          "timestamp_s": 16.41787,
+          "itl_ms": 32.658,
+          "is_simulated": true
+        },
+        {
+          "token_index": 34,
+          "timestamp_s": 16.45048,
+          "itl_ms": 32.612,
+          "is_simulated": true
+        },
+        {
+          "token_index": 35,
+          "timestamp_s": 16.48185,
+          "itl_ms": 31.373,
+          "is_simulated": true
+        },
+        {
+          "token_index": 36,
+          "timestamp_s": 16.51143,
+          "itl_ms": 29.581,
+          "is_simulated": true
+        },
+        {
+          "token_index": 37,
+          "timestamp_s": 16.53841,
+          "itl_ms": 26.979,
+          "is_simulated": true
+        },
+        {
+          "token_index": 38,
+          "timestamp_s": 16.57254,
+          "itl_ms": 34.126,
+          "is_simulated": true
+        },
+        {
+          "token_index": 39,
+          "timestamp_s": 16.63537,
+          "itl_ms": 62.834,
+          "is_simulated": true
+        },
+        {
+          "token_index": 40,
+          "timestamp_s": 16.6604,
+          "itl_ms": 25.027,
+          "is_simulated": true
+        },
+        {
+          "token_index": 41,
+          "timestamp_s": 16.69081,
+          "itl_ms": 30.415,
+          "is_simulated": true
+        },
+        {
+          "token_index": 42,
+          "timestamp_s": 16.7194,
+          "itl_ms": 28.591,
+          "is_simulated": true
+        },
+        {
+          "token_index": 43,
+          "timestamp_s": 16.74742,
+          "itl_ms": 28.019,
+          "is_simulated": true
+        },
+        {
+          "token_index": 44,
+          "timestamp_s": 16.77102,
+          "itl_ms": 23.594,
+          "is_simulated": true
+        },
+        {
+          "token_index": 45,
+          "timestamp_s": 16.79237,
+          "itl_ms": 21.357,
+          "is_simulated": true
+        },
+        {
+          "token_index": 46,
+          "timestamp_s": 16.81999,
+          "itl_ms": 27.613,
+          "is_simulated": true
+        },
+        {
+          "token_index": 47,
+          "timestamp_s": 16.84772,
+          "itl_ms": 27.73,
+          "is_simulated": true
+        },
+        {
+          "token_index": 48,
+          "timestamp_s": 16.87721,
+          "itl_ms": 29.495,
+          "is_simulated": true
+        }
+      ]
+    }
+  ]
+}

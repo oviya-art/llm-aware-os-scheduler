@@ -1,0 +1,83 @@
+t_ms,event,core,task_id,task_kind,phase,reason,other_task_id,laxity_ms,norm_laxity,key,pred_service_ms,detail
+0.0,ARRIVE,,real_972962,inference,prefill,,,,,,,prompt=0 bursts=7 total_service=23179.8ms
+0.0,DISPATCH,0,real_972962,inference,prefill,fill_idle_core,,700.0,0.875,0.775,100.0,lam=0.88 L=700.0ms key=0.78 protected
+754.0,ARRIVE,,bg_001,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1190.0ms
+754.0,DISPATCH,1,bg_001,background,cpu_bound,fill_idle_core,,,,2.9998,,bg_key=3.00
+1014.0,ARRIVE,,bg_002,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1824.9ms
+1014.0,DISPATCH,2,bg_002,background,cpu_bound,fill_idle_core,,,,3.0,,bg_key=3.00
+1532.0,ARRIVE,,bg_003,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=4240.5ms
+1532.0,DISPATCH,3,bg_003,background,cpu_bound,fill_idle_core,,,,2.9996,,bg_key=3.00
+1944.103,COMPLETE,,bg_001,background,done,,,,,,,cpu=1190.0ms preemptions=0
+2100.0,ARRIVE,,bg_004,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=3143.7ms
+2100.0,DISPATCH,1,bg_004,background,cpu_bound,fill_idle_core,,,,2.9982,,bg_key=3.00
+2600.0,ARRIVE,,bg_005,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1206.1ms
+2752.0,PREEMPT,1,bg_004,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.69 | evicts bg_004 (key=3.00)
+2752.0,DISPATCH,1,bg_005,background,cpu_bound,bg_aging_rotation,bg_004,,,2.6941,,bg_key=2.69 | evicts bg_004 (key=3.00)
+2838.982,COMPLETE,,bg_002,background,done,,,,,,,cpu=1824.9ms preemptions=0
+2839.0,DISPATCH,2,bg_004,background,cpu_bound,fill_idle_core,,,,2.826,,bg_key=2.83 [migrated]
+3722.0,ARRIVE,,bg_006,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=870.0ms
+3874.0,PREEMPT,1,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,,,bg_key=2.70 | evicts bg_005 (key=3.00)
+3874.0,DISPATCH,1,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,2.6956,,bg_key=2.70 | evicts bg_005 (key=3.00)
+4026.0,PREEMPT,1,bg_006,background,cpu_bound,bg_aging_rotation,bg_005,,,,,bg_key=2.70 | evicts bg_006 (key=3.00)
+4026.0,DISPATCH,1,bg_005,background,cpu_bound,bg_aging_rotation,bg_006,,,2.696,,bg_key=2.70 | evicts bg_006 (key=3.00)
+4110.255,COMPLETE,,bg_005,background,done,,,,,,,cpu=1206.1ms preemptions=1
+4111.0,DISPATCH,1,bg_006,background,cpu_bound,fill_idle_core,,,,2.83,,bg_key=2.83
+4829.248,COMPLETE,,bg_006,background,done,,,,,,,cpu=870.0ms preemptions=1
+5331.167,COMPLETE,,bg_004,background,done,,,,,,,cpu=3143.7ms preemptions=1
+5772.57,COMPLETE,,bg_003,background,done,,,,,,,cpu=4240.5ms preemptions=0
+7414.0,ARRIVE,,bg_007,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=701.5ms
+7414.0,DISPATCH,1,bg_007,background,cpu_bound,fill_idle_core,,,,2.9993,,bg_key=3.00
+8115.582,COMPLETE,,bg_007,background,done,,,,,,,cpu=701.5ms preemptions=0
+8182.0,ARRIVE,,bg_008,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1184.7ms
+8182.0,DISPATCH,1,bg_008,background,cpu_bound,fill_idle_core,,,,2.9998,,bg_key=3.00
+9366.845,COMPLETE,,bg_008,background,done,,,,,,,cpu=1184.7ms preemptions=0
+10538.0,ARRIVE,,bg_009,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=994.0ms
+10538.0,DISPATCH,1,bg_009,background,cpu_bound,fill_idle_core,,,,2.999,,bg_key=3.00
+11532.079,COMPLETE,,bg_009,background,done,,,,,,,cpu=994.0ms preemptions=0
+11851.0,ARRIVE,,bg_010,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1772.3ms
+11851.0,DISPATCH,1,bg_010,background,cpu_bound,fill_idle_core,,,,2.9999,,bg_key=3.00
+12367.0,ARRIVE,,bg_011,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2088.1ms
+12367.0,DISPATCH,2,bg_011,background,cpu_bound,fill_idle_core,,,,2.9983,,bg_key=3.00
+12822.0,ARRIVE,,bg_012,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=372.0ms
+12822.0,DISPATCH,3,bg_012,background,cpu_bound,fill_idle_core,,,,2.9997,,bg_key=3.00
+13194.075,COMPLETE,,bg_012,background,done,,,,,,,cpu=372.0ms preemptions=0
+13623.36,COMPLETE,,bg_010,background,done,,,,,,,cpu=1772.3ms preemptions=0
+14455.194,COMPLETE,,bg_011,background,done,,,,,,,cpu=2088.1ms preemptions=0
+14477.0,ARRIVE,,bg_013,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=643.3ms
+14477.0,DISPATCH,1,bg_013,background,cpu_bound,fill_idle_core,,,,2.9992,,bg_key=3.00
+15120.357,COMPLETE,,bg_013,background,done,,,,,,,cpu=643.3ms preemptions=0
+15345.0,ARRIVE,,bg_014,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=860.4ms
+15345.0,DISPATCH,1,bg_014,background,cpu_bound,fill_idle_core,,,,2.9996,,bg_key=3.00
+16205.505,COMPLETE,,bg_014,background,done,,,,,,,cpu=860.4ms preemptions=0
+17093.0,ARRIVE,,bg_015,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1297.7ms
+17093.0,DISPATCH,1,bg_015,background,cpu_bound,fill_idle_core,,,,2.9985,,bg_key=3.00
+17727.0,ARRIVE,,bg_016,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1233.3ms
+17727.0,DISPATCH,2,bg_016,background,cpu_bound,fill_idle_core,,,,2.999,,bg_key=3.00
+18268.0,ARRIVE,,bg_017,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2015.1ms
+18268.0,DISPATCH,3,bg_017,background,cpu_bound,fill_idle_core,,,,2.9988,,bg_key=3.00
+18390.841,COMPLETE,,bg_015,background,done,,,,,,,cpu=1297.7ms preemptions=0
+18464.0,ARRIVE,,bg_018,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1777.6ms
+18464.0,DISPATCH,1,bg_018,background,cpu_bound,fill_idle_core,,,,2.9993,,bg_key=3.00
+18931.0,ARRIVE,,bg_019,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=900.3ms
+18960.415,COMPLETE,,bg_016,background,done,,,,,,,cpu=1233.3ms preemptions=0
+18961.0,DISPATCH,2,bg_019,background,cpu_bound,fill_idle_core,,,,2.9393,,bg_key=2.94
+19463.0,ARRIVE,,bg_020,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2278.7ms
+19615.0,PREEMPT,1,bg_018,background,cpu_bound,bg_aging_rotation,bg_020,,,,,bg_key=2.70 | evicts bg_018 (key=3.00)
+19615.0,DISPATCH,1,bg_020,background,cpu_bound,bg_aging_rotation,bg_018,,,2.6958,,bg_key=2.70 | evicts bg_018 (key=3.00)
+19767.0,PREEMPT,1,bg_020,background,cpu_bound,bg_aging_rotation,bg_018,,,,,bg_key=2.70 | evicts bg_020 (key=3.00)
+19767.0,DISPATCH,1,bg_018,background,cpu_bound,bg_aging_rotation,bg_020,,,2.696,,bg_key=2.70 | evicts bg_020 (key=3.00)
+19861.4,COMPLETE,,bg_019,background,done,,,,,,,cpu=900.3ms preemptions=0
+19862.0,DISPATCH,2,bg_020,background,cpu_bound,fill_idle_core,,,,2.81,,bg_key=2.81 [migrated]
+20283.175,COMPLETE,,bg_017,background,done,,,,,,,cpu=2015.1ms preemptions=0
+20393.772,COMPLETE,,bg_018,background,done,,,,,,,cpu=1777.6ms preemptions=1
+21034.0,ARRIVE,,bg_021,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2055.6ms
+21034.0,DISPATCH,1,bg_021,background,cpu_bound,fill_idle_core,,,,2.9997,,bg_key=3.00
+21989.222,COMPLETE,,bg_020,background,done,,,,,,,cpu=2278.7ms preemptions=1
+22186.0,ARRIVE,,bg_022,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=1514.0ms
+22186.0,DISPATCH,2,bg_022,background,cpu_bound,fill_idle_core,,,,2.9988,,bg_key=3.00
+23089.716,COMPLETE,,bg_021,background,done,,,,,,,cpu=2055.6ms preemptions=0
+23147.0,ARRIVE,,bg_023,background,cpu_bound,,,,,,,prompt=0 bursts=1 total_service=2036.5ms
+23147.0,DISPATCH,1,bg_023,background,cpu_bound,fill_idle_core,,,,2.9984,,bg_key=3.00
+23179.88,COMPLETE,,real_972962,inference,done,,,,,,,cpu=23179.8ms preemptions=0
+23700.05,COMPLETE,,bg_022,background,done,,,,,,,cpu=1514.0ms preemptions=0
+25183.599,COMPLETE,,bg_023,background,done,,,,,,,cpu=2036.5ms preemptions=0
