@@ -708,7 +708,7 @@ route("arena", async view => {
   };
 });
 
-/* New workload dialog (shared by Arena and Experiments). onData(replayJson) */
+/* New workload dialog. onData(replayJson) */
 function newRunModal(onData) {
   const m = modal(`<button class="btn icon x" data-close aria-label="Close">${icon("x")}</button><h2>New workload</h2><p style="color:var(--mute);margin:0 0 16px">Fresh trace, six schedulers, same jobs.</p>
    <form id="nf" class="grid g2" style="gap:14px">
@@ -722,9 +722,7 @@ function newRunModal(onData) {
   $("#nf", m.el).onsubmit = async e => {
     e.preventDefault(); const f = Object.fromEntries(new FormData(e.target)), b = $("#go", m.el); b.disabled = true; b.lastChild.textContent = "Simulating...";
     try {
-      const d = await apiRun(f); d.meta.title = "Custom run"; const h = Store.get("history", []);
-      const tls = d.runs.token_laxity.metrics.request_miss_rate, others = Object.entries(d.runs).filter(([k]) => k !== "token_laxity").map(([k, v]) => [k, v.metrics.request_miss_rate]).sort((a, b) => a[1] - b[1])[0];
-      h.unshift({ id: Date.now(), ts: new Date().toISOString(), params: f, tls, best: others[0], bestVal: others[1] }); Store.set("history", h.slice(0, 30));
+      const d = await apiRun(f); d.meta.title = "Custom run";
       m.close(); toast("Run finished"); onData(d)
     }
     catch (err) { b.disabled = false; b.lastChild.textContent = "Run"; toast(serverUp === false ? "Start the server to run new workloads: python server.py" : err.message, "err") }
