@@ -43,7 +43,7 @@ const IC={
  alert:'<path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17.5v.01"/>', chev:'<path d="m6 9 6 6 6-6"/>',
  zap:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>', cpu:'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>',
  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.9.7 3.2 2.4 3.5 5"/>',
- turtle:'<path d="M3 17h18M5 17a7 7 0 0 1 14 0"/>', cmd:'<path d="M9 9V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3z"/>',
+ turtle:'<path d="M3 17h18M5 17a7 7 0 0 1 14 0"/>',
  info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.01"/>', trash:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>', chat:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
  gauge:'<path d="M4 18a9 9 0 1 1 16 0"/><path d="m12 14 4-5"/>'
 };
@@ -75,7 +75,7 @@ const scenarioChips=(node,cur,on)=>chips(node,SCN().map(k=>({k,label:scnShort[k]
 
 /* ---------- router ---------- */
 const ROUTES={};let cleanup=null,current=null;
-const NAV=[["dashboard","Dashboard","dash"],["chat","Live Chat","chat"],["arena","Live arena","arena"],["analytics","Analytics","chart"],["experiments","Experiments","flask"],["settings","Settings","sliders"]];
+const NAV=[["dashboard","Dashboard","dash"],["chat","Live Chat","chat"],["arena","Live arena","arena"],["analytics","Analytics","chart"],["experiments","Experiments","flask"]];
 function route(path,fn){ROUTES[path]=fn}
 async function navigate(){
   const name=(location.hash.replace(/^#\/?/,"")||"dashboard").split("?")[0];const fn=ROUTES[name]||ROUTES.dashboard;
@@ -87,30 +87,14 @@ async function navigate(){
 }
 function go(path){location.hash="#/"+path}
 
-/* ---------- command palette ---------- */
-function openPalette(){
-  const items=[...NAV.map(n=>({label:"Go to "+n[1],ic:n[2],run:()=>go(n[0])})),
-    ...SCN().map(k=>({label:"Open arena: "+scnName(k),ic:"arena",run:()=>{settings.scenario=k;saveSettings();go("arena");if(current==="arena")navigate()}})),
-    {label:settings.theme==="dark"?"Switch to light theme":"Switch to dark theme",ic:settings.theme==="dark"?"sun":"moon",run:()=>{settings.theme=settings.theme==="dark"?"light":"dark";saveSettings();if(current==="settings")navigate()}}];
-  let sel=0,list=items;
-  const m=modal(`<div class="cmd"><input type="search" placeholder="Jump to a screen or scenario" aria-label="Command"><ul></ul></div>`);
-  m.el.style.cssText="background:none;border:0;box-shadow:none;padding:0;width:min(560px,100%);align-self:start;margin-top:14vh;overflow:visible";
-  const input=$("input",m.el),ul=$("ul",m.el);
-  const draw=()=>{ul.innerHTML=list.map((o,i)=>`<li data-i="${i}" aria-selected="${i===sel}">${icon(o.ic)}${esc(o.label)}</li>`).join("")||`<li>No match</li>`;
-    $$("li[data-i]",ul).forEach(li=>{li.onclick=()=>{m.close();list[+li.dataset.i].run()}})};
-  input.oninput=()=>{const q=input.value.toLowerCase();list=items.filter(i=>i.label.toLowerCase().includes(q));sel=0;draw()};
-  input.onkeydown=e=>{if(e.key==="ArrowDown"){sel=Math.min(list.length-1,sel+1);draw();e.preventDefault()}else if(e.key==="ArrowUp"){sel=Math.max(0,sel-1);draw();e.preventDefault()}else if(e.key==="Enter"&&list[sel]){m.close();list[sel].run()}};
-  draw();
-}
-
 /* ---------- boot ---------- */
 function boot(){
   document.body.innerHTML=`<div class="app"><nav class="side" aria-label="Main"><a class="logo" href="#/dashboard">${LOGO}TokenLaxity</a>
-   <div class="nav">${NAV.map(([r,l,i])=>`${r==="settings"?'<div class="sep"></div>':""}<a href="#/${r}" data-r="${r}">${icon(i)}<span>${l}</span></a>`).join("")}</div>
+   <div class="nav">${NAV.map(([r,l,i])=>`<a href="#/${r}" data-r="${r}">${icon(i)}<span>${l}</span></a>`).join("")}</div>
    <div class="bottom"><div class="status"><span id="srv-dot" class="dot"></span><span id="srv-txt">Checking server</span></div>
-   <button class="btn" id="palette">${icon("cmd")}Quick jump <span class="kbd" style="margin-left:auto">Ctrl K</span></button></div></nav>
+   <button class="btn" id="theme" aria-label="Toggle theme"></button></div></nav>
    <main id="view" class="view"></main></div><div class="toasts" id="toasts" aria-live="polite"></div><div class="tip" id="tip" role="tooltip"></div>`;
-  $("#palette").onclick=openPalette;
-  addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openPalette()}});
+  const themeBtn=()=>{$("#theme").innerHTML=icon(settings.theme==="dark"?"sun":"moon")+(settings.theme==="dark"?"Light theme":"Dark theme")};
+  $("#theme").onclick=()=>{settings.theme=settings.theme==="dark"?"light":"dark";saveSettings();themeBtn()};themeBtn();
   addEventListener("hashchange",navigate);pingServer();navigate();
 }
