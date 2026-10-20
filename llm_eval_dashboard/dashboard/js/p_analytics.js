@@ -94,7 +94,7 @@ route("analytics", async view => {
 
       <!-- Response Generation Duration -->
       <div class="card stat">
-        <div class="lbl">${icon("hourglass", "clock")}Generation Duration</div>
+        <div class="lbl">${icon("clock")}Generation Duration</div>
         <div class="val"><span id="m-mean-dur">0</span><small>ms</small></div>
         <div class="delta" style="font-size:12px;color:var(--mute)">Median: <b id="m-med-dur">0</b> ms</div>
       </div>
