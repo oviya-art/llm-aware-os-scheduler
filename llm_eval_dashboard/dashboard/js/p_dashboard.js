@@ -297,7 +297,6 @@ route("dashboard", async view => {
         <p>A scheduler that treats every token as a deadline.</p>
         <div class="row">
           <a class="btn primary lg" href="#/arena">${icon("play")}Watch it live</a>
-          <button class="btn lg" id="new-run">${icon("plus")}New run</button>
         </div>
       </div>
       <div class="preview" aria-label="Live preview of two schedulers">
@@ -315,8 +314,6 @@ route("dashboard", async view => {
       <div class="card"><h3>${icon("zap")}Requests on time<small id="lb-sub"></small></h3><div class="rank" id="rank"></div></div>
       <div class="card"><h3>${icon("gauge")}SLA misses by scenario<small>% of requests</small></h3><div id="heat"></div></div>
     </div>`;
-
-    $("#new-run").onclick = () => go("arena");
 
     const stat = (ic, label, val, unit, delta, good, spark) => `<div class="card stat"><div class="lbl">${icon(ic)}${label}</div><div class="val">${val}<small>${unit}</small></div>
       <div class="delta"><span class="badge ${good ? "ok" : "warn"}">${delta}</span></div><div class="spark" data-sp="${spark}"></div></div>`;
